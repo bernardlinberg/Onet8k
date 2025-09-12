@@ -1,0 +1,10 @@
+# OS junk 
+.DS_Store 
+Thumbs.db 
+# Editors 
+.vscode/ 
+.idea/ 
+# Netlify CLI 
+.netlify/ 
+# Logs (just in case) 
+*.log
