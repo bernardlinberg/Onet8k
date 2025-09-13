@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#hafaSamband" class="nav-link text-light fs-3 px-3">Hafa samband</a>
+                        <a href="#hafaSamband" class="nav-link text-light fs-3 px-3" data-bs-toggle="modal" data-bs-target="#hafaSamband">Hafa samband</a>
                     </li>
                     <a href="https://www.instagram.com/onet8k/" target="_blank" class="ps-5 text-light">
                       <i class="bi bi-instagram fs-1"></i>
@@ -55,7 +55,9 @@
 
     </nav> 
 
-    <!-- Landing Page -->
+
+<!-- Landing Page -->
+ 
 <section class="position-relative text-center text-sm-start" style="min-height: calc(100vh - 80px)">
   <!-- Background video -->
   <video autoplay loop muted playsinline 
@@ -75,7 +77,7 @@
       <h3 class="display-3 fw-bold">meiri metnaður,</h3>
       <h3 class="display-3 fw-bold">betri þjónusta.</h3>
       
-      <button class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3">Hafa Samband</button>
+      <button class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3" data-bs-toggle="modal" data-bs-target="#hafaSamband">Hafa Samband</button>
     </div>
   </div>
 </section>
@@ -177,7 +179,7 @@
 </section>
 <!-- UM OKKUR -->
 
-<section class="text-light position-relative p-5">
+<section id="umOkkur" class="text-light position-relative p-5">
   <div class="container text-light">
     <div class="row align-items-center justify-content-between">
       <div class="col-md p-5">
@@ -269,21 +271,68 @@
   <div class="container">
     <p class="lead">Copyright &copy; 2025 ONET8K ehf.</p>
     <a href="#" class="position-absolute bottom-0 end-0 p-5">
-      <i class="bi bi-arrow-up-circle h1"></i>
+      <i class="bi bi-arrow-up-circle h1 text-light"></i>
     </a>
   </div>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="hafaSamband" tabindex="-1" role="dialog" aria-labelledby="hafaSamband" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content border-0 rounded-5 overflow-hidden">
+
+      <div class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3">
+        <h5 class="modal-title fw-bold" id="hafaSamband">Fylltu út formið og við heyrum í þér</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      
+      <div class="modal-body bg-danger text-white p-4">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <div class="mb-3">
+            <label for="nafn" class="col-form-label">
+              *Nafn:
+            </label>
+            <input type="text" name="nafn" class="form-control" id="nafn" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="col-form-label">
+              *Email:
+            </label>
+            <input type="email" name="email" class="form-control" id="email" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="simanumer" class="col-form-label">
+              Símanúmer:
+            </label>
+            <input type="text" name="simanumer" class="form-control" id="simanumer">
+          </div>
+
+          <div class="mb-3">
+            <label for="skilabod" class="col-form-label">
+              *Hvernig getum við aðstoðað?:
+            </label>
+            <textarea name="skilabod" class="form-control pb-5" id="skilabod" required></textarea>
+          </div>
+          <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">Senda</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById("videoOverlay");
+  window.addEventListener("scroll", () => 
+  {
+    const scrollY = window.scrollY;
+    const maxScroll = 700;
+    const opacity = Math.min(scrollY / maxScroll, 0.7);
+    overlay.style.background = `rgba(220,53,69,${opacity})`;
+  });
 </script>
-    <script>
-      const overlay = document.getElementById("videoOverlay");
-      window.addEventListener("scroll", () => 
-      {
-        const scrollY = window.scrollY;
-        const maxScroll = 700;
-        const opacity = Math.min(scrollY / maxScroll, 0.7);
-        overlay.style.background = `rgba(220,53,69,${opacity})`;
-      });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 

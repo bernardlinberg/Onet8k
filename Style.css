@@ -1,15 +1,14 @@
-/* Move the prev/next buttons further out */
 #vimeoCarousel .carousel-control-prev,
 #vimeoCarousel .carousel-control-next {
-  width: 5%; /* thinner clickable area */
+  width: 5%;
 }
 
 #vimeoCarousel .carousel-control-prev {
-  left: -60px; /* push to the left outside carousel */
+  left: -60px;
 }
 
 #vimeoCarousel .carousel-control-next {
-  right: -60px; /* push to the right outside carousel */
+  right: -60px;
 }
 
 
@@ -18,4 +17,43 @@
     background-color: rgba(0,0,0,0.88);
     border-radius: 40%;
     background-size: 100% 80%;
+}
+
+#hafaSamband .form-control
+{
+    background-color:lightgray;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#hafaSamband .form-control:focus
+{
+    background-color: white;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255,0.25);
+}
+
+#hafaSamband .btn
+{
+    border-radius: 0.5rem;
+}
+
+.modal-header
+{
+    border-bottom: none;
+}
+
+.btn-close.btn-close-white
+{
+    filter: invert(1);
+}
+
+.modal-content
+{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+html
+{
+    scroll-behavior: smooth;
 }
