@@ -1,0 +1,21 @@
+/* Move the prev/next buttons further out */
+#vimeoCarousel .carousel-control-prev,
+#vimeoCarousel .carousel-control-next {
+  width: 5%; /* thinner clickable area */
+}
+
+#vimeoCarousel .carousel-control-prev {
+  left: -60px; /* push to the left outside carousel */
+}
+
+#vimeoCarousel .carousel-control-next {
+  right: -60px; /* push to the right outside carousel */
+}
+
+
+#vimeoCarousel .carousel-control-prev-icon, #vimeoCarousel .carousel-control-next-icon
+{
+    background-color: rgba(0,0,0,0.88);
+    border-radius: 40%;
+    background-size: 100% 80%;
+}

@@ -7,15 +7,16 @@
     <title>Onet8K</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
      <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-danger navbar-dark fixed-top py-3">     <!-- maybe put navbar-danger, for red banner, but black text? -->
+    <nav class="navbar navbar-expand-lg bg-danger navbar-dark fixed-top py-2">     <!-- <nav class="navbar navbar-expand-lg fixed-top" style="background: rgba(220,53,69,0.8);"> transparent navbar? -->
 
         <div class="container-fluid">
-            <a href="#" class="navbar-brand ps-5 fw-bold fs-1">ONET8K</a>
+            <a href="#" class="navbar-brand ps-5 fw-bold fs-1">ONET8K <span class="d-block text-light fs-6 fw-normal text-center">MEDIA</span></a>
 
             <button 
                 class="navbar-toggler" 
@@ -31,16 +32,22 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a href="#verkefni" class="nav-link fw-bold fs-2">Verkefni</a>
+                        <a href="#verkefni" class="nav-link text-light fs-3 px-3 ">Verkefni</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#umOkkur" class="nav-link fw-bold fs-2">Um okkur</a>
+                        <a href="#umOkkur" class="nav-link text-light fs-3 px-3">Um okkur</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#hafaSamband" class="nav-link fw-bold fs-2">Hafa samband</a>
+                        <a href="#hafaSamband" class="nav-link text-light fs-3 px-3">Hafa samband</a>
                     </li>
+                    <a href="https://www.instagram.com/onet8k/" target="_blank" class="ps-5 text-light">
+                      <i class="bi bi-instagram fs-1"></i>
+                    </a>
+                    <a href="https://www.facebook.com/einar.hodge" target="_blank" class="ps-5 text-light">
+                      <i class="bi bi-facebook fs-1"></i>
+                    </a>
                 </ul>
 
             </div>
@@ -48,43 +55,235 @@
 
     </nav> 
 
-<section class="position-relative text-start">
+    <!-- Landing Page -->
+<section class="position-relative text-center text-sm-start" style="min-height: calc(100vh - 80px)">
   <!-- Background video -->
   <video autoplay loop muted playsinline 
-         class="position-fixed top-0 start-0 w-100 h-100"
-         style="object-fit: cover; z-index:-1;">
+         class="position-fixed start-0 w-100 h-100"
+         style="object-fit: cover; z-index:-2;">
     <source src="Assets/Videos/Onet8K Landing page video.mp4" type="video/mp4">
   </video>
 
-  <!-- Content container -->
-  <div class="container d-flex flex-column justify-content-end min-vh-100 text-light">
-    <div class="pb-5">
-      <h1 class="display-1 fw-bold">Fleiri hugmyndir,</h1>
-      <h1 class="display-1 fw-bold">meiri metnaður,</h1>
-      <h1 class="display-1 fw-bold">betri þjónusta.</h1>
+  <!-- Red Overlay-->
 
-      <a href="#hafaSamband" class="display-1 btn btn-danger btn-lg rounded-pill fs-1 px-5 mt-3 fw-bold">
-        Hafa samband
-      </a>
+  <div id="videoOverlay" class="position-fixed top-0 start-0 w-100 h-100" style="background: rgba(220,53,69,0); z-index: -1;"></div>
+
+  <!-- Content container -->
+  <div class="container d-sm-flex flex-column align-items-start pt-5 justify-content-end min-vh-100 text-light"> <!-- ms-5 ef þau vilja hafa þetta til hægri -->
+    <div class="pb-5 pt-5">
+      <h3 class="display-3 fw-bold">Fleiri hugmyndir,</h3>
+      <h3 class="display-3 fw-bold">meiri metnaður,</h3>
+      <h3 class="display-3 fw-bold">betri þjónusta.</h3>
+      
+      <button class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3">Hafa Samband</button>
     </div>
   </div>
 </section>
 
-<section class="position-relative text-start">
+<!-- vimeo carousel section-->
 
-  <!-- Content container -->
-  <div class="container d-flex flex-column justify-content-end min-vh-100 text-light">
-    <div class="pb-5">
-      <h1>Fleiri hugmyndir,Fleiri hugmyndir,Fleiri hugmyndir,Fleiri hugmyndir,Fleiri hugmyndir,</h1>
-      <h1>meiri metnaður,Fleiri hugmyndir,Fleiri hugmyndir,Fleiri hugmyndir,Fleiri hugmyndir,</h1>
-      <h1>betri þjónusta.</h1>
 
-      <a href="#hafaSamband" class="btn btn-danger btn-lg rounded-pill mt-3 fw-bold">
-        Hafa samband
-      </a>
+
+<section class=" text-light p-5 position-relative">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      
+      <div class="text-start">
+        <h1 class="fw-bold pb-1">Hvað getum við gert fyrir þig?</h1>
+        <h3>Það er ekki nóg að bjóða á bestu vöruna, fólk</h3>
+        <h3>þarf að vita af því.</h3>
+        <h3>Við hjálpum þér að komaþér á framfæri með</h3>
+        <h3>frumlegum og sérsniðuðum lausnum.</h3>
+      </div>
+
+    </div>
+
+    <div id="vimeoCarousel" class="carousel slide pt-5" data-bs-ride="false">
+      <div class="carousel-inner">
+
+        <!-- first 3 videos active at a time-->
+          <div class="carousel-item active">
+            <div class="row g-3">
+              <div class="col-12 col-md-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://player.vimeo.com/video/24745931" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://player.vimeo.com/video/8747975" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://player.vimeo.com/video/397964830" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+      </div> 
+      <div class="carousel-item">
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://player.vimeo.com/video/196479572" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://player.vimeo.com/video/199384374" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://player.vimeo.com/video/108742121" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- Carousel Controls-->
+    <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#vimeoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+     </button>
+    <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#vimeoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
+<section class="text-light position-relative p-5">
+  <div class="text-center">
+    <h1 class="mb-4 fw-bold pb-5">
+      Komdu í klúbbinn!
+    </h1>
+    <div class="d-flex justify-content-center flex-wrap gap-5">
+      <img src="Assets/Img/sjova-hvitt.png" alt="" height="90">
+      <img src="Assets/Img/Algalife-logo-graent-1.png" alt="" height="90">
+      <img src="Assets/Img/RÚV_logo_(1966–2011).svg.png" alt="" height="90">
+      <img src="Assets/Img/Good_Good_Social_sharing_df6d7c7c-3674-4a1c-b382-feec4ad84502.webp" alt="" height="90">
+      <img src="Assets/Img/Mastercard-logo.svg.png" alt="" height="90">
+            <img src="Assets/Img/Sækja sem SVG.url" alt="" height="90">
+    </div>
+    <h1 class="mb-4 fw-bold pt-5">
+      <a href="#hafaSamband" class="text-light text-decoration-none">Heyrðu í okkur</a>
+    </h1>
+    <h5 class="fw-normal">(við bítum oftast ekki)</h5>
+  </div>
+
+</section>
+<section>
+  <img src="Assets/Img/Sectioner.png" alt="" class="w-100 h-100">
+</section>
+<!-- UM OKKUR -->
+
+<section class="text-light position-relative p-5">
+  <div class="container text-light">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md p-5">
+        <h3 class="display-2 fw-bold pb-5">Nei hæ, má bjóða þér kaffi?</h3>
+        <h1 class="fw-bold py-3">Hvað gerum við?</h1>
+        <h5 class="fw-normal">Við sérhæfum okkur í að bjóða upp á</h5>
+        <h5 class="fw-normal">fjölbreyttar og samþættar lausnir á sviði</h5>
+        <h5 class="fw-normal">stafrænnar markaðssetningar sem hámarka</h5>
+        <h5 class="fw-normal pb-5">árangur.</h5>
+        <h5 class="fw-normal">Við leggjum áherslu á að skapa einstaka</h5>
+        <h5 class="fw-normal">þjónustuupplifun fyrir hvern viðskiptavin og</h5>
+        <h5 class="fw-normal">mótum markaðsstarfið í takt við þarfir þíns</h5>
+        <h5 class="fw-normal">fyrirtækis.</h5>
+      </div>
+      <div class="col-md">
+        <img src="Assets/Img/einar lookin swole.png" alt="">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- HVAÐ ER ONET8K-->
+<section class="text-light position-relative p-5">
+  <div class="container text-light">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="Assets/Img/Kári og einar lookin fly.png" alt="">
+      </div>
+      <div class="col-md p-5">
+        <h1 class="fw-bold py-3">Hvað gerum við?</h1>
+        <h5 class="fw-normal">Við erum lítð en kröftugt framleiðslufyrirtæki sem</h5>
+        <h5 class="fw-normal">starfar úr Reykjanesbæ. Með árareynslu í</h5>
+        <h5 class="fw-normal">sjónvarps- og auglýsinga framleiðslu, sérhæfum</h5>
+        <h5 class="fw-normal">við okkur allra hellst í áhrifaríkri og ógleymanlegri</h5>
+        <h5 class="fw-normal pb-5">stafrænni markaðssetningu.</h5>
+        <h5 class="fw-normal">Við erum þess hugar að góð samskipti og áhersla</h5>
+        <h5 class="fw-normal">á frumlegar lausnir við flóknum vandamálum séu</h5>
+        <h5 class="fw-normal">lykil atriði til að tryggja góðar niðurstöður.</h5>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- TEYMIÐ -->
+<section class="text-light position-relative p-5">
+  <h1 class="display-3 fw-bold pb-5 text-center">Teymið</h1>
+    <div class="container text-light">
+      <div class="row align-items-center justify-content-between p-5">
+        <div class="col-md-3">
+          <div class="card border-0">
+            <img src="Assets/Img/Kári.png" alt="">
+            <div class="card-footer bg-danger text-white text-center">
+              <h5 class="mb-1 fw-bold">Kári Snær Halldórsson</h5>
+              <p>kari@onet8k.is</p>
+              <p>+354 776 0957</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card border-0">
+            <img src="Assets/Img/Einar.png" alt="">
+            <div class="card-footer bg-danger text-white text-center">
+              <h5 class="mb-1 fw-bold">Einar Örn Michaelsson</h5>
+              <p>einar@onet8k.is</p>
+              <p>+354 615 3670</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card border-0">
+            <img src="Assets/Img/Kænar.png" alt="">
+            <div class="card-footer bg-danger text-white text-center">
+              <h5 class="mb-1 fw-bold">Kári Snær Halldórsson</h5>
+              <p>kari@onet8k.is</p>
+              <p>+354 776 0957</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+<!-- footer -->
+<footer class="p-5 bg-dark text-white text-center position-relative">
+  <div class="container">
+    <p class="lead">Copyright &copy; 2025 ONET8K ehf.</p>
+    <a href="#" class="position-absolute bottom-0 end-0 p-5">
+      <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+  </div>
+</footer>
+</script>
+    <script>
+      const overlay = document.getElementById("videoOverlay");
+      window.addEventListener("scroll", () => 
+      {
+        const scrollY = window.scrollY;
+        const maxScroll = 700;
+        const opacity = Math.min(scrollY / maxScroll, 0.7);
+        overlay.style.background = `rgba(220,53,69,${opacity})`;
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
