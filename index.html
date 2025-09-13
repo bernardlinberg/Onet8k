@@ -277,7 +277,7 @@
 </footer>
 
 <!-- Modal -->
-<div class="modal fade" id="hafaSamband" tabindex="-1" role="dialog" aria-labelledby="hafaSamband" aria-hidden="true">
+<div class="modal fade" id="hafaSamband" tabindex="-1" role="dialog" aria-labelledby="hafaSambandTitle" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content border-0 rounded-5 overflow-hidden">
 
@@ -288,35 +288,40 @@
       </div>
       
       <div class="modal-body bg-danger text-white p-4">
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-  <!-- Hidden input for Netlify -->
-  <input type="hidden" name="form-name" value="contact">
-  <p style="display:none">
-    <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
-  </p>
+        <form name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" accept="UTF-8">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
+          <div class="mb-3">
+            <label for="nafn" class="col-form-label">
+              *Nafn:
+            </label>
+            <input type="text" name="nafn" class="form-control" id="nafn" required>
+          </div>
 
-  <div class="mb-3">
-    <label for="nafn" class="col-form-label">*Nafn:</label>
-    <input type="text" name="nafn" class="form-control" id="nafn" required>
-  </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label">
+              *Email:
+            </label>
+            <input type="email" name="email" class="form-control" id="email" required>
+          </div>
 
-  <div class="mb-3">
-    <label for="email" class="col-form-label">*Email:</label>
-    <input type="email" name="email" class="form-control" id="email" required>
-  </div>
+          <div class="mb-3">
+            <label for="simanumer" class="col-form-label">
+              Símanúmer:
+            </label>
+            <input type="text" name="simanumer" class="form-control" id="simanumer">
+          </div>
 
-  <div class="mb-3">
-    <label for="simanumer" class="col-form-label">Símanúmer:</label>
-    <input type="text" name="simanumer" class="form-control" id="simanumer">
-  </div>
-
-  <div class="mb-3">
-    <label for="skilabod" class="col-form-label">*Hvernig getum við aðstoðað?:</label>
-    <textarea name="skilabod" class="form-control pb-5" id="skilabod" required></textarea>
-  </div>
-
-  <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">Senda</button>
-</form>
+          <div class="mb-3">
+            <label for="skilabod" class="col-form-label">
+              *Hvernig getum við aðstoðað?:
+            </label>
+            <textarea name="skilabod" class="form-control" id="skilabod" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">Senda</button>
+        </form>
       </div>
     </div>
   </div>
