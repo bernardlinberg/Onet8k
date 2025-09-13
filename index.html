@@ -289,6 +289,10 @@
       
       <div class="modal-body bg-danger text-white p-4">
         <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <p style="display:none">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
           <div class="mb-3">
             <label for="nafn" class="col-form-label">
               *Nafn:
@@ -314,7 +318,7 @@
             <label for="skilabod" class="col-form-label">
               *Hvernig getum við aðstoðað?:
             </label>
-            <textarea name="skilabod" class="form-control pb-5" id="skilabod" required></textarea>
+            <textarea name="skilabod" class="form-control" id="skilabod" rows="5" required></textarea>
           </div>
           <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">Senda</button>
         </form>
