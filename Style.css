@@ -70,18 +70,50 @@ body
     overflow-x: hidden;
     background: #f2f2f2;
 }
+
+@keyframes slide
+{
+    from 
+    {
+        transform: translateX(0);
+    }
+
+    to
+    {
+        transform: translateX(-100%);
+    }
+}
+
 .logos
 {
     overflow: hidden;
-    margin-bottom: 50px;
+    padding: 60px 0;
+    white-space: nowrap;
+    position: relative;  
+    mask-image: linear-gradient(
+        var(--mask-direction, to right),
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 1) 10%,
+        hsl(0 0% 0% / 1) 90%,
+        hsl(0 0% 0% / 0)
+    );
+}
+
+
+.logos:hover .logos-slide
+{
+    animation-play-state: paused;
 }
 
 .logos-slide
 {
-    white-space: nowrap;
+    display: inline-block;
+    animation: 35s slide infinite linear;
 }
 
 .logos-slide img
 {
     height: 90px;
+    margin: 0 25px;
 }
+
