@@ -80,7 +80,7 @@ body
 
     to
     {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
@@ -106,7 +106,7 @@ mask-image: linear-gradient(to right,
 .logos-slide
 {
     display: inline-block;
-    animation: 5s slide infinite linear;
+    animation: 15s slide infinite linear;
 }
 
 .logos-slide img
