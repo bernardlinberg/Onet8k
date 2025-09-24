@@ -88,11 +88,13 @@ body
 {
     overflow: hidden;
     padding: 60px 0;
+    width: 88.8%;
     white-space: nowrap;
-    position: relative;  
+    position: relative;
+    margin: 0 auto;  
 mask-image: linear-gradient(to right,
   rgba(0,0,0,0) 0%,
-  rgba(0,0,0,1) 5%,  /* fade in quicker */
+  rgba(0,0,0,1) 5%,  
   rgba(0,0,0,1) 95%,
   rgba(0,0,0,0) 100%);
 }
@@ -111,7 +113,24 @@ mask-image: linear-gradient(to right,
 
 .logos-slide img
 {
+    height: 60px;
+    margin: 0 15px;
+
     height: 90px;
     margin: 0 25px;
+}
+
+@media (min-width: 576px)
+{
+    .logos
+    {
+        width: 100%;
+    }
+
+    .logos-slide img
+    {
+        height: 90px;
+        margin: 0 25px;
+    }
 }
 
