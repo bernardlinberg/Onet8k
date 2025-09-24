@@ -90,13 +90,11 @@ body
     padding: 60px 0;
     white-space: nowrap;
     position: relative;  
-    mask-image: linear-gradient(
-        var(--mask-direction, to right),
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 1) 10%,
-        hsl(0 0% 0% / 1) 90%,
-        hsl(0 0% 0% / 0)
-    );
+mask-image: linear-gradient(to right,
+  rgba(0,0,0,0) 0%,
+  rgba(0,0,0,1) 5%,  /* fade in quicker */
+  rgba(0,0,0,1) 95%,
+  rgba(0,0,0,0) 100%);
 }
 
 
@@ -108,7 +106,7 @@ body
 .logos-slide
 {
     display: inline-block;
-    animation: 35s slide infinite linear;
+    animation: 5s slide infinite linear;
 }
 
 .logos-slide img
