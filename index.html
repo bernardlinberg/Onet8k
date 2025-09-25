@@ -379,16 +379,26 @@
 
 <script>
   const overlay = document.getElementById("videoOverlay");
+  let ticking = false;
   window.addEventListener("scroll", () => 
   {
-    const scrollY = window.scrollY;
-    const maxScroll = 700;
-    const opacity = Math.min(scrollY / maxScroll, 0.7);
-    const blur = Math.min(scrollY / 100, 10);
+    if (!ticking)
+    {
+        window.requestAnimationFrame(() => 
+      {
+        const scrollY = window.scrollY;
+        const maxScroll = 700;
+        const opacity = Math.min(scrollY / maxScroll, 0.7);
+        const blur = Math.min(scrollY / 100, 10);
 
-    overlay.style.background = `rgba(220,53,69,${opacity})`;
-    overlay.style.backdropFilter = `blur(${blur}px)`;
-    overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+        overlay.style.background = `rgba(220, 53, 69, ${opacity})`;
+        overlay.style.backdropFilter = `blur(${blur}px)`;
+        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+
+        ticking = false;
+      });
+    ticking = true;
+    }
   });
 </script>
 
