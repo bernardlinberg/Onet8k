@@ -88,7 +88,7 @@ body
 {
     overflow: hidden;
     padding: 60px 0;
-    width: 88.8%;
+    width: 97%;
     white-space: nowrap;
     position: relative;
     margin: 0 auto;  
@@ -100,37 +100,56 @@ mask-image: linear-gradient(to right,
 }
 
 
-.logos:hover .logos-slide
-{
-    animation-play-state: paused;
-}
+
 
 .logos-slide
 {
     display: inline-block;
-    animation: 15s slide infinite linear;
+    animation: 30s slide infinite linear;
 }
 
 .logos-slide img
 {
     height: 60px;
     margin: 0 15px;
-
-    height: 90px;
-    margin: 0 25px;
 }
 
 @media (min-width: 576px)
 {
     .logos
     {
-        width: 100%;
+        width: 70%;
     }
 
     .logos-slide img
     {
         height: 90px;
-        margin: 0 25px;
+        margin: 0 45px;
     }
 }
+.logos-slide img.pipar
+{
+    height: 25px !important;
+    width: auto !important;
+}
 
+.mt-10
+{
+    margin-top: 10rem;
+}
+.mt-20
+{
+    margin-top: 20rem;
+}
+.mb-10
+{
+    margin-bottom: 10rem;
+}
+.mb-20
+{
+    margin-bottom: 20rem;
+}
+.mb-15
+{
+    margin-bottom: 15rem;
+}
