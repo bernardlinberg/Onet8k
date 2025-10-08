@@ -153,3 +153,7 @@ mask-image: linear-gradient(to right,
 {
     margin-bottom: 15rem;
 }
+main#app {
+  opacity: 5;
+  transition: opacity .5s ease;
+}
