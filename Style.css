@@ -72,13 +72,6 @@ body
     font-family: 'Montserrat', sans-serif;
 }
 
-.custom-img {
-    width: 200%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
 @keyframes slide
 {
     from 
@@ -133,6 +126,16 @@ mask-image: linear-gradient(to right,
     {
         height: 90px;
         margin: 0 45px;
+    }
+
+    .um-hero .right-col {
+        margin-top: 18rem;
+        width: 100%;
+    }
+
+    .um-hero-img {
+        height: auto;
+        width: 100%;
     }
 }
 .logos-slide img.pipar
