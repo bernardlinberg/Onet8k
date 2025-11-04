@@ -72,6 +72,13 @@ body
     font-family: 'Montserrat', sans-serif;
 }
 
+.custom-img {
+    width: 200%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 @keyframes slide
 {
     from 
@@ -225,4 +232,14 @@ main#app {
     transform: none;
     opacity: 1;
   }
+}
+
+.project-panel {
+  width: 100vw;              
+  margin-left: calc(-50vw + 50%); 
+  background: rgba(220, 53, 69, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0.90;
+  padding: 3rem 0;           
 }
