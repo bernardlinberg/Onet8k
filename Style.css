@@ -271,3 +271,21 @@ main#app {
   object-fit: cover;
   display: block;
 }
+
+@media (max-width: 575.98px){
+  /* Hide address block and big text logo + MEDIA line */
+  .footer .ps-md-5 .text-start { display: none; }                 /* address */
+  .footer .display-3, .footer small { display: none !important; } /* big text */
+
+  /* Only show social icons; hide 'Hafa samband' text & back-to-top */
+  .footer .d-inline-flex > a.text-light.fw-semibold { display: none !important; }
+  .footer a.position-fixed-absolute { display: none !important; }
+
+  /* If you have an image logo in other pages, you can show it here:
+     .footer .center-logo-img { display:block !important; } */
+
+  /* Spacing + sizing that we already tuned */
+  .footer{ padding: 1.5rem 1rem; text-align:center; }
+  .footer .row{ row-gap: 1rem; }
+  .footer .bi{ font-size: 1.6rem; }
+}
