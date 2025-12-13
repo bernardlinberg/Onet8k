@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ONET8K</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ONET8K</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body hx-boost="true" hx-push-url="true" hx-select="main#app" hx-swap="outerHTML" hx-target="main#app">
 
      <!-- NAVBAR -->
-    <nav id="mainNav" class="navbar navbar-dark fixed-top py-2 bg-transparent">     <!-- <nav class="navbar navbar-expand-lg fixed-top" style="background: rgba(220,53,69,0.8);"> transparent navbar? -->
-
+    <nav id="mainNav" class="navbar navbar-dark fixed-top py-2 bg-transparent">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1"> <img src="Assets/Img/ONETAKE LOGO.png" alt="onet8k logo" style="height: 60px; width: auto;"> </a>
+            <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
+              <img src="Assets/Img/ONETAKE LOGO.png" alt="onet8k logo" style="height: 60px; width: auto;">
+            </a>
                
-            <button class="navbar-toggler" type="button"
-                     data-bs-toggle="collapse" data-bs-target="#navMenu"
-                     aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler d-md-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navMenu"
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navMenu">
 
-                <ul class="navbar-nav ms-auto">
+              <ul class="navbar-nav ms-auto">
 
-                    <li class="nav-item">
-                        <a href="#verkefni" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
-                    </li>
+                <li class="nav-item">
+                  <a href="snjalltryggingar.html" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a href="umOkkur.html" class="nav-link text-light fs-3 px-3 fw-bold">Um okkur</a>
-                    </li>
+                <li class="nav-item">
+                  <a href="umOkkur.html" class="nav-link text-light fs-3 px-3 fw-bold">Um okkur</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a href="#hafaSamband" class="nav-link text-light fs-3 px-3 fw-bold" data-bs-toggle="modal" data-bs-target="#hafaSamband" hx-boost="false">Hafa samband</a>
-                    </li>
-                    <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
-                      <i class="bi bi-instagram fs-1"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="pe-3 ps-3 text-light">
-                      <i class="bi bi-tiktok fs-1"></i>
-                    </a>
-                </ul>
+                <li class="nav-item">
+                  <a href="index.html#hafaSamband"
+                    class="nav-link text-light fs-3 px-3 fw-bold">
+                    Hafa samband
+                  </a>
+                </li>
+                <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
+                  <i class="bi bi-instagram fs-1"></i>
+                </a>
+                  <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="pe-3 ps-3 text-light">
+                    <i class="bi bi-tiktok fs-1"></i>
+                  </a>
+                </a>
+              </ul>
 
             </div>
         </div>
@@ -68,17 +73,19 @@
   <!-- Landing Page -->
   <main id="app" data-page="home">
   <section class="position-relative text-center text-sm-start" style="min-height: calc(100vh - 80px)">
-    <!-- TODO: PLAY 4K VERSION IF SCREEN AND OR INTERNET IS FAST ENOUGH  -->
     
-
   <!-- Content container -->
-  <div class="container d-flex flex-column pt-5 justify-content-end justify-content-sm-end min-vh-100 text-light mb-10 mt-10"> <!-- ms-5 ef þau vilja hafa þetta til hægri -->
-    <div class="pb-5 pt-5">
+  <div class="container-fluid d-flex flex-column justify-content-end align-items-start min-vh-100 text-light pt-5">
+    <div class="pb-4 ps-3 ps-md-5">
       <h3 class="display-3 fw-bold">Fleiri hugmyndir,</h3>
       <h3 class="display-3 fw-bold">meiri metnaður,</h3>
       <h3 class="display-3 fw-bold pb-4">betri þjónusta.</h3>
       
-      <button class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3 mb-10" data-bs-toggle="modal" data-bs-target="#hafaSamband" hx-boost="false">Hafa Samband</button>
+      <a href="#hafaSamband"
+        class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3 mb-10"
+        hx-boost="false">
+        Hafa Samband
+      </a>
     </div>
   </div>
 </section>
@@ -165,135 +172,78 @@
     </h1>
     <div class="logos">
       <div class="logos-slide justify-content-center gap-5">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
-          <!-- Repeat -->
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
+        <!-- Repeat -->
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
       </div>
       <div class="logos-slide justify-content-center gap-5">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="pipar" class="pipar">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
-          <!-- Repeat -->
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-          <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="pipar" class="pipar">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
+        <!-- Repeat -->
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
+        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
       </div>
     </div>
     <h1 class="mb-4 fw-bold pt-1">
-      <a href="#hafaSamband" class="text-light text-decoration-none">Heyrðu í okkur</a>
+      <a href="#hafaSamband" class="text-light text-decoration-none" hx-boost="false">
+        Heyrðu í okkur
+      </a>
     </h1>
     <h5 class="fw-normal">(við bítum oftast ekki)</h5>
   </div>
 
 </section>
-<section>
-  <img src="Assets/Img/Sectioner.png" alt="" class="w-100 h-100">
-</section>
 
-
-</main>
-<!-- footer -->
-<footer class="footer bg-danger text-white py-4">
-  <div class="container-fluid px-2 px-md-3">
-    <div class="row g-2 align-items-center">
-
-      <!-- LEFT (address + phone) -->
-      <div class="col-4 ps-md-5">
-        <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
-        <div class="text-start d-none d-sm-block small">
-          <p class="mb-1 fw-bold">Onetake ehf.</p>
-          <p class="mb-1 fw-bold">Hafnargata,</p>
-          <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
-        </div>
-        <div class="text-center text-md-start">
-          <a href="tel:+3547760957" class="text-white text-decoration-none fw-semibold small">
-            +354 7760957
-          </a>
-        </div>
-      </div>
-
-      <!-- CENTER (logo) -->
-      <div class="col-4 text-center">
-        <!-- Smaller logo on phones, bigger on md+ -->
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
-             class="d-inline d-md-none" style="height:40px;width:auto;">
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
-             class="d-none d-md-inline" style="height:80px;width:auto;">
-        <div class="small opacity-75 mt-1 d-none d-sm-block"></div>
-      </div>
-
-      <!-- RIGHT (CTA + icons) -->
-      <div class="col-4 pe-md-0">
-        <div class="d-flex justify-content-end align-items-center gap-3 flex-wrap">
-          <!-- Hide long text CTA on phones to save space -->
-          <a href="#" class="text-light fw-semibold text-decoration-none d-none d-sm-inline"
-             data-bs-toggle="modal" data-bs-target="#hafaSamband">Hafa samband</a>
-
-          <a href="https://www.instagram.com/onet8k/" target="_blank" rel="noopener noreferrer"
-             class="text-light" aria-label="instagram">
-            <i class="bi bi-instagram fs-5 fs-md-3"></i>
-          </a>
-          <a href="https://www.facebook.com/einar.hodge" target="_blank" rel="noopener noreferrer"
-             class="text-light" aria-label="facebook">
-            <i class="bi bi-facebook fs-5 fs-md-3"></i>
-          </a>
-
-          <!-- Back to top: keep for sm+ to avoid crowding on xs -->
-          <a href="#" class="d-none d-sm-inline" aria-label="Back to top">
-            <i class="bi bi-arrow-up-circle h4 text-light"></i>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</footer>
-
-<!-- Modal -->
-<div class="modal fade" id="hafaSamband" tabindex="-1" role="dialog" aria-labelledby="hafaSambandTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content border-0 rounded-5 overflow-hidden">
-
+<section id="hafaSamband" class="py-5">
+  <div class="container d-flex justify-content-center">
+    <div class="modal-content border-0 rounded-5 overflow-hidden" style="max-width: 700px;">
       <div class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3">
-        <h5 class="modal-title fw-bold" id="hafaSamband">Fylltu út formið og við heyrum í þér</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
-        </button>
+        <h5 class="modal-title fw-bold">
+          Fylltu út formið og við heyrum í þér
+        </h5>
       </div>
-      
+
       <div class="modal-body bg-danger text-white p-4">
-        <form name="contact" method="POST" action="/thankYou.html" data-netlify="true" netlify-honeypot="bot-field" accept="UTF-8" hx-boost="false">
+        <form name="contact" method="POST" action="/thankYou.html"
+            data-netlify="true" netlify-honeypot="bot-field"
+            accept="UTF-8" hx-boost="false">
           <input type="hidden" name="form-name" value="contact">
           <p style="display:none">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            <label>Don't fill this out if you're human:
+              <input name="bot-field">
+            </label>
           </p>
+
           <div class="mb-3">
             <label for="nafn" class="col-form-label">
               *Nafn:
@@ -321,12 +271,76 @@
             </label>
             <textarea name="skilabod" class="form-control" id="skilabod" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">Senda</button>
+
+          <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">
+            Senda
+          </button>
         </form>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+</main>
+
+<!-- footer -->
+<footer class="footer bg-danger text-white py-4">
+  <div class="container-fluid px-2 px-md-3">
+    <div class="row g-2 align-items-center">
+
+      <!-- LEFT (address + phone) -->
+      <div class="col-4 ps-md-5">
+        <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
+        <div class="text-start d-none d-sm-block small">
+          <p class="mb-1 fw-bold">Onetake ehf.</p>
+          <p class="mb-1 fw-bold">Hafnargata,</p>
+          <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
+        </div>
+        <div class="text-center text-md-start">
+          <a href="tel:+3547760957" class="text-white text-decoration-none fw-semibold small">
+            +354 7760957
+          </a>
+        </div>
+      </div>
+
+      <!-- CENTER (logo) -->
+      <div class="col-4 text-center">
+        <!-- Smaller logo on phones, bigger on md+ -->
+        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
+          class="d-inline d-md-none" style="height:40px;width:auto;">
+        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
+          class="d-none d-md-inline" style="height:80px;width:auto;">
+        <div class="small opacity-75 mt-1 d-none d-sm-block"></div>
+      </div>
+
+      <!-- RIGHT (CTA + icons) -->
+      <div class="col-4 pe-md-0">
+        <div class="d-flex justify-content-end align-items-center gap-3 flex-wrap">
+          <!-- changed: footer CTA scrolls to form -->
+          <a href="index.html#hafaSamband"
+            class="text-light fw-semibold text-decoration-none d-none d-sm-inline">
+            Hafa samband
+          </a>
+
+          <a href="https://www.instagram.com/onet8k/" target="_blank" rel="noopener noreferrer"
+             class="text-light" aria-label="instagram">
+            <i class="bi bi-instagram fs-5 fs-md-3"></i>
+          </a>
+          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" rel="noopener noreferrer"
+             class="text-light" aria-label="facebook">
+            <i class="bi bi-tiktok fs-5 fs-md-3"></i>
+          </a>
+          <!-- Back to top: keep for sm+ to avoid crowding on xs -->
+          <a href="#" class="d-none d-sm-inline" aria-label="Back to top">
+            <i class="bi bi-arrow-up-circle h4 text-light"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
 
 <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
 <script>
@@ -353,21 +367,25 @@ document.body.addEventListener('htmx:afterSwap', () => {
     if (t) document.title = t.textContent;
   });
 
-  // Scroll blur for HOME
+  // Scroll blur for HOME (video background)
   function initHomeOverlay() {
     const overlay = document.getElementById('videoOverlay');
-    if (!overlay) return;
+    const video   = document.querySelector('video');
+    if (!overlay || !video) return;
+
+    // Make sure video is visible on home
+    video.style.display = '';
 
     let ticking = false;
     const onScroll = () => {
-      if (ticking) return; 
+      if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
         const y = window.scrollY || 0;
         const opacity = Math.min(y / 700, 0.7);
-        const blur = Math.min(y / 100, 10);
-        overlay.style.background = `rgba(220,53,69,${opacity})`;
-        overlay.style.backdropFilter = `blur(${blur}px)`;
+        const blur    = Math.min(y / 100, 10);
+        overlay.style.background        = `rgba(220,53,69,${opacity})`;
+        overlay.style.backdropFilter    = `blur(${blur}px)`;
         overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
         ticking = false;
       });
@@ -377,6 +395,72 @@ document.body.addEventListener('htmx:afterSwap', () => {
     window.__pageCleanup = () => window.removeEventListener('scroll', onScroll);
     onScroll();
   }
+
+  // Static max blur for UM OKKUR (video background)
+  function initUmOkkurOverlay() {
+    const overlay = document.getElementById('videoOverlay');
+    const video   = document.querySelector('video');
+    if (!overlay || !video) return;
+
+    // Make sure video is visible on umOkkur
+    video.style.display = '';
+
+    overlay.style.background        = `rgba(220,53,69,0.7)`;
+    overlay.style.backdropFilter    = `blur(10px)`;
+    overlay.style.webkitBackdropFilter = `blur(10px)`;
+
+    // no scroll listener here
+    window.__pageCleanup = null;
+  }
+
+  // Photo background for SNJALLTRYGGINGAR
+  function initSnjallOverlay() {
+    const video        = document.querySelector('video');
+    const videoOverlay = document.getElementById('videoOverlay');
+    const photoOverlay = document.getElementById('photoOverlay');
+
+    // Hide the video when on snjalltryggingar
+    if (video) video.style.display = 'none';
+
+    // Clear any styling on the videoOverlay
+    if (videoOverlay) {
+      videoOverlay.style.background        = '';
+      videoOverlay.style.backdropFilter    = '';
+      videoOverlay.style.webkitBackdropFilter = '';
+    }
+
+    if (!photoOverlay) {
+      window.__pageCleanup = null;
+      return;
+    }
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        const opacity = Math.min(y / 700, 0.7);
+        const blur    = Math.min(y / 100, 10);
+        photoOverlay.style.background        = `rgba(220,53,69,${opacity})`;
+        photoOverlay.style.backdropFilter    = `blur(${blur}px)`;
+        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+        ticking = false;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Cleanup when leaving snjalltryggingar
+    window.__pageCleanup = () => {
+      window.removeEventListener('scroll', onScroll);
+      // show the video again when we leave this page
+      if (video) video.style.display = '';
+    };
+
+    onScroll();
+  }
+
   function runPageInit() {
     // Cleanup previous page behavior
     if (typeof window.__pageCleanup === 'function') {
@@ -384,58 +468,64 @@ document.body.addEventListener('htmx:afterSwap', () => {
       window.__pageCleanup = null;
     }
 
-    const page = document.querySelector('main#app')?.dataset.page || '';
+    const main = document.querySelector('main#app');
+    const page = main?.dataset.page || '';
 
-    if (page === 'home') initHomeOverlay();
-    else if (page === 'umOkkur') initUmOkkurOverlay();
-    else {
-      // Default: clear overlay
+    if (page === 'home') {
+      initHomeOverlay();
+    } else if (page === 'umOkkur') {
+      initUmOkkurOverlay();
+    } else if (page === 'snjalltryggingar') {
+      initSnjallOverlay();
+    } else {
+      // Default: clear video overlay, ensure video is visible
       const overlay = document.getElementById('videoOverlay');
+      const video   = document.querySelector('video');
       if (overlay) {
-        overlay.style.background = '';
-        overlay.style.backdropFilter = '';
+        overlay.style.background        = '';
+        overlay.style.backdropFilter    = '';
         overlay.style.webkitBackdropFilter = '';
       }
+      if (video) video.style.display = '';
     }
   }
 
-  // Static max blur for UM OKKUR
-  function initUmOkkurOverlay() {
-    const overlay = document.getElementById('videoOverlay');
-    if (!overlay) return;
-
-    overlay.style.background = `rgba(220,53,69,0.7)`;
-    overlay.style.backdropFilter = `blur(10px)`;
-    overlay.style.webkitBackdropFilter = `blur(10px)`;
-
-    // no scroll listener here
-    window.__pageCleanup = null;
+  // Manual scroll restoration so our own logic is in control
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
 
-  
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
+  // Handle scrolling to #hafaSamband on HOME after HTMX swap
+  document.body.addEventListener('htmx:afterSettle', () => {
+    const main = document.querySelector('main#app');
+    if (!main) return;
 
-document.body.addEventListener('htmx:afterSettle', (e) => {
-  // Always force to top after any HTMX content swap or restore
-  const page = document.querySelector('main#app')?.dataset.page;
-  if (page === 'home') {
-    // Double RAF guarantees layout settled before scroll reset
-    requestAnimationFrame(() => {
+    const page = main.dataset.page;
+    const hash = window.location.hash;
+
+    if (page === 'home') {
       requestAnimationFrame(() => {
-        window.scrollTo(0, 0);
+        requestAnimationFrame(() => {
+          if (hash && document.querySelector(hash)) {
+            const el = document.querySelector(hash);
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            window.scrollTo(0, 0);
+          }
+        });
       });
-    });
-  }
-});
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', runPageInit);
-document.body.addEventListener('htmx:afterSwap', (e) => {
-  if (e.target.id === 'app') {
-    // Wait one frame so HTMX can inject the new content and dataset
-    requestAnimationFrame(() => runPageInit());
-  }
-});
+
+  document.body.addEventListener('htmx:afterSwap', (e) => {
+    if (e.target.id === 'app') {
+      // Wait one frame so HTMX can inject the new content and dataset
+      requestAnimationFrame(() => runPageInit());
+    }
+  });
+
   document.body.addEventListener('htmx:historyRestore', runPageInit);
 </script>
 <script>

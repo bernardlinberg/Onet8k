@@ -28,7 +28,7 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-                        <a href="#verkefni" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
+                        <a href="snjalltryggingar.html" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
                     </li>
 
                     <li class="nav-item">
@@ -36,7 +36,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#hafaSamband" class="nav-link text-light fs-3 px-3 fw-bold" data-bs-toggle="modal" data-bs-target="#hafaSamband" hx-boost="false">Hafa samband</a>
+                      <a href="index.html#hafaSamband"
+                        class="nav-link text-light fs-3 px-3 fw-bold">
+                        Hafa samband
+                      </a>
                     </li>
                     <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
                       <i class="bi bi-instagram fs-1"></i>
@@ -51,55 +54,58 @@
 
     </nav> 
      
-<section class="position-relative text-center text-sm-start" style="min-height:100vh; overflow:hidden;">
-    <!-- Background image -->
+<main id="app" data-page="snjalltryggingar">
+  <section class="position-relative text-center text-sm-start" style="min-height:100vh; overflow:hidden;">
+    <!-- Background image that replaces video -->
     <img src="Assets/Img/PNG/KSH09045.png" alt="Snjalltryggingar background"
-         class="position-fixed top-0 start-0 w-100 h-100 object-fit-cover" style="z-index:-2;">
+         class="position-fixed top-0 start-0 w-100 h-100 object-fit-cover"
+         style="z-index:-2;">
 
-    <!-- Overlay that only appears on scroll -->
-    <div id="photoOverlay" class="position-fixed top-0 start-0 w-100 h-100" 
-         style="background:rgba(220,53,69,0); backdrop-filter:none; z-index:-1;"></div>
+    <!-- Red overlay that reacts to scroll -->
+    <div id="photoOverlay"
+         class="position-fixed top-0 start-0 w-100 h-100"
+         style="background:rgba(220,53,69,0); backdrop-filter:none; z-index:-1;">
+    </div>
 
-
-  <main id="app" data-page="snjalltryggingar">
+    <!-- Spacer to give some top height like the hero on other pages -->
     <section class="position-relative text-center text-sm-start" style="min-height: calc(100vh - 30px)">
     </section>
-    </section>
-      <section class="px-3 px-md-4 my-0">
-  <div class="project-panel bg-danger text-white shadow">
-    <div class="container-xxl py-5">
-      <!-- TOP ROW -->
-      <div class="row g-4 align-items-start mb-5">
-        <!-- LEFT (Title) -->
-        <div class="col-12 col-lg-6">
-          <p class="text-uppercase fw-semibold mb-1">Verkefnið</p>
-          <h1 class="fw-bold m-0" style="letter-spacing:.2px;">Snjalltrygging</h1>
-        </div>
+  </section>
+    <section class="px-3 px-md-4 my-0">
+      <div class="project-panel bg-danger text-white shadow">
+        <div class="container-xxl py-5">
+          <!-- TOP ROW -->
+          <div class="row g-4 align-items-start mb-5">
+            <!-- LEFT (Title) -->
+            <div class="col-12 col-lg-6">
+              <p class="text-uppercase fw-semibold mb-1">Verkefnið</p>
+              <h1 class="fw-bold m-0" style="letter-spacing:.2px;">Snjalltrygging</h1>
+            </div>
 
-        <!-- RIGHT (Description) -->
-        <div class="col-12 col-lg-6">
-          <p class="text-uppercase fw-bold mb-2">Verkefnið</p>
-          <p class="mb-0">
-            Með Sjóvá vildum við sýna fram á raunverulegt notagildi
-            snjalltrygginga fyrir markhóp þeirra á einfaldan og
-            auðskiljanlegan hátt.
-          </p>
+            <!-- RIGHT (Description) -->
+            <div class="col-12 col-lg-6">
+              <p class="text-uppercase fw-bold mb-2">Verkefnið</p>
+              <p class="mb-0">
+                Með Sjóvá vildum við sýna fram á raunverulegt notagildi
+                snjalltrygginga fyrir markhóp þeirra á einfaldan og
+                auðskiljanlegan hátt.
+              </p>
+            </div>
+          </div>
+
+          <!-- BOTTOM ROW -->
+          <div class="row g-4 align-items-start">
+            <!-- LEFT (Client info) -->
+            <div class="col-12 col-lg-6">
+              <p class="text-uppercase fw-semibold mb-1">Viðskiptavinur</p>
+              <h2 class="fw-bold m-0">Sjóvá</h2>
+            </div>
+
+            <!-- RIGHT (empty for spacing) -->
+            <div class="col-12 col-lg-6"></div>
+          </div>
         </div>
       </div>
-
-      <!-- BOTTOM ROW -->
-      <div class="row g-4 align-items-start">
-        <!-- LEFT (Client info) -->
-        <div class="col-12 col-lg-6">
-          <p class="text-uppercase fw-semibold mb-1">Viðskiptavinur</p>
-          <h2 class="fw-bold m-0">Sjóvá</h2>
-        </div>
-
-        <!-- RIGHT (empty for spacing) -->
-        <div class="col-12 col-lg-6"></div>
-      </div>
-    </div>
-  </div>
 </section>
 <section class="text-light position-relative py-5">
   <div class="container-xxl">
@@ -128,9 +134,6 @@
     </div>
   </div>
   <section class="mt-10">
-  </section>
-  <section class="photo-fullvh">
-    <img src="Assets/Img/standin.png" alt="single hero" class="hero-img-size">
   </section>
   <section class="mt-10">
   </section>
@@ -195,9 +198,9 @@
              class="text-light" aria-label="instagram">
             <i class="bi bi-instagram fs-5 fs-md-3"></i>
           </a>
-          <a href="https://www.facebook.com/einar.hodge" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" rel="noopener noreferrer"
              class="text-light" aria-label="facebook">
-            <i class="bi bi-facebook fs-5 fs-md-3"></i>
+            <i class="bi bi-tiktok fs-5 fs-md-3"></i>
           </a>
 
           <!-- Back to top: keep for sm+ to avoid crowding on xs -->

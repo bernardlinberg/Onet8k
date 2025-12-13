@@ -10,110 +10,111 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body hx-boost="true" hx-push-url="true" hx-select="main#app" hx-swap="outerHTML" hx-target="main#app">
-     <!-- NAVBAR -->
-    <nav id="mainNav" class="navbar navbar-dark fixed-top py-2 bg-transparent">     <!-- <nav class="navbar navbar-expand-lg fixed-top" style="background: rgba(220,53,69,0.8);"> transparent navbar? -->
+  <!-- NAVBAR -->
+  <nav id="mainNav" class="navbar navbar-dark fixed-top py-2 bg-transparent">
+    <div class="container-fluid">
+      <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
+        <img src="Assets/Img/ONETAKE LOGO.png" alt="onet8k logo" style="height: 60px; width: auto;">
+      </a>
 
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1"> <img src="Assets/Img/ONETAKE LOGO.png" alt="onet8k logo" style="height: 60px; width: auto;"> </a>
-               
-            <button class="navbar-toggler" type="button"
-                     data-bs-toggle="collapse" data-bs-target="#navMenu"
-                     aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-            </button>
+      <button class="navbar-toggler d-md-none" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navMenu"
+          aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="collapse navbar-collapse" id="navMenu">
+      <div class="collapse navbar-collapse" id="navMenu">
 
-                <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="snjalltryggingar.html" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
+          </li>
 
-                    <li class="nav-item">
-                        <a href="#verkefni" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
-                    </li>
+          <li class="nav-item">
+            <a href="umOkkur.html" class="nav-link text-light fs-3 px-3 fw-bold">Um okkur</a>
+          </li>
 
-                    <li class="nav-item">
-                        <a href="umOkkur.html" class="nav-link text-light fs-3 px-3 fw-bold">Um okkur</a>
-                    </li>
+          <li class="nav-item">
+            <a href="index.html#hafaSamband"
+               class="nav-link text-light fs-3 px-3 fw-bold">
+              Hafa samband
+            </a>
+          </li>
 
-                    <li class="nav-item">
-                        <a href="#hafaSamband" class="nav-link text-light fs-3 px-3 fw-bold" data-bs-toggle="modal" data-bs-target="#hafaSamband" hx-boost="false">Hafa samband</a>
-                    </li>
-                    <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
-                      <i class="bi bi-instagram fs-1"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="pe-3 ps-3 text-light">
-                      <i class="bi bi-tiktok fs-1"></i>
-                    </a>
-                </ul>
+          <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
+            <i class="bi bi-instagram fs-1"></i>
+          </a>
+          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="pe-3 ps-3 text-light">
+            <i class="bi bi-tiktok fs-1"></i>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-            </div>
-        </div>
-
-    </nav> 
-     
-<section class="position-relative text-center text-sm-start" style="min-height: calc(100vh - 80px)">
-  <!-- TODO: PLAY 4K VERSION IF SCREEN AND OR INTERNET IS FAST ENOUGH  -->
-    <!-- Background video -->
+  <!-- Background video (same shell as index) -->
   <video autoplay loop muted playsinline preload="auto"
          class="position-fixed start-0 w-100 h-100"
          style="top: 0px; width: 100%; object-fit: cover; z-index:-2;">
     <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4">
     <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4">
-  </video>   
+  </video>
 
-  <!-- Red Overlay-->
+  <!-- Red overlay -->
+  <div id="videoOverlay" class="position-fixed top-0 start-0 w-100 h-100"
+       style="background: rgba(220,53,69,0); z-index: -1;"></div>
 
-  <div id="videoOverlay" class="position-fixed top-0 start-0 w-100 h-100" style="background: rgba(220,53,69,0); z-index: -1;"></div>
-
-
+  <!-- PAGE CONTENT -->
   <main id="app" data-page="umOkkur">
-    <section id="umOkkur" class="text-light position-relative p-5">
-  <div class="mt-10 container text-light">
-    <div class="row align-items-center justify-content-between um-hero">
-      <div class="col-md p-5">
-        <h3 class="display-2 fw-bold pb-5">Nei hæ, má bjóða þér kaffi?</h3>
-        <h1 class="fw-bold py-3">Hvað gerum við?</h1>
-        <h5 class="fw-normal">Við sérhæfum okkur í að bjóða upp á</h5>
-        <h5 class="fw-normal">fjölbreyttar og samþættar lausnir á sviði</h5>
-        <h5 class="fw-normal">stafrænnar markaðssetningar sem hámarka</h5>
-        <h5 class="fw-normal pb-5">árangur.</h5>
-        <h5 class="fw-normal">Við leggjum áherslu á að skapa einstaka</h5>
-        <h5 class="fw-normal">þjónustuupplifun fyrir hvern viðskiptavin og</h5>
-        <h5 class="fw-normal">mótum markaðsstarfið í takt við þarfir þíns</h5>
-        <h5 class="fw-normal">fyrirtækis.</h5>
+    <!-- HERO / INTRO -->
+    <section id="umOkkur" class="text-light position-relative py-5" style="min-height: calc(100vh - 80px);">
+      <div class="mt-10 container text-light px-3 px-md-5">
+        <div class="row align-items-center justify-content-between um-hero">
+          <div class="col-md px-0 py-5">
+            <h3 class="display-2 fw-bold pb-5">Nei hæ, má bjóða þér kaffi?</h3>
+            <h1 class="fw-bold py-3">Hvað gerum við?</h1>
+            <h5 class="fw-normal">Við sérhæfum okkur í að bjóða upp á</h5>
+            <h5 class="fw-normal">fjölbreyttar og samþættar lausnir á sviði</h5>
+            <h5 class="fw-normal">stafrænnar markaðssetningar sem hámarka</h5>
+            <h5 class="fw-normal pb-5">árangur.</h5>
+            <h5 class="fw-normal">Við leggjum áherslu á að skapa einstaka</h5>
+            <h5 class="fw-normal">þjónustuupplifun fyrir hvern viðskiptavin og</h5>
+            <h5 class="fw-normal">mótum markaðsstarfið í takt við þarfir þíns</h5>
+            <h5 class="fw-normal">fyrirtækis.</h5>
+          </div>
+          <div class="col-md right-col">
+            <img src="Assets/Img/einar lookin swole.png" alt="" class="img-fluid rounded um-hero-img">
+          </div>
+        </div>
       </div>
-      <div class="col-md right-col">
-        <img src="Assets/Img/einar lookin swole.png" alt="" class="img-fluid rounded um-hero-img">
-      </div>
-    </div>
-  </div>
+    </section>
 
-</section>
-
-<!-- HVAÐ ER ONET8K-->
-<section class="text-light position-relative p-5">
-  <div class="container text-light">
-    <div class="row align-items-center justify-content-between">
-      <div class="col-md">
-        <img src="Assets/Img/Kári og einar lookin fly.png" alt="" class="img-fluid rounded">
+    <!-- HVAÐ ER ONET8K -->
+    <section class="text-light position-relative py-5">
+      <div class="container text-light px-3 px-md-5">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md mb-4 mb-md-0">
+            <img src="Assets/Img/Kári og einar lookin fly.png" alt="" class="img-fluid rounded">
+          </div>
+          <div class="col-md px-0 py-5">
+            <h1 class="fw-bold py-3">Hvað gerum við?</h1>
+            <p class="fw-normal mb-4">
+              Við erum lítið en kröftugt framleiðslufyrirtæki sem starfar úr Reykjanesbæ.
+              Með áralangri reynslu í sjónvarps- og auglýsingaframleiðslu sérhæfum við okkur
+              allra helst í áhrifaríkri og ógleymanlegri stafrænni markaðssetningu.
+            </p>
+            <p class="fw-normal mb-0">
+              Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við
+              flóknum vandamálum séu lykilatriði til að tryggja góðar niðurstöður.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-md p-5">
-        <h1 class="fw-bold py-3">Hvað gerum við?</h1>
-        <h5 class="fw-normal">Við erum lítð en kröftugt framleiðslufyrirtæki sem</h5>
-        <h5 class="fw-normal">starfar úr Reykjanesbæ. Með árareynslu í</h5>
-        <h5 class="fw-normal">sjónvarps- og auglýsinga framleiðslu, sérhæfum</h5>
-        <h5 class="fw-normal">við okkur allra hellst í áhrifaríkri og ógleymanlegri</h5>
-        <h5 class="fw-normal pb-5">stafrænni markaðssetningu.</h5>
-        <h5 class="fw-normal">Við erum þess hugar að góð samskipti og áhersla</h5>
-        <h5 class="fw-normal">á frumlegar lausnir við flóknum vandamálum séu</h5>
-        <h5 class="fw-normal">lykil atriði til að tryggja góðar niðurstöður.</h5>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- TEYMIÐ -->
-<section class="text-light position-relative p-5">
-    <h1 class="display-3 fw-bold pb-5 text-center">Teymið</h1>
+    <!-- TEYMIÐ -->
+    <section class="text-light position-relative p-5">
+      <h1 class="display-3 fw-bold pb-5 text-center">Teymið</h1>
       <div class="container text-light">
         <div class="row align-items-center justify-content-center p-5">
           <div class="col-md-3">
@@ -148,8 +149,8 @@
               </div>
             </div>
           </div>
-          
         </div>
+
         <div class="row align-items-center justify-content-center p-5">
           <div class="col-md-3">
             <div class="card border-0">
@@ -173,10 +174,8 @@
           </div>
         </div>
       </div>
-  </section>
-
-
-</main>
+    </section>
+  </main>
 
 <!-- footer -->
 <footer class="footer bg-danger text-white py-4">
@@ -219,9 +218,9 @@
              class="text-light" aria-label="instagram">
             <i class="bi bi-instagram fs-5 fs-md-3"></i>
           </a>
-          <a href="https://www.facebook.com/einar.hodge" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" rel="noopener noreferrer"
              class="text-light" aria-label="facebook">
-            <i class="bi bi-facebook fs-5 fs-md-3"></i>
+            <i class="bi bi-tiktok fs-5 fs-md-3"></i>
           </a>
 
           <!-- Back to top: keep for sm+ to avoid crowding on xs -->
@@ -309,21 +308,25 @@ document.body.addEventListener('htmx:afterSwap', () => {
     if (t) document.title = t.textContent;
   });
 
-  // Scroll blur for HOME
+  // Scroll blur for HOME (video background)
   function initHomeOverlay() {
     const overlay = document.getElementById('videoOverlay');
-    if (!overlay) return;
+    const video   = document.querySelector('video');
+    if (!overlay || !video) return;
+
+    // Make sure video is visible on home
+    video.style.display = '';
 
     let ticking = false;
     const onScroll = () => {
-      if (ticking) return; 
+      if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
         const y = window.scrollY || 0;
         const opacity = Math.min(y / 700, 0.7);
-        const blur = Math.min(y / 100, 10);
-        overlay.style.background = `rgba(220,53,69,${opacity})`;
-        overlay.style.backdropFilter = `blur(${blur}px)`;
+        const blur    = Math.min(y / 100, 10);
+        overlay.style.background        = `rgba(220,53,69,${opacity})`;
+        overlay.style.backdropFilter    = `blur(${blur}px)`;
         overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
         ticking = false;
       });
@@ -333,6 +336,72 @@ document.body.addEventListener('htmx:afterSwap', () => {
     window.__pageCleanup = () => window.removeEventListener('scroll', onScroll);
     onScroll();
   }
+
+  // Static max blur for UM OKKUR (video background)
+  function initUmOkkurOverlay() {
+    const overlay = document.getElementById('videoOverlay');
+    const video   = document.querySelector('video');
+    if (!overlay || !video) return;
+
+    // Make sure video is visible on umOkkur
+    video.style.display = '';
+
+    overlay.style.background        = `rgba(220,53,69,0.7)`;
+    overlay.style.backdropFilter    = `blur(10px)`;
+    overlay.style.webkitBackdropFilter = `blur(10px)`;
+
+    // no scroll listener here
+    window.__pageCleanup = null;
+  }
+
+  // Photo background for SNJALLTRYGGINGAR
+  function initSnjallOverlay() {
+    const video        = document.querySelector('video');
+    const videoOverlay = document.getElementById('videoOverlay');
+    const photoOverlay = document.getElementById('photoOverlay');
+
+    // Hide the video when on snjalltryggingar
+    if (video) video.style.display = 'none';
+
+    // Clear any styling on the videoOverlay
+    if (videoOverlay) {
+      videoOverlay.style.background        = '';
+      videoOverlay.style.backdropFilter    = '';
+      videoOverlay.style.webkitBackdropFilter = '';
+    }
+
+    if (!photoOverlay) {
+      window.__pageCleanup = null;
+      return;
+    }
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || 0;
+        const opacity = Math.min(y / 700, 0.7);
+        const blur    = Math.min(y / 100, 10);
+        photoOverlay.style.background        = `rgba(220,53,69,${opacity})`;
+        photoOverlay.style.backdropFilter    = `blur(${blur}px)`;
+        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+        ticking = false;
+      });
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Cleanup when leaving snjalltryggingar
+    window.__pageCleanup = () => {
+      window.removeEventListener('scroll', onScroll);
+      // show the video again when we leave this page
+      if (video) video.style.display = '';
+    };
+
+    onScroll();
+  }
+
   function runPageInit() {
     // Cleanup previous page behavior
     if (typeof window.__pageCleanup === 'function') {
@@ -340,58 +409,64 @@ document.body.addEventListener('htmx:afterSwap', () => {
       window.__pageCleanup = null;
     }
 
-    const page = document.querySelector('main#app')?.dataset.page || '';
+    const main = document.querySelector('main#app');
+    const page = main?.dataset.page || '';
 
-    if (page === 'home') initHomeOverlay();
-    else if (page === 'umOkkur') initUmOkkurOverlay();
-    else {
-      // Default: clear overlay
+    if (page === 'home') {
+      initHomeOverlay();
+    } else if (page === 'umOkkur') {
+      initUmOkkurOverlay();
+    } else if (page === 'snjalltryggingar') {
+      initSnjallOverlay();
+    } else {
+      // Default: clear video overlay, ensure video is visible
       const overlay = document.getElementById('videoOverlay');
+      const video   = document.querySelector('video');
       if (overlay) {
-        overlay.style.background = '';
-        overlay.style.backdropFilter = '';
+        overlay.style.background        = '';
+        overlay.style.backdropFilter    = '';
         overlay.style.webkitBackdropFilter = '';
       }
+      if (video) video.style.display = '';
     }
   }
 
-  // Static max blur for UM OKKUR
-  function initUmOkkurOverlay() {
-    const overlay = document.getElementById('videoOverlay');
-    if (!overlay) return;
-
-    overlay.style.background = `rgba(220,53,69,0.7)`;
-    overlay.style.backdropFilter = `blur(10px)`;
-    overlay.style.webkitBackdropFilter = `blur(10px)`;
-
-    // no scroll listener here
-    window.__pageCleanup = null;
+  // Manual scroll restoration so our own logic is in control
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
   }
 
-  
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
+  // Handle scrolling to #hafaSamband on HOME after HTMX swap
+  document.body.addEventListener('htmx:afterSettle', () => {
+    const main = document.querySelector('main#app');
+    if (!main) return;
 
-document.body.addEventListener('htmx:afterSettle', (e) => {
-  // Always force to top after any HTMX content swap or restore
-  const page = document.querySelector('main#app')?.dataset.page;
-  if (page === 'home') {
-    // Double RAF guarantees layout settled before scroll reset
-    requestAnimationFrame(() => {
+    const page = main.dataset.page;
+    const hash = window.location.hash;
+
+    if (page === 'home') {
       requestAnimationFrame(() => {
-        window.scrollTo(0, 0);
+        requestAnimationFrame(() => {
+          if (hash && document.querySelector(hash)) {
+            const el = document.querySelector(hash);
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            window.scrollTo(0, 0);
+          }
+        });
       });
-    });
-  }
-});
+    }
+  });
+
   document.addEventListener('DOMContentLoaded', runPageInit);
-document.body.addEventListener('htmx:afterSwap', (e) => {
-  if (e.target.id === 'app') {
-    // Wait one frame so HTMX can inject the new content and dataset
-    requestAnimationFrame(() => runPageInit());
-  }
-});
+
+  document.body.addEventListener('htmx:afterSwap', (e) => {
+    if (e.target.id === 'app') {
+      // Wait one frame so HTMX can inject the new content and dataset
+      requestAnimationFrame(() => runPageInit());
+    }
+  });
+
   document.body.addEventListener('htmx:historyRestore', runPageInit);
 </script>
 <script>
