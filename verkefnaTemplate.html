@@ -20,6 +20,8 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
         />
+        <link rel="prefetch" href="index.html" as="document" />
+        <link rel="prefetch" href="umOkkur.html" as="document" />
     </head>
     <body
         hx-boost="true"
@@ -104,7 +106,7 @@
         <main id="app" data-page="snjalltryggingar">
             <section
                 class="position-relative text-center text-sm-start"
-                style="min-height: 70vh; overflow: hidden"
+                style="min-height: 80vh; overflow: hidden"
             >
                 <!-- Background image that replaces video -->
                 <img
@@ -128,7 +130,7 @@
                 <!-- Spacer to give some top height like the hero on other pages -->
                 <section
                     class="position-relative text-center text-sm-start"
-                    style="min-height: calc(70vh - 30px)"
+                    style="min-height: calc(80vh - 30px)"
                 ></section>
             </section>
             <section class="px-3 px-md-4 my-0">
@@ -447,6 +449,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
         <script>
             (function () {
                 const THRESHOLD = 50;

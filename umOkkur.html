@@ -16,6 +16,8 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
         />
+        <link rel="prefetch" href="index.html" as="document" />
+        <link rel="prefetch" href="umOkkur.html" as="document" />
     </head>
     <body
         hx-boost="true"
@@ -101,6 +103,8 @@
                 </div>
             </div>
         </nav>
+
+        <!-- PAGE CONTENT -->
         <!-- Background video (same shell as index) -->
         <video
             autoplay
@@ -114,15 +118,12 @@
             <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4" />
             <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4" />
         </video>
-
-        <!-- Red overlay -->
         <div
             id="videoOverlay"
             class="position-fixed top-0 start-0 w-100 h-100"
             style="background: rgba(220, 53, 69, 0); z-index: -1"
         ></div>
 
-        <!-- PAGE CONTENT -->
         <main id="app" data-page="umOkkur">
             <!-- HERO / INTRO -->
             <section
@@ -560,51 +561,13 @@
             }
 
             // Photo background for SNJALLTRYGGINGAR
-            function initSnjallOverlay() {
-                const video = document.querySelector("video");
-                const videoOverlay = document.getElementById("videoOverlay");
-                const photoOverlay = document.getElementById("photoOverlay");
+            function resetVideoOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                if (!overlay) return;
 
-                // Hide the video when on snjalltryggingar
-                if (video) video.style.display = "none";
-
-                // Clear any styling on the videoOverlay
-                if (videoOverlay) {
-                    videoOverlay.style.background = "";
-                    videoOverlay.style.backdropFilter = "";
-                    videoOverlay.style.webkitBackdropFilter = "";
-                }
-
-                if (!photoOverlay) {
-                    window.__pageCleanup = null;
-                    return;
-                }
-
-                let ticking = false;
-                const onScroll = () => {
-                    if (ticking) return;
-                    ticking = true;
-                    requestAnimationFrame(() => {
-                        const y = window.scrollY || 0;
-                        const opacity = Math.min(y / 700, 0.7);
-                        const blur = Math.min(y / 100, 10);
-                        photoOverlay.style.background = `rgba(220,53,69,${opacity})`;
-                        photoOverlay.style.backdropFilter = `blur(${blur}px)`;
-                        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
-                        ticking = false;
-                    });
-                };
-
-                window.addEventListener("scroll", onScroll, { passive: true });
-
-                // Cleanup when leaving snjalltryggingar
-                window.__pageCleanup = () => {
-                    window.removeEventListener("scroll", onScroll);
-                    // show the video again when we leave this page
-                    if (video) video.style.display = "";
-                };
-
-                onScroll();
+                overlay.style.background = "rgba(220,53,69,0)";
+                overlay.style.backdropFilter = "none";
+                overlay.style.webkitBackdropFilter = "none";
             }
 
             function runPageInit() {
@@ -616,6 +579,8 @@
                     window.__pageCleanup = null;
                 }
 
+                resetVideoOverlay(); // 🔥 THIS FIXES THE BUG
+
                 const main = document.querySelector("main#app");
                 const page = main?.dataset.page || "";
 
@@ -623,18 +588,6 @@
                     initHomeOverlay();
                 } else if (page === "umOkkur") {
                     initUmOkkurOverlay();
-                } else if (page === "snjalltryggingar") {
-                    initSnjallOverlay();
-                } else {
-                    // Default: clear video overlay, ensure video is visible
-                    const overlay = document.getElementById("videoOverlay");
-                    const video = document.querySelector("video");
-                    if (overlay) {
-                        overlay.style.background = "";
-                        overlay.style.backdropFilter = "";
-                        overlay.style.webkitBackdropFilter = "";
-                    }
-                    if (video) video.style.display = "";
                 }
             }
 
