@@ -281,7 +281,7 @@
                                                     class="project-card"
                                                 >
                                                     <img
-                                                        src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.avif"
+                                                        src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.jpg"
                                                         alt="Barnvænt Sveitarfélag verkefni"
                                                         loading="lazy"
                                                     />
@@ -680,6 +680,45 @@
                     requestAnimationFrame(applyNavState),
                 );
             })();
+        </script>
+        <script>
+            function initFadeIns() {
+                const elements = document.querySelectorAll(
+                    "p, h1, h2, h3, h4, h5, h6, li, span",
+                );
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("is-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.15,
+                        rootMargin: "0px 0px -50px 0px",
+                    },
+                );
+
+                elements.forEach((el) => {
+                    if (!el.classList.contains("fade-in")) {
+                        el.classList.add("fade-in");
+                        observer.observe(el);
+                    }
+                });
+            }
+
+            // Initial load
+            document.addEventListener("DOMContentLoaded", initFadeIns);
+
+            // HTMX page swaps
+            document.body.addEventListener("htmx:afterSwap", (e) => {
+                if (e.target.id === "app") {
+                    requestAnimationFrame(initFadeIns);
+                }
+            });
         </script>
 
         <script
