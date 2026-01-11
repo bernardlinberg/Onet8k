@@ -29,7 +29,7 @@
         hx-boost="true"
         hx-push-url="true"
         hx-select="main#app"
-        hx-swap="outerHTML"
+        hx-swap="innerHTML"
         hx-target="main#app"
     >
         <!-- NAVBAR -->
@@ -576,6 +576,16 @@
                 overlay.style.webkitBackdropFilter = "none";
             }
 
+            function getCurrentPage() {
+                return (
+                    document.querySelector("#app [data-page]")?.dataset.page ||
+                    document.querySelector("main#app")?.dataset.page ||
+                    (location.pathname.endsWith("umOkkur.html")
+                        ? "umOkkur"
+                        : "home")
+                );
+            }
+
             function runPageInit() {
                 // Cleanup previous page behavior
                 if (typeof window.__pageCleanup === "function") {
@@ -585,10 +595,9 @@
                     window.__pageCleanup = null;
                 }
 
-                resetVideoOverlay(); // 🔥 THIS FIXES THE BUG
+                resetVideoOverlay();
 
-                const main = document.querySelector("main#app");
-                const page = main?.dataset.page || "";
+                const page = getCurrentPage();
 
                 if (page === "home") {
                     initHomeOverlay();

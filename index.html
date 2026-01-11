@@ -30,7 +30,7 @@
         hx-boost="true"
         hx-push-url="true"
         hx-select="main#app"
-        hx-swap="outerHTML"
+        hx-swap="innerHTML"
         hx-target="main#app"
     >
         <!-- NAVBAR -->
@@ -165,7 +165,7 @@
                         <div class="d-flex justify-content-center">
                             <div class="text-start">
                                 <h1 class="fw-bold pb-1">
-                                    Hvað getum við gert fyrir þig?$
+                                    Hvað getum við gert fyrir þig?
                                 </h1>
                                 <h3>
                                     Það er ekki nóg að bjóða á bestu vöruna,
@@ -178,79 +178,155 @@
                                 <h3>frumlegum og sérsniðuðum lausnum.</h3>
                             </div>
                         </div>
+                        <div class="carousel-wrapper">
+                            <div
+                                id="vimeoCarousel"
+                                class="carousel slide pt-5"
+                                data-bs-ride="false"
+                            >
+                                <div class="carousel-inner position-relative">
+                                    <!-- first 3 videos active at a time-->
+                                    <div class="carousel-item active">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/hardRock.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/Verkefnasidur/hardrockcover.jpg"
+                                                        alt="Hard Rock verkefni"
+                                                        loading="lazy"
+                                                    />
 
-                        <div
-                            id="vimeoCarousel"
-                            class="carousel slide pt-5"
-                            data-bs-ride="false"
-                        >
-                            <div class="carousel-inner">
-                                <!-- first 3 videos active at a time-->
-                                <div class="carousel-item active">
-                                    <div class="row g-3">
-                                        <div class="col-12 col-md-4">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe
-                                                    src="https://player.vimeo.com/video/1119859948"
-                                                    frameborder="0"
-                                                    allow="fullscreen"
-                                                    loading="lazy"
-                                                ></iframe>
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>Hard Rock</h3>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe
-                                                    src="https://player.vimeo.com/video/8747975"
-                                                    frameborder="0"
-                                                    allow="fullscreen"
-                                                    loading="lazy"
-                                                ></iframe>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/snjalltryggingar.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/snjalltryggingThumbnail.jpg"
+                                                        alt="Sjóvá Snjalltrygginga verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>
+                                                            Sjóvá
+                                                            Snjalltryggingar
+                                                        </h3>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-md-4">
-                                            <div class="ratio ratio-16x9">
-                                                <iframe
-                                                    src="https://player.vimeo.com/video/397964830"
-                                                    frameborder="0"
-                                                    allow="fullscreen"
-                                                    loading="lazy"
-                                                ></iframe>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/barnvaentSveitarfelag.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.avif"
+                                                        alt="Barnvænt Sveitarfélag verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>
+                                                            Barnvænt
+                                                            Sveitarfélag
+                                                        </h3>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row g-3">
-                                    <div class="col-12 col-md-4">
-                                        <div class="ratio ratio-16x9">
-                                            <iframe
-                                                src="https://player.vimeo.com/video/196479572"
-                                                frameborder="0"
-                                                allow="fullscreen"
-                                                loading="lazy"
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <div class="ratio ratio-16x9">
-                                            <iframe
-                                                src="https://player.vimeo.com/video/199384374"
-                                                frameborder="0"
-                                                allow="fullscreen"
-                                                loading="lazy"
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <div class="ratio ratio-16x9">
-                                            <iframe
-                                                src="https://player.vimeo.com/video/108742121"
-                                                frameborder="0"
-                                                allow="fullscreen"
-                                                loading="lazy"
-                                            ></iframe>
+                                    <div class="carousel-item">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/hardRock.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/Verkefnasidur/hardrockcover.jpg"
+                                                        alt="Hard Rock verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>Hard Rock</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/snjalltryggingar.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/snjalltryggingThumbnail.jpg"
+                                                        alt="Sjóvá Snjalltrygginga verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>
+                                                            Sjóvá
+                                                            Snjalltryggingar
+                                                        </h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/songvakeppni.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/söngvakeppnis banner 3.jpg"
+                                                        alt="Söngvakeppnis verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>Söngvakeppnin</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -263,7 +339,7 @@
                             data-bs-target="#vimeoCarousel"
                             data-bs-slide="prev"
                         >
-                            <span class="carousel-control-prev-icon"></span>
+                            <i class="bi bi-caret-left-fill"></i>
                         </button>
                         <button
                             class="carousel-control-next custom-carousel-control"
@@ -271,7 +347,7 @@
                             data-bs-target="#vimeoCarousel"
                             data-bs-slide="next"
                         >
-                            <span class="carousel-control-next-icon"></span>
+                            <i class="bi bi-caret-right-fill"></i>
                         </button>
                     </div>
                 </div>
@@ -726,6 +802,16 @@
                 overlay.style.webkitBackdropFilter = "none";
             }
 
+            function getCurrentPage() {
+                return (
+                    document.querySelector("#app [data-page]")?.dataset.page ||
+                    document.querySelector("main#app")?.dataset.page ||
+                    (location.pathname.endsWith("umOkkur.html")
+                        ? "umOkkur"
+                        : "home")
+                );
+            }
+
             function runPageInit() {
                 // Cleanup previous page behavior
                 if (typeof window.__pageCleanup === "function") {
@@ -735,10 +821,9 @@
                     window.__pageCleanup = null;
                 }
 
-                resetVideoOverlay(); // 🔥 THIS FIXES THE BUG
+                resetVideoOverlay();
 
-                const main = document.querySelector("main#app");
-                const page = main?.dataset.page || "";
+                const page = getCurrentPage();
 
                 if (page === "home") {
                     initHomeOverlay();

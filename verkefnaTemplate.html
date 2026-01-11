@@ -35,19 +35,17 @@
             id="mainNav"
             class="navbar navbar-dark fixed-top py-2 bg-transparent"
         >
-            <!-- <nav class="navbar navbar-expand-lg fixed-top" style="background: rgba(220,53,69,0.8);"> transparent navbar? -->
-
             <div class="container-fluid">
                 <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
                     <img
                         src="Assets/Img/ONETAKE LOGO.png"
                         alt="onet8k logo"
-                        style="height: 60px; width: auto"
+                        style="height: 80px; width: auto"
                     />
                 </a>
 
                 <button
-                    class="navbar-toggler"
+                    class="navbar-toggler d-md-none"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navMenu"
@@ -63,7 +61,7 @@
                         <li class="nav-item">
                             <a
                                 href="snjalltryggingar.html"
-                                class="nav-link text-light fs-3 px-3 fw-bold"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
                                 >Verkefni</a
                             >
                         </li>
@@ -71,7 +69,7 @@
                         <li class="nav-item">
                             <a
                                 href="umOkkur.html"
-                                class="nav-link text-light fs-3 px-3 fw-bold"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
                                 >Um okkur</a
                             >
                         </li>
@@ -79,7 +77,7 @@
                         <li class="nav-item">
                             <a
                                 href="index.html#hafaSamband"
-                                class="nav-link text-light fs-3 px-3 fw-bold"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
                             >
                                 Hafa samband
                             </a>
@@ -89,19 +87,45 @@
                             target="_blank"
                             class="pe-3 ps-3 text-light"
                         >
-                            <i class="bi bi-instagram fs-1"></i>
+                            <i class="bi bi-instagram fs-4"></i>
                         </a>
                         <a
                             href="https://www.tiktok.com/@onet8kmedia"
                             target="_blank"
                             class="pe-3 ps-3 text-light"
                         >
-                            <i class="bi bi-tiktok fs-1"></i>
+                            <i class="bi bi-tiktok fs-4"></i>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61586025819175"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-facebook fs-4"></i>
                         </a>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- Background video -->
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="position-fixed start-0 w-100 h-100"
+            style="top: 0px; width: 100%; object-fit: cover; z-index: -2"
+        >
+            <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4" />
+            <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4" />
+        </video>
+        <div
+            id="videoOverlay"
+            class="position-fixed top-0 start-0 w-100 h-100"
+            style="background: rgba(220, 53, 69, 0); z-index: -1"
+        ></div>
 
         <main id="app" data-page="snjalltryggingar">
             <section
@@ -251,6 +275,188 @@
                     </div>
                 </section>
             </section>
+            <section class="text-light position-relative">
+                <div class="container">
+                    <div class="project-panel text-white shadow">
+                        <div class="d-flex justify-content-center">
+                            <div class="text-start">
+                                <h1 class="fw-bold pb-1">Fleiri verkefni</h1>
+                            </div>
+                        </div>
+                        <div class="carousel-wrapper">
+                            <div
+                                id="vimeoCarousel"
+                                class="carousel slide pt-5"
+                                data-bs-ride="false"
+                            >
+                                <div class="carousel-inner position-relative">
+                                    <!-- first 3 videos active at a time-->
+                                    <div class="carousel-item active">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/hardRock.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/Verkefnasidur/hardrockcover.jpg"
+                                                        alt="Hard Rock verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>Hard Rock</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/snjalltryggingar.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/snjalltryggingThumbnail.jpg"
+                                                        alt="Sjóvá Snjalltrygginga verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>
+                                                            Sjóvá
+                                                            Snjalltryggingar
+                                                        </h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/barnvaentSveitarfelag.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.avif"
+                                                        alt="Barnvænt Sveitarfélag verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>
+                                                            Barnvænt
+                                                            Sveitarfélag
+                                                        </h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/hardRock.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/Verkefnasidur/hardrockcover.jpg"
+                                                        alt="Hard Rock verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>Hard Rock</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/snjalltryggingar.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/snjalltryggingThumbnail.jpg"
+                                                        alt="Sjóvá Snjalltrygginga verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>
+                                                            Sjóvá
+                                                            Snjalltryggingar
+                                                        </h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/songvakeppni.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/söngvakeppnis banner 3.jpg"
+                                                        alt="Söngvakeppnis verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <i
+                                                            class="bi bi-play-circle-fill"
+                                                        ></i>
+                                                        <h3>Söngvakeppnin</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls-->
+                        <button
+                            class="carousel-control-prev custom-carousel-control"
+                            type="button"
+                            data-bs-target="#vimeoCarousel"
+                            data-bs-slide="prev"
+                        >
+                            <i class="bi bi-caret-left-fill"></i>
+                        </button>
+                        <button
+                            class="carousel-control-next custom-carousel-control"
+                            type="button"
+                            data-bs-target="#vimeoCarousel"
+                            data-bs-slide="next"
+                        >
+                            <i class="bi bi-caret-right-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!-- footer -->
@@ -269,8 +475,9 @@
                             <a
                                 href="tel:+3547760957"
                                 class="text-white text-decoration-none fw-semibold small"
-                                >+354 7760957</a
                             >
+                                +354 7760957
+                            </a>
                         </div>
                     </div>
 
@@ -299,14 +506,13 @@
                         <div
                             class="d-flex justify-content-end align-items-center gap-3 flex-wrap"
                         >
-                            <!-- Hide long text CTA on phones to save space -->
+                            <!-- changed: footer CTA scrolls to form -->
                             <a
-                                href="#"
+                                href="index.html#hafaSamband"
                                 class="text-light fw-semibold text-decoration-none d-none d-sm-inline"
-                                data-bs-toggle="modal"
-                                data-bs-target="#hafaSamband"
-                                >Hafa samband</a
                             >
+                                Hafa samband
+                            </a>
 
                             <a
                                 href="https://www.instagram.com/onet8k/"
@@ -326,7 +532,6 @@
                             >
                                 <i class="bi bi-tiktok fs-5 fs-md-3"></i>
                             </a>
-
                             <!-- Back to top: keep for sm+ to avoid crowding on xs -->
                             <a
                                 href="#"
@@ -342,115 +547,160 @@
                 </div>
             </div>
         </footer>
-        <!-- Modal -->
-        <div
-            class="modal fade"
-            id="hafaSamband"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="hafaSambandTitle"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content border-0 rounded-5 overflow-hidden">
-                    <div
-                        class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3"
-                    >
-                        <h5 class="modal-title fw-bold" id="hafaSamband">
-                            Fylltu út formið og við heyrum í þér
-                        </h5>
-                        <button
-                            type="button"
-                            class="btn-close btn-close-white"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                    </div>
-
-                    <div class="modal-body bg-danger text-white p-4">
-                        <form
-                            name="contact"
-                            method="POST"
-                            action="/thankYou.html"
-                            data-netlify="true"
-                            netlify-honeypot="bot-field"
-                            accept="UTF-8"
-                            hx-boost="false"
-                        >
-                            <input
-                                type="hidden"
-                                name="form-name"
-                                value="contact"
-                            />
-                            <p style="display: none">
-                                <label
-                                    >Don't fill this out if you're human:
-                                    <input name="bot-field"
-                                /></label>
-                            </p>
-                            <div class="mb-3">
-                                <label for="nafn" class="col-form-label">
-                                    *Nafn:
-                                </label>
-                                <input
-                                    type="text"
-                                    name="nafn"
-                                    class="form-control"
-                                    id="nafn"
-                                    required
-                                />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="email" class="col-form-label">
-                                    *Email:
-                                </label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    class="form-control"
-                                    id="email"
-                                    required
-                                />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="simanumer" class="col-form-label">
-                                    Símanúmer:
-                                </label>
-                                <input
-                                    type="text"
-                                    name="simanumer"
-                                    class="form-control"
-                                    id="simanumer"
-                                />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="skilabod" class="col-form-label">
-                                    *Hvernig getum við aðstoðað?:
-                                </label>
-                                <textarea
-                                    name="skilabod"
-                                    class="form-control"
-                                    id="skilabod"
-                                    rows="5"
-                                    required
-                                ></textarea>
-                            </div>
-                            <button
-                                type="submit"
-                                class="btn w-100 fw-bold py-3 senda-btn"
-                            >
-                                Senda
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+        <script>
+            document.body.addEventListener("htmx:beforeSwap", () => {
+                const main = document.querySelector("main#app");
+                if (main) main.style.opacity = "0";
+            });
+
+            document.body.addEventListener("htmx:afterSwap", () => {
+                const main = document.querySelector("main#app");
+                if (main) {
+                    // small delay to let HTMX inject new content before fading in
+                    requestAnimationFrame(() => (main.style.opacity = "1"));
+                }
+            });
+        </script>
+        <script>
+            // Update <title> after HTMX navigation
+            document.body.addEventListener("htmx:afterOnLoad", (e) => {
+                const txt = e.detail?.xhr?.responseText;
+                if (!txt) return;
+                const doc = new DOMParser().parseFromString(txt, "text/html");
+                const t = doc.querySelector("title");
+                if (t) document.title = t.textContent;
+            });
+
+            // Scroll blur for HOME (video background)
+            function initHomeOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                const video = document.querySelector("video");
+                if (!overlay || !video) return;
+
+                // Make sure video is visible on home
+                video.style.display = "";
+
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const y = window.scrollY || 0;
+                        const opacity = Math.min(y / 700, 0.7);
+                        const blur = Math.min(y / 100, 10);
+                        overlay.style.background = `rgba(220,53,69,${opacity})`;
+                        overlay.style.backdropFilter = `blur(${blur}px)`;
+                        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+                        ticking = false;
+                    });
+                };
+
+                window.addEventListener("scroll", onScroll, { passive: true });
+                window.__pageCleanup = () =>
+                    window.removeEventListener("scroll", onScroll);
+                onScroll();
+            }
+
+            // Static max blur for UM OKKUR (video background)
+            function initUmOkkurOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                const video = document.querySelector("video");
+                if (!overlay || !video) return;
+
+                // Make sure video is visible on umOkkur
+                video.style.display = "";
+
+                overlay.style.background = `rgba(220,53,69,0.7)`;
+                overlay.style.backdropFilter = `blur(10px)`;
+                overlay.style.webkitBackdropFilter = `blur(10px)`;
+
+                // no scroll listener here
+                window.__pageCleanup = null;
+            }
+
+            // Photo background for SNJALLTRYGGINGAR
+            function resetVideoOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                if (!overlay) return;
+
+                overlay.style.background = "rgba(220,53,69,0)";
+                overlay.style.backdropFilter = "none";
+                overlay.style.webkitBackdropFilter = "none";
+            }
+
+            function getCurrentPage() {
+                return (
+                    document.querySelector("#app [data-page]")?.dataset.page ||
+                    document.querySelector("main#app")?.dataset.page ||
+                    (location.pathname.endsWith("umOkkur.html")
+                        ? "umOkkur"
+                        : "home")
+                );
+            }
+
+            function runPageInit() {
+                // Cleanup previous page behavior
+                if (typeof window.__pageCleanup === "function") {
+                    try {
+                        window.__pageCleanup();
+                    } catch {}
+                    window.__pageCleanup = null;
+                }
+
+                resetVideoOverlay();
+
+                const page = getCurrentPage();
+
+                if (page === "home") {
+                    initHomeOverlay();
+                } else if (page === "umOkkur") {
+                    initUmOkkurOverlay();
+                }
+            }
+
+            // Manual scroll restoration so our own logic is in control
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+
+            // Handle scrolling to #hafaSamband on HOME after HTMX swap
+            document.body.addEventListener("htmx:afterSettle", () => {
+                const main = document.querySelector("main#app");
+                if (!main) return;
+
+                const page = main.dataset.page;
+                const hash = window.location.hash;
+
+                if (page === "home") {
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            if (hash && document.querySelector(hash)) {
+                                const el = document.querySelector(hash);
+                                el.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start",
+                                });
+                            } else {
+                                window.scrollTo(0, 0);
+                            }
+                        });
+                    });
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", runPageInit);
+
+            document.body.addEventListener("htmx:afterSwap", (e) => {
+                if (e.target.id === "app") {
+                    // Wait one frame so HTMX can inject the new content and dataset
+                    requestAnimationFrame(() => runPageInit());
+                }
+            });
+
+            document.body.addEventListener("htmx:historyRestore", runPageInit);
+        </script>
         <script>
             (function () {
                 const THRESHOLD = 50;
@@ -493,32 +743,6 @@
                     requestAnimationFrame(applyNavState),
                 );
             })();
-        </script>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const overlay = document.getElementById("photoOverlay");
-                if (!overlay) return;
-
-                let ticking = false;
-
-                function onScroll() {
-                    if (ticking) return;
-                    ticking = true;
-                    requestAnimationFrame(() => {
-                        const y = window.scrollY || 0;
-                        const opacity = Math.min(y / 700, 0.7);
-                        const blur = Math.min(y / 100, 10);
-                        overlay.style.background = `rgba(220,53,69,${opacity})`;
-                        overlay.style.backdropFilter = `blur(${blur}px)`;
-                        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
-                        ticking = false;
-                    });
-                }
-
-                window.addEventListener("scroll", onScroll, { passive: true });
-                onScroll();
-            });
         </script>
 
         <script
