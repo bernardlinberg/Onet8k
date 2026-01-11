@@ -1,573 +1,891 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ONET8K</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body hx-boost="true" hx-push-url="true" hx-select="main#app" hx-swap="outerHTML" hx-target="main#app">
+        <title>ONET8K</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="Style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        />
+        <link rel="prefetch" href="umOkkur.html" as="document" />
+    </head>
 
-     <!-- NAVBAR -->
-    <nav id="mainNav" class="navbar navbar-dark fixed-top py-2 bg-transparent">
-        <div class="container-fluid">
-            <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
-              <img src="Assets/Img/ONETAKE LOGO.png" alt="onet8k logo" style="height: 80px; width: auto;">
-            </a>
-               
-            <button class="navbar-toggler d-md-none" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navMenu"
-                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-
-              <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                  <a href="snjalltryggingar.html" class="nav-link text-light fs-5 px-3 fw-bold">Verkefni</a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="umOkkur.html" class="nav-link text-light fs-5 px-3 fw-bold">Um okkur</a>
-                </li>
-
-                <li class="nav-item">
-                  <a href="index.html#hafaSamband"
-                    class="nav-link text-light fs-5 px-3 fw-bold">
-                    Hafa samband
-                  </a>
-                </li>
-                <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
-                  <i class="bi bi-instagram fs-4"></i>
+    <body
+        hx-boost="true"
+        hx-push-url="true"
+        hx-select="main#app"
+        hx-swap="outerHTML"
+        hx-target="main#app"
+    >
+        <!-- NAVBAR -->
+        <nav
+            id="mainNav"
+            class="navbar navbar-dark fixed-top py-2 bg-transparent"
+        >
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
+                    <img
+                        src="Assets/Img/ONETAKE LOGO.png"
+                        alt="onet8k logo"
+                        style="height: 80px; width: auto"
+                    />
                 </a>
-                  <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="pe-3 ps-3 text-light">
-                    <i class="bi bi-tiktok fs-4"></i>
-                  </a>
-                  <a href="https://www.facebook.com/profile.php?id=61586025819175" target="_blank" class="pe-3 ps-3 text-light">
-                    <i class="bi bi-facebook fs-4"></i>
-                  </a>
-                </a>
-              </ul>
 
+                <button
+                    class="navbar-toggler d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                href="snjalltryggingar.html"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
+                                >Verkefni</a
+                            >
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                href="umOkkur.html"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
+                                >Um okkur</a
+                            >
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                href="index.html#hafaSamband"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
+                            >
+                                Hafa samband
+                            </a>
+                        </li>
+                        <a
+                            href="https://www.instagram.com/onet8k/"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a
+                            href="https://www.tiktok.com/@onet8kmedia"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-tiktok fs-4"></i>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61586025819175"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
 
-    </nav> 
+        <!-- Background video -->
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="position-fixed start-0 w-100 h-100"
+            style="top: 0px; width: 100%; object-fit: cover; z-index: -2"
+        >
+            <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4" />
+            <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4" />
+        </video>
+        <!-- Red Overlay-->
 
+        <div
+            id="videoOverlay"
+            class="position-fixed top-0 start-0 w-100 h-100"
+            style="background: rgba(220, 53, 69, 0); z-index: -1"
+        ></div>
 
+        <!-- Landing Page -->
+        <main id="app" data-page="home">
+            <section
+                class="position-relative text-center text-sm-start"
+                style="min-height: calc(100vh - 80px)"
+            >
+                <!-- Content container -->
+                <div
+                    class="container-fluid d-flex flex-column justify-content-end align-items-start min-vh-100 text-light pt-5"
+                >
+                    <div class="pb-4 ps-3 ps-md-5">
+                        <h3 class="display-3 fw-bold">Fleiri hugmyndir,</h3>
+                        <h3 class="display-3 fw-bold">meiri metnaður,</h3>
+                        <h3 class="display-3 fw-bold pb-4">betri þjónusta.</h3>
 
-    <!-- Background video -->
-  <video autoplay loop muted playsinline preload="auto"
-         class="position-fixed start-0 w-100 h-100"
-         style="top: 0px; width: 100%; object-fit: cover; z-index:-2;">
-    <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4">
-    <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4">
-  </video>   
-  <!-- Red Overlay-->
-  
-  <div id="videoOverlay" class="position-fixed top-0 start-0 w-100 h-100" style="background: rgba(220,53,69,0); z-index: -1;"></div>
-
-  <!-- Landing Page -->
-  <main id="app" data-page="home">
-  <section class="position-relative text-center text-sm-start" style="min-height: calc(100vh - 80px)">
-    
-  <!-- Content container -->
-  <div class="container-fluid d-flex flex-column justify-content-end align-items-start min-vh-100 text-light pt-5">
-    <div class="pb-4 ps-3 ps-md-5">
-      <h3 class="display-3 fw-bold">Fleiri hugmyndir,</h3>
-      <h3 class="display-3 fw-bold">meiri metnaður,</h3>
-      <h3 class="display-3 fw-bold pb-4">betri þjónusta.</h3>
-      
-      <a href="#hafaSamband"
-        class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3 mb-10"
-        hx-boost="false">
-        Hafa Samband
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- vimeo carousel section-->
-
-<section class="mt-10">
-</section>
-
-<section class=" text-light p-5 position-relative">
-  <div class="container">
-    <div class="project-panel text-white shadow">
-      <div class="d-flex justify-content-center">
-        
-        <div class="text-start">
-          <h1 class="fw-bold pb-1">Hvað getum við gert fyrir þig?</h1>
-          <h3>Það er ekki nóg að bjóða á bestu vöruna, fólk</h3>
-          <h3>þarf að vita af því.</h3>
-          <h3>Við hjálpum þér að komaþér á framfæri með</h3>
-          <h3>frumlegum og sérsniðuðum lausnum.</h3>
-        </div>
-
-      </div>
-
-      <div id="vimeoCarousel" class="carousel slide pt-5" data-bs-ride="false">
-        <div class="carousel-inner">
-
-          <!-- first 3 videos active at a time-->
-            <div class="carousel-item active">
-              <div class="row g-3">
-                <div class="col-12 col-md-4">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://player.vimeo.com/video/1119859948" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+                        <a
+                            href="#hafaSamband"
+                            class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3 mb-10"
+                            hx-boost="false"
+                        >
+                            Hafa Samband
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://player.vimeo.com/video/8747975" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+            </section>
+
+            <!-- vimeo carousel section-->
+
+            <section class="mt-10"></section>
+
+            <section class="text-light p-5 position-relative">
+                <div class="container">
+                    <div class="project-panel text-white shadow">
+                        <div class="d-flex justify-content-center">
+                            <div class="text-start">
+                                <h1 class="fw-bold pb-1">
+                                    Hvað getum við gert fyrir þig?$
+                                </h1>
+                                <h3>
+                                    Það er ekki nóg að bjóða á bestu vöruna,
+                                    fólk
+                                </h3>
+                                <h3>þarf að vita af því.</h3>
+                                <h3>
+                                    Við hjálpum þér að komaþér á framfæri með
+                                </h3>
+                                <h3>frumlegum og sérsniðuðum lausnum.</h3>
+                            </div>
+                        </div>
+
+                        <div
+                            id="vimeoCarousel"
+                            class="carousel slide pt-5"
+                            data-bs-ride="false"
+                        >
+                            <div class="carousel-inner">
+                                <!-- first 3 videos active at a time-->
+                                <div class="carousel-item active">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-4">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe
+                                                    src="https://player.vimeo.com/video/1119859948"
+                                                    frameborder="0"
+                                                    allow="fullscreen"
+                                                    loading="lazy"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe
+                                                    src="https://player.vimeo.com/video/8747975"
+                                                    frameborder="0"
+                                                    allow="fullscreen"
+                                                    loading="lazy"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe
+                                                    src="https://player.vimeo.com/video/397964830"
+                                                    frameborder="0"
+                                                    allow="fullscreen"
+                                                    loading="lazy"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row g-3">
+                                    <div class="col-12 col-md-4">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe
+                                                src="https://player.vimeo.com/video/196479572"
+                                                frameborder="0"
+                                                allow="fullscreen"
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe
+                                                src="https://player.vimeo.com/video/199384374"
+                                                frameborder="0"
+                                                allow="fullscreen"
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <div class="ratio ratio-16x9">
+                                            <iframe
+                                                src="https://player.vimeo.com/video/108742121"
+                                                frameborder="0"
+                                                allow="fullscreen"
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls-->
+                        <button
+                            class="carousel-control-prev custom-carousel-control"
+                            type="button"
+                            data-bs-target="#vimeoCarousel"
+                            data-bs-slide="prev"
+                        >
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button
+                            class="carousel-control-next custom-carousel-control"
+                            type="button"
+                            data-bs-target="#vimeoCarousel"
+                            data-bs-slide="next"
+                        >
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
                 </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://player.vimeo.com/video/397964830" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
+            </section>
+            <section class="mb-15"></section>
+            <section class="text-light position-relative mt-5">
+                <div class="text-center">
+                    <h1 class="mb-4 fw-bold pb-1 pt-5">Komdu í klúbbinn!</h1>
+                    <div class="logos">
+                        <div class="logos-slide justify-content-center gap-5">
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png"
+                                alt=""
+                                class="pipar"
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png"
+                                alt=""
+                            />
+                            <!-- Repeat -->
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png"
+                                alt=""
+                                class="pipar"
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="logos-slide justify-content-center gap-5">
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png"
+                                alt="pipar"
+                                class="pipar"
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png"
+                                alt=""
+                            />
+                            <!-- Repeat -->
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png"
+                                alt=""
+                                class="pipar"
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png"
+                                alt=""
+                            />
+                            <img
+                                src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <h1 class="mb-4 fw-bold pt-1">
+                        <a
+                            href="#hafaSamband"
+                            class="text-light text-decoration-none"
+                            hx-boost="false"
+                        >
+                            Heyrðu í okkur
+                        </a>
+                    </h1>
+                    <h5 class="fw-normal">(við bítum oftast ekki)</h5>
                 </div>
-              </div>
+            </section>
+
+            <section id="hafaSamband" class="py-5">
+                <div class="container d-flex justify-content-center">
+                    <div
+                        class="modal-content border-0 rounded-5 overflow-hidden"
+                        style="max-width: 700px"
+                    >
+                        <div
+                            class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3"
+                        >
+                            <h5 class="modal-title fw-bold">
+                                Fylltu út formið og við heyrum í þér
+                            </h5>
+                        </div>
+
+                        <div class="modal-body bg-danger text-white p-4">
+                            <form
+                                name="contact"
+                                method="POST"
+                                action="/thankYou.html"
+                                data-netlify="true"
+                                netlify-honeypot="bot-field"
+                                accept="UTF-8"
+                                hx-boost="false"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="form-name"
+                                    value="contact"
+                                />
+                                <p style="display: none">
+                                    <label
+                                        >Don't fill this out if you're human:
+                                        <input name="bot-field" />
+                                    </label>
+                                </p>
+
+                                <div class="mb-3">
+                                    <label for="nafn" class="col-form-label">
+                                        *Nafn:
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="nafn"
+                                        class="form-control"
+                                        id="nafn"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label">
+                                        *Email:
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        class="form-control"
+                                        id="email"
+                                        required
+                                    />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label
+                                        for="simanumer"
+                                        class="col-form-label"
+                                    >
+                                        Símanúmer:
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="simanumer"
+                                        class="form-control"
+                                        id="simanumer"
+                                    />
+                                </div>
+
+                                <div class="mb-3">
+                                    <label
+                                        for="skilabod"
+                                        class="col-form-label"
+                                    >
+                                        *Hvernig getum við aðstoðað?:
+                                    </label>
+                                    <textarea
+                                        name="skilabod"
+                                        class="form-control"
+                                        id="skilabod"
+                                        rows="5"
+                                        required
+                                    ></textarea>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    class="btn w-100 fw-bold py-3 senda-btn"
+                                >
+                                    Senda
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="footer bg-danger text-white py-4">
+            <div class="container-fluid px-2 px-md-3">
+                <div class="row g-2 align-items-center">
+                    <!-- LEFT (address + phone) -->
+                    <div class="col-4 ps-md-5">
+                        <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
+                        <div class="text-start d-none d-sm-block small">
+                            <p class="mb-1 fw-bold">Onetake ehf.</p>
+                            <p class="mb-1 fw-bold">Hafnargata,</p>
+                            <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
+                        </div>
+                        <div class="text-center text-md-start">
+                            <a
+                                href="tel:+3547760957"
+                                class="text-white text-decoration-none fw-semibold small"
+                            >
+                                +354 7760957
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CENTER (logo) -->
+                    <div class="col-4 text-center">
+                        <!-- Smaller logo on phones, bigger on md+ -->
+                        <img
+                            src="Assets/Img/ONETAKE LOGO.png"
+                            alt="ONET8K"
+                            class="d-inline d-md-none"
+                            style="height: 40px; width: auto"
+                        />
+                        <img
+                            src="Assets/Img/ONETAKE LOGO.png"
+                            alt="ONET8K"
+                            class="d-none d-md-inline"
+                            style="height: 80px; width: auto"
+                        />
+                        <div
+                            class="small opacity-75 mt-1 d-none d-sm-block"
+                        ></div>
+                    </div>
+
+                    <!-- RIGHT (CTA + icons) -->
+                    <div class="col-4 pe-md-0">
+                        <div
+                            class="d-flex justify-content-end align-items-center gap-3 flex-wrap"
+                        >
+                            <!-- changed: footer CTA scrolls to form -->
+                            <a
+                                href="index.html#hafaSamband"
+                                class="text-light fw-semibold text-decoration-none d-none d-sm-inline"
+                            >
+                                Hafa samband
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/onet8k/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-light"
+                                aria-label="instagram"
+                            >
+                                <i class="bi bi-instagram fs-5 fs-md-3"></i>
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@onet8kmedia"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-light"
+                                aria-label="facebook"
+                            >
+                                <i class="bi bi-tiktok fs-5 fs-md-3"></i>
+                            </a>
+                            <!-- Back to top: keep for sm+ to avoid crowding on xs -->
+                            <a
+                                href="#"
+                                class="d-none d-sm-inline"
+                                aria-label="Back to top"
+                            >
+                                <i
+                                    class="bi bi-arrow-up-circle h4 text-light"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div> 
-        <div class="carousel-item">
-          <div class="row g-3">
-              <div class="col-12 col-md-4">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://player.vimeo.com/video/196479572" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://player.vimeo.com/video/199384374" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
-                </div>
-              </div>
-              <div class="col-12 col-md-4">
-                <div class="ratio ratio-16x9">
-                  <iframe src="https://player.vimeo.com/video/108742121" frameborder="0" allow="fullscreen" loading="lazy"></iframe>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      <!-- Carousel Controls-->
-      <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#vimeoCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#vimeoCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </div>
-</section>
-<section class="mb-15">
+        </footer>
 
-</section>
-<section class="text-light position-relative mt-5">
-  <div class="text-center">
-    <h1 class="mb-4 fw-bold pb-1 pt-5">
-      Komdu í klúbbinn!
-    </h1>
-    <div class="logos">
-      <div class="logos-slide justify-content-center gap-5">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
-        <!-- Repeat -->
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
-      </div>
-      <div class="logos-slide justify-content-center gap-5">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="pipar" class="pipar">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
-        <!-- Repeat -->
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Algalife-logo-hvitt-2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/good good.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/nordic live events.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/Pipar_logo_white.png" alt="" class="pipar">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png" alt="">
-        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="">
-      </div>
-    </div>
-    <h1 class="mb-4 fw-bold pt-1">
-      <a href="#hafaSamband" class="text-light text-decoration-none" hx-boost="false">
-        Heyrðu í okkur
-      </a>
-    </h1>
-    <h5 class="fw-normal">(við bítum oftast ekki)</h5>
-  </div>
+        <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+        <script>
+            document.body.addEventListener("htmx:beforeSwap", () => {
+                const main = document.querySelector("main#app");
+                if (main) main.style.opacity = "0";
+            });
 
-</section>
+            document.body.addEventListener("htmx:afterSwap", () => {
+                const main = document.querySelector("main#app");
+                if (main) {
+                    // small delay to let HTMX inject new content before fading in
+                    requestAnimationFrame(() => (main.style.opacity = "1"));
+                }
+            });
+        </script>
+        <script>
+            // Update <title> after HTMX navigation
+            document.body.addEventListener("htmx:afterOnLoad", (e) => {
+                const txt = e.detail?.xhr?.responseText;
+                if (!txt) return;
+                const doc = new DOMParser().parseFromString(txt, "text/html");
+                const t = doc.querySelector("title");
+                if (t) document.title = t.textContent;
+            });
 
-<section id="hafaSamband" class="py-5">
-  <div class="container d-flex justify-content-center">
-    <div class="modal-content border-0 rounded-5 overflow-hidden" style="max-width: 700px;">
-      <div class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3">
-        <h5 class="modal-title fw-bold">
-          Fylltu út formið og við heyrum í þér
-        </h5>
-      </div>
+            // Scroll blur for HOME (video background)
+            function initHomeOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                const video = document.querySelector("video");
+                if (!overlay || !video) return;
 
-      <div class="modal-body bg-danger text-white p-4">
-        <form name="contact" method="POST" action="/thankYou.html"
-            data-netlify="true" netlify-honeypot="bot-field"
-            accept="UTF-8" hx-boost="false">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none">
-            <label>Don't fill this out if you're human:
-              <input name="bot-field">
-            </label>
-          </p>
+                // Make sure video is visible on home
+                video.style.display = "";
 
-          <div class="mb-3">
-            <label for="nafn" class="col-form-label">
-              *Nafn:
-            </label>
-            <input type="text" name="nafn" class="form-control" id="nafn" required>
-          </div>
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const y = window.scrollY || 0;
+                        const opacity = Math.min(y / 700, 0.7);
+                        const blur = Math.min(y / 100, 10);
+                        overlay.style.background = `rgba(220,53,69,${opacity})`;
+                        overlay.style.backdropFilter = `blur(${blur}px)`;
+                        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+                        ticking = false;
+                    });
+                };
 
-          <div class="mb-3">
-            <label for="email" class="col-form-label">
-              *Email:
-            </label>
-            <input type="email" name="email" class="form-control" id="email" required>
-          </div>
+                window.addEventListener("scroll", onScroll, { passive: true });
+                window.__pageCleanup = () =>
+                    window.removeEventListener("scroll", onScroll);
+                onScroll();
+            }
 
-          <div class="mb-3">
-            <label for="simanumer" class="col-form-label">
-              Símanúmer:
-            </label>
-            <input type="text" name="simanumer" class="form-control" id="simanumer">
-          </div>
+            // Static max blur for UM OKKUR (video background)
+            function initUmOkkurOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                const video = document.querySelector("video");
+                if (!overlay || !video) return;
 
-          <div class="mb-3">
-            <label for="skilabod" class="col-form-label">
-              *Hvernig getum við aðstoðað?:
-            </label>
-            <textarea name="skilabod" class="form-control" id="skilabod" rows="5" required></textarea>
-          </div>
+                // Make sure video is visible on umOkkur
+                video.style.display = "";
 
-          <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">
-            Senda
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+                overlay.style.background = `rgba(220,53,69,0.7)`;
+                overlay.style.backdropFilter = `blur(10px)`;
+                overlay.style.webkitBackdropFilter = `blur(10px)`;
 
-</main>
+                // no scroll listener here
+                window.__pageCleanup = null;
+            }
 
-<!-- footer -->
-<footer class="footer bg-danger text-white py-4">
-  <div class="container-fluid px-2 px-md-3">
-    <div class="row g-2 align-items-center">
+            // Photo background for SNJALLTRYGGINGAR
+            function initSnjallOverlay() {
+                const video = document.querySelector("video");
+                const videoOverlay = document.getElementById("videoOverlay");
+                const photoOverlay = document.getElementById("photoOverlay");
 
-      <!-- LEFT (address + phone) -->
-      <div class="col-4 ps-md-5">
-        <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
-        <div class="text-start d-none d-sm-block small">
-          <p class="mb-1 fw-bold">Onetake ehf.</p>
-          <p class="mb-1 fw-bold">Hafnargata,</p>
-          <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
-        </div>
-        <div class="text-center text-md-start">
-          <a href="tel:+3547760957" class="text-white text-decoration-none fw-semibold small">
-            +354 7760957
-          </a>
-        </div>
-      </div>
+                // Hide the video when on snjalltryggingar
+                if (video) video.style.display = "none";
 
-      <!-- CENTER (logo) -->
-      <div class="col-4 text-center">
-        <!-- Smaller logo on phones, bigger on md+ -->
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
-          class="d-inline d-md-none" style="height:40px;width:auto;">
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
-          class="d-none d-md-inline" style="height:80px;width:auto;">
-        <div class="small opacity-75 mt-1 d-none d-sm-block"></div>
-      </div>
+                // Clear any styling on the videoOverlay
+                if (videoOverlay) {
+                    videoOverlay.style.background = "";
+                    videoOverlay.style.backdropFilter = "";
+                    videoOverlay.style.webkitBackdropFilter = "";
+                }
 
-      <!-- RIGHT (CTA + icons) -->
-      <div class="col-4 pe-md-0">
-        <div class="d-flex justify-content-end align-items-center gap-3 flex-wrap">
-          <!-- changed: footer CTA scrolls to form -->
-          <a href="index.html#hafaSamband"
-            class="text-light fw-semibold text-decoration-none d-none d-sm-inline">
-            Hafa samband
-          </a>
+                if (!photoOverlay) {
+                    window.__pageCleanup = null;
+                    return;
+                }
 
-          <a href="https://www.instagram.com/onet8k/" target="_blank" rel="noopener noreferrer"
-             class="text-light" aria-label="instagram">
-            <i class="bi bi-instagram fs-5 fs-md-3"></i>
-          </a>
-          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" rel="noopener noreferrer"
-             class="text-light" aria-label="facebook">
-            <i class="bi bi-tiktok fs-5 fs-md-3"></i>
-          </a>
-          <!-- Back to top: keep for sm+ to avoid crowding on xs -->
-          <a href="#" class="d-none d-sm-inline" aria-label="Back to top">
-            <i class="bi bi-arrow-up-circle h4 text-light"></i>
-          </a>
-        </div>
-      </div>
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const y = window.scrollY || 0;
+                        const opacity = Math.min(y / 700, 0.7);
+                        const blur = Math.min(y / 100, 10);
+                        photoOverlay.style.background = `rgba(220,53,69,${opacity})`;
+                        photoOverlay.style.backdropFilter = `blur(${blur}px)`;
+                        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+                        ticking = false;
+                    });
+                };
 
-    </div>
-  </div>
-</footer>
+                window.addEventListener("scroll", onScroll, { passive: true });
 
+                // Cleanup when leaving snjalltryggingar
+                window.__pageCleanup = () => {
+                    window.removeEventListener("scroll", onScroll);
+                    // show the video again when we leave this page
+                    if (video) video.style.display = "";
+                };
 
-<script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
-<script>
-document.body.addEventListener('htmx:beforeSwap', () => {
-  const main = document.querySelector('main#app');
-  if (main) main.style.opacity = '0';
-});
+                onScroll();
+            }
 
-document.body.addEventListener('htmx:afterSwap', () => {
-  const main = document.querySelector('main#app');
-  if (main) {
-    // small delay to let HTMX inject new content before fading in
-    requestAnimationFrame(() => main.style.opacity = '1');
-  }
-});
-</script>
-<script>
-  // Update <title> after HTMX navigation
-  document.body.addEventListener('htmx:afterOnLoad', (e) => {
-    const txt = e.detail?.xhr?.responseText;
-    if (!txt) return;
-    const doc = new DOMParser().parseFromString(txt, 'text/html');
-    const t = doc.querySelector('title');
-    if (t) document.title = t.textContent;
-  });
+            function runPageInit() {
+                // Cleanup previous page behavior
+                if (typeof window.__pageCleanup === "function") {
+                    try {
+                        window.__pageCleanup();
+                    } catch {}
+                    window.__pageCleanup = null;
+                }
 
-  // Scroll blur for HOME (video background)
-  function initHomeOverlay() {
-    const overlay = document.getElementById('videoOverlay');
-    const video   = document.querySelector('video');
-    if (!overlay || !video) return;
+                const main = document.querySelector("main#app");
+                const page = main?.dataset.page || "";
 
-    // Make sure video is visible on home
-    video.style.display = '';
+                if (page === "home") {
+                    initHomeOverlay();
+                } else if (page === "umOkkur") {
+                    initUmOkkurOverlay();
+                } else if (page === "snjalltryggingar") {
+                    initSnjallOverlay();
+                } else {
+                    // Default: clear video overlay, ensure video is visible
+                    const overlay = document.getElementById("videoOverlay");
+                    const video = document.querySelector("video");
+                    if (overlay) {
+                        overlay.style.background = "";
+                        overlay.style.backdropFilter = "";
+                        overlay.style.webkitBackdropFilter = "";
+                    }
+                    if (video) video.style.display = "";
+                }
+            }
 
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY || 0;
-        const opacity = Math.min(y / 700, 0.7);
-        const blur    = Math.min(y / 100, 10);
-        overlay.style.background        = `rgba(220,53,69,${opacity})`;
-        overlay.style.backdropFilter    = `blur(${blur}px)`;
-        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
-        ticking = false;
-      });
-    };
+            // Manual scroll restoration so our own logic is in control
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.__pageCleanup = () => window.removeEventListener('scroll', onScroll);
-    onScroll();
-  }
+            // Handle scrolling to #hafaSamband on HOME after HTMX swap
+            document.body.addEventListener("htmx:afterSettle", () => {
+                const main = document.querySelector("main#app");
+                if (!main) return;
 
-  // Static max blur for UM OKKUR (video background)
-  function initUmOkkurOverlay() {
-    const overlay = document.getElementById('videoOverlay');
-    const video   = document.querySelector('video');
-    if (!overlay || !video) return;
+                const page = main.dataset.page;
+                const hash = window.location.hash;
 
-    // Make sure video is visible on umOkkur
-    video.style.display = '';
+                if (page === "home") {
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            if (hash && document.querySelector(hash)) {
+                                const el = document.querySelector(hash);
+                                el.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start",
+                                });
+                            } else {
+                                window.scrollTo(0, 0);
+                            }
+                        });
+                    });
+                }
+            });
 
-    overlay.style.background        = `rgba(220,53,69,0.7)`;
-    overlay.style.backdropFilter    = `blur(10px)`;
-    overlay.style.webkitBackdropFilter = `blur(10px)`;
+            document.addEventListener("DOMContentLoaded", runPageInit);
 
-    // no scroll listener here
-    window.__pageCleanup = null;
-  }
+            document.body.addEventListener("htmx:afterSwap", (e) => {
+                if (e.target.id === "app") {
+                    // Wait one frame so HTMX can inject the new content and dataset
+                    requestAnimationFrame(() => runPageInit());
+                }
+            });
 
-  // Photo background for SNJALLTRYGGINGAR
-  function initSnjallOverlay() {
-    const video        = document.querySelector('video');
-    const videoOverlay = document.getElementById('videoOverlay');
-    const photoOverlay = document.getElementById('photoOverlay');
+            document.body.addEventListener("htmx:historyRestore", runPageInit);
+        </script>
+        <script>
+            (function () {
+                const THRESHOLD = 50;
 
-    // Hide the video when on snjalltryggingar
-    if (video) video.style.display = 'none';
+                function applyNavState() {
+                    const nav = document.getElementById("mainNav");
+                    const page =
+                        document.querySelector("main#app")?.dataset.page || "";
+                    if (!nav) return;
 
-    // Clear any styling on the videoOverlay
-    if (videoOverlay) {
-      videoOverlay.style.background        = '';
-      videoOverlay.style.backdropFilter    = '';
-      videoOverlay.style.webkitBackdropFilter = '';
-    }
+                    if (page === "home") {
+                        if (
+                            (window.scrollY ||
+                                document.documentElement.scrollTop ||
+                                0) > THRESHOLD
+                        ) {
+                            nav.classList.add("scrolled");
+                        } else {
+                            nav.classList.remove("scrolled");
+                        }
+                    } else {
+                        nav.classList.add("scrolled");
+                    }
+                }
 
-    if (!photoOverlay) {
-      window.__pageCleanup = null;
-      return;
-    }
+                document.addEventListener("DOMContentLoaded", applyNavState);
 
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY || 0;
-        const opacity = Math.min(y / 700, 0.7);
-        const blur    = Math.min(y / 100, 10);
-        photoOverlay.style.background        = `rgba(220,53,69,${opacity})`;
-        photoOverlay.style.backdropFilter    = `blur(${blur}px)`;
-        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
-        ticking = false;
-      });
-    };
+                window.addEventListener("scroll", applyNavState, {
+                    passive: true,
+                });
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+                document.body.addEventListener("htmx:afterSwap", (e) => {
+                    if (e.target?.id === "app")
+                        requestAnimationFrame(applyNavState);
+                });
+                document.body.addEventListener("htmx:historyRestore", () =>
+                    requestAnimationFrame(applyNavState),
+                );
+                document.body.addEventListener("htmx:afterSettle", () =>
+                    requestAnimationFrame(applyNavState),
+                );
+            })();
+        </script>
 
-    // Cleanup when leaving snjalltryggingar
-    window.__pageCleanup = () => {
-      window.removeEventListener('scroll', onScroll);
-      // show the video again when we leave this page
-      if (video) video.style.display = '';
-    };
-
-    onScroll();
-  }
-
-  function runPageInit() {
-    // Cleanup previous page behavior
-    if (typeof window.__pageCleanup === 'function') {
-      try { window.__pageCleanup(); } catch {}
-      window.__pageCleanup = null;
-    }
-
-    const main = document.querySelector('main#app');
-    const page = main?.dataset.page || '';
-
-    if (page === 'home') {
-      initHomeOverlay();
-    } else if (page === 'umOkkur') {
-      initUmOkkurOverlay();
-    } else if (page === 'snjalltryggingar') {
-      initSnjallOverlay();
-    } else {
-      // Default: clear video overlay, ensure video is visible
-      const overlay = document.getElementById('videoOverlay');
-      const video   = document.querySelector('video');
-      if (overlay) {
-        overlay.style.background        = '';
-        overlay.style.backdropFilter    = '';
-        overlay.style.webkitBackdropFilter = '';
-      }
-      if (video) video.style.display = '';
-    }
-  }
-
-  // Manual scroll restoration so our own logic is in control
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-
-  // Handle scrolling to #hafaSamband on HOME after HTMX swap
-  document.body.addEventListener('htmx:afterSettle', () => {
-    const main = document.querySelector('main#app');
-    if (!main) return;
-
-    const page = main.dataset.page;
-    const hash = window.location.hash;
-
-    if (page === 'home') {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          if (hash && document.querySelector(hash)) {
-            const el = document.querySelector(hash);
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          } else {
-            window.scrollTo(0, 0);
-          }
-        });
-      });
-    }
-  });
-
-  document.addEventListener('DOMContentLoaded', runPageInit);
-
-  document.body.addEventListener('htmx:afterSwap', (e) => {
-    if (e.target.id === 'app') {
-      // Wait one frame so HTMX can inject the new content and dataset
-      requestAnimationFrame(() => runPageInit());
-    }
-  });
-
-  document.body.addEventListener('htmx:historyRestore', runPageInit);
-</script>
-<script>
-  (function () {
-    const THRESHOLD = 50;
-
-    function applyNavState() {
-      const nav  = document.getElementById('mainNav');
-      const page = document.querySelector('main#app')?.dataset.page || '';
-      if (!nav) return;
-
-      if (page === 'home') {
-        if ((window.scrollY || document.documentElement.scrollTop || 0) > THRESHOLD) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      } else {
-        nav.classList.add('scrolled');
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', applyNavState);
-
-    window.addEventListener('scroll', applyNavState, { passive: true });
-
-    document.body.addEventListener('htmx:afterSwap',  e => { if (e.target?.id === 'app') requestAnimationFrame(applyNavState); });
-    document.body.addEventListener('htmx:historyRestore', () => requestAnimationFrame(applyNavState));
-    document.body.addEventListener('htmx:afterSettle', () => requestAnimationFrame(applyNavState));
-  })();
-</script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-</body>
-
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

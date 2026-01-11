@@ -1,0 +1,18 @@
+{
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html",
+        "bracketSameLine": false,
+        "tabWidth": 4
+      }
+    }
+  ]
+}

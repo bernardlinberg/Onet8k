@@ -8,3 +8,4 @@ Thumbs.db
 .netlify/ 
 # Logs (just in case) 
 *.log
+node_modules/

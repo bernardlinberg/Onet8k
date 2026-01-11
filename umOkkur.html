@@ -1,506 +1,732 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ONET8K</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-<body hx-boost="true" hx-push-url="true" hx-select="main#app" hx-swap="outerHTML" hx-target="main#app">
-  <!-- NAVBAR -->
-  <nav id="mainNav" class="navbar navbar-dark fixed-top py-2 bg-transparent">
-    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="onet8k logo" style="height: 60px; width: auto;">
-      </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <button class="navbar-toggler d-md-none" type="button"
-          data-bs-toggle="collapse" data-bs-target="#navMenu"
-          aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
+        <title>ONET8K</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="Style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        />
+    </head>
+    <body
+        hx-boost="true"
+        hx-push-url="true"
+        hx-select="main#app"
+        hx-swap="outerHTML"
+        hx-target="main#app"
+    >
+        <!-- NAVBAR -->
+        <nav
+            id="mainNav"
+            class="navbar navbar-dark fixed-top py-2 bg-transparent"
+        >
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand ps-5 fw-bold fs-1">
+                    <img
+                        src="Assets/Img/ONETAKE LOGO.png"
+                        alt="onet8k logo"
+                        style="height: 80px; width: auto"
+                    />
+                </a>
 
-      <div class="collapse navbar-collapse" id="navMenu">
+                <button
+                    class="navbar-toggler d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="snjalltryggingar.html" class="nav-link text-light fs-3 px-3 fw-bold">Verkefni</a>
-          </li>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a
+                                href="snjalltryggingar.html"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
+                                >Verkefni</a
+                            >
+                        </li>
 
-          <li class="nav-item">
-            <a href="umOkkur.html" class="nav-link text-light fs-3 px-3 fw-bold">Um okkur</a>
-          </li>
+                        <li class="nav-item">
+                            <a
+                                href="umOkkur.html"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
+                                >Um okkur</a
+                            >
+                        </li>
 
-          <li class="nav-item">
-            <a href="index.html#hafaSamband"
-               class="nav-link text-light fs-3 px-3 fw-bold">
-              Hafa samband
-            </a>
-          </li>
-
-          <a href="https://www.instagram.com/onet8k/" target="_blank" class="pe-3 ps-3 text-light">
-            <i class="bi bi-instagram fs-1"></i>
-          </a>
-          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="pe-3 ps-3 text-light">
-            <i class="bi bi-tiktok fs-1"></i>
-          </a>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Background video (same shell as index) -->
-  <video autoplay loop muted playsinline preload="auto"
-         class="position-fixed start-0 w-100 h-100"
-         style="top: 0px; width: 100%; object-fit: cover; z-index:-2;">
-    <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4">
-    <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4">
-  </video>
-
-  <!-- Red overlay -->
-  <div id="videoOverlay" class="position-fixed top-0 start-0 w-100 h-100"
-       style="background: rgba(220,53,69,0); z-index: -1;"></div>
-
-  <!-- PAGE CONTENT -->
-  <main id="app" data-page="umOkkur">
-    <!-- HERO / INTRO -->
-    <section id="umOkkur" class="text-light position-relative py-5" style="min-height: calc(100vh - 80px);">
-      <div class="mt-10 container text-light px-3 px-md-5">
-        <div class="row align-items-center justify-content-between um-hero">
-          <div class="col-md px-0 py-5">
-            <h3 class="display-2 fw-bold pb-5">Nei hæ, má bjóða þér kaffi?</h3>
-            <h1 class="fw-bold py-3">Hvað gerum við?</h1>
-            <h5 class="fw-normal">Við sérhæfum okkur í að bjóða upp á</h5>
-            <h5 class="fw-normal">fjölbreyttar og samþættar lausnir á sviði</h5>
-            <h5 class="fw-normal">stafrænnar markaðssetningar sem hámarka</h5>
-            <h5 class="fw-normal pb-5">árangur.</h5>
-            <h5 class="fw-normal">Við leggjum áherslu á að skapa einstaka</h5>
-            <h5 class="fw-normal">þjónustuupplifun fyrir hvern viðskiptavin og</h5>
-            <h5 class="fw-normal">mótum markaðsstarfið í takt við þarfir þíns</h5>
-            <h5 class="fw-normal">fyrirtækis.</h5>
-          </div>
-          <div class="col-md right-col">
-            <img src="Assets/Img/einar lookin swole.png" alt="" class="img-fluid rounded um-hero-img">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HVAÐ ER ONET8K -->
-    <section class="text-light position-relative py-5">
-      <div class="container text-light px-3 px-md-5">
-        <div class="row align-items-center justify-content-between">
-          <div class="col-md mb-4 mb-md-0">
-            <img src="Assets/Img/Kári og einar lookin fly.png" alt="" class="img-fluid rounded">
-          </div>
-          <div class="col-md px-0 py-5">
-            <h1 class="fw-bold py-3">Hvað gerum við?</h1>
-            <p class="fw-normal mb-4">
-              Við erum lítið en kröftugt framleiðslufyrirtæki sem starfar úr Reykjanesbæ.
-              Með áralangri reynslu í sjónvarps- og auglýsingaframleiðslu sérhæfum við okkur
-              allra helst í áhrifaríkri og ógleymanlegri stafrænni markaðssetningu.
-            </p>
-            <p class="fw-normal mb-0">
-              Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við
-              flóknum vandamálum séu lykilatriði til að tryggja góðar niðurstöður.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEYMIÐ -->
-    <section class="text-light position-relative p-5">
-      <h1 class="display-3 fw-bold pb-5 text-center">Teymið</h1>
-      <div class="container text-light">
-        <div class="row align-items-center justify-content-center p-5">
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="Assets/Img/Kári.png" alt="">
-              <div class="card-footer bg-danger text-white text-center">
-                <h5 class="mb-1 fw-bold">Kári Snær Halldórsson</h5>
-                <p>kari@onet8k.is</p>
-                <p>+354 776 0957</p>
-              </div>
+                        <li class="nav-item">
+                            <a
+                                href="index.html#hafaSamband"
+                                class="nav-link text-light fs-5 px-3 fw-bold"
+                            >
+                                Hafa samband
+                            </a>
+                        </li>
+                        <a
+                            href="https://www.instagram.com/onet8k/"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-instagram fs-4"></i>
+                        </a>
+                        <a
+                            href="https://www.tiktok.com/@onet8kmedia"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-tiktok fs-4"></i>
+                        </a>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61586025819175"
+                            target="_blank"
+                            class="pe-3 ps-3 text-light"
+                        >
+                            <i class="bi bi-facebook fs-4"></i>
+                        </a>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </nav>
+        <!-- Background video (same shell as index) -->
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="position-fixed start-0 w-100 h-100"
+            style="top: 0px; width: 100%; object-fit: cover; z-index: -2"
+        >
+            <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4" />
+            <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4" />
+        </video>
 
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="Assets/Img/Einar.png" alt="">
-              <div class="card-footer bg-danger text-white text-center">
-                <h5 class="mb-1 fw-bold">Einar Örn Michaelsson</h5>
-                <p>einar@onet8k.is</p>
-                <p>+354 615 3670</p>
-              </div>
+        <!-- Red overlay -->
+        <div
+            id="videoOverlay"
+            class="position-fixed top-0 start-0 w-100 h-100"
+            style="background: rgba(220, 53, 69, 0); z-index: -1"
+        ></div>
+
+        <!-- PAGE CONTENT -->
+        <main id="app" data-page="umOkkur">
+            <!-- HERO / INTRO -->
+            <section
+                id="umOkkur"
+                class="text-light position-relative py-5"
+                style="min-height: calc(100vh - 80px)"
+            >
+                <div class="mt-10 container text-light px-3 px-md-5">
+                    <div
+                        class="row align-items-center justify-content-between um-hero"
+                    >
+                        <div class="col-md px-0 py-5">
+                            <h3 class="display-2 fw-bold pb-5">
+                                Nei hæ, má bjóða þér kaffi?
+                            </h3>
+                            <h1 class="fw-bold py-3">Hvað gerum við?</h1>
+                            <h5 class="fw-normal">
+                                Við sérhæfum okkur í að bjóða upp á
+                            </h5>
+                            <h5 class="fw-normal">
+                                fjölbreyttar og samþættar lausnir á sviði
+                            </h5>
+                            <h5 class="fw-normal">
+                                stafrænnar markaðssetningar sem hámarka
+                            </h5>
+                            <h5 class="fw-normal pb-5">árangur.</h5>
+                            <h5 class="fw-normal">
+                                Við leggjum áherslu á að skapa einstaka
+                            </h5>
+                            <h5 class="fw-normal">
+                                þjónustuupplifun fyrir hvern viðskiptavin og
+                            </h5>
+                            <h5 class="fw-normal">
+                                mótum markaðsstarfið í takt við þarfir þíns
+                            </h5>
+                            <h5 class="fw-normal">fyrirtækis.</h5>
+                        </div>
+                        <div class="col-md right-col">
+                            <img
+                                src="Assets/Img/einar lookin swole.png"
+                                alt=""
+                                class="img-fluid rounded um-hero-img"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HVAÐ ER ONET8K -->
+            <section class="text-light position-relative py-5">
+                <div class="container text-light px-3 px-md-5">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-md mb-4 mb-md-0">
+                            <img
+                                src="Assets/Img/Kári og einar lookin fly.png"
+                                alt=""
+                                class="img-fluid rounded"
+                            />
+                        </div>
+                        <div class="col-md px-0 py-5">
+                            <h1 class="fw-bold py-3">Hvað gerum við?</h1>
+                            <p class="fw-normal mb-4">
+                                Við erum lítið en kröftugt framleiðslufyrirtæki
+                                sem starfar úr Reykjanesbæ. Með áralangri
+                                reynslu í sjónvarps- og auglýsingaframleiðslu
+                                sérhæfum við okkur allra helst í áhrifaríkri og
+                                ógleymanlegri stafrænni markaðssetningu.
+                            </p>
+                            <p class="fw-normal mb-0">
+                                Við erum þess hugar að góð samskipti og áhersla
+                                á frumlegar lausnir við flóknum vandamálum séu
+                                lykilatriði til að tryggja góðar niðurstöður.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TEYMIÐ -->
+            <section class="text-light position-relative p-5">
+                <h1 class="display-3 fw-bold pb-5 text-center">Teymið</h1>
+                <div class="container text-light">
+                    <div
+                        class="row align-items-center justify-content-center p-5"
+                    >
+                        <div class="col-md-3">
+                            <div class="card border-0">
+                                <img src="Assets/Img/Kári.png" alt="" />
+                                <div
+                                    class="card-footer bg-danger text-white text-center"
+                                >
+                                    <h5 class="mb-1 fw-bold">
+                                        Kári Snær Halldórsson
+                                    </h5>
+                                    <p>kari@onet8k.is</p>
+                                    <p>+354 776 0957</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card border-0">
+                                <img src="Assets/Img/Einar.png" alt="" />
+                                <div
+                                    class="card-footer bg-danger text-white text-center"
+                                >
+                                    <h5 class="mb-1 fw-bold">
+                                        Einar Örn Michaelsson
+                                    </h5>
+                                    <p>einar@onet8k.is</p>
+                                    <p>+354 615 3670</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card border-0">
+                                <img src="Assets/Img/Kænar.png" alt="" />
+                                <div
+                                    class="card-footer bg-danger text-white text-center"
+                                >
+                                    <h5 class="mb-1 fw-bold">
+                                        Kári Snær Halldórsson
+                                    </h5>
+                                    <p>kari@onet8k.is</p>
+                                    <p>+354 776 0957</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="row align-items-center justify-content-center p-5"
+                    >
+                        <div class="col-md-3">
+                            <div class="card border-0">
+                                <img src="Assets/Img/dori.png" alt="" />
+                                <div
+                                    class="card-footer bg-danger text-white text-center"
+                                >
+                                    <h5 class="mb-1 fw-bold">
+                                        Halldór Smári Karlsson
+                                    </h5>
+                                    <p>Mank@onetake.is</p>
+                                    <p>+354 776 0957</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card border-0">
+                                <img src="Assets/Img/bernard.png" alt="" />
+                                <div
+                                    class="card-footer bg-danger text-white text-center"
+                                >
+                                    <h5 class="mb-1 fw-bold">
+                                        Beres Gay kingberg
+                                    </h5>
+                                    <p>bernie@onetake.is</p>
+                                    <p>+354 776 0957</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer class="footer bg-danger text-white py-4">
+            <div class="container-fluid px-2 px-md-3">
+                <div class="row g-2 align-items-center">
+                    <!-- LEFT (address + phone) -->
+                    <div class="col-4 ps-md-5">
+                        <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
+                        <div class="text-start d-none d-sm-block small">
+                            <p class="mb-1 fw-bold">Onetake ehf.</p>
+                            <p class="mb-1 fw-bold">Hafnargata,</p>
+                            <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
+                        </div>
+                        <div class="text-center text-md-start">
+                            <a
+                                href="tel:+3547760957"
+                                class="text-white text-decoration-none fw-semibold small"
+                            >
+                                +354 7760957
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CENTER (logo) -->
+                    <div class="col-4 text-center">
+                        <!-- Smaller logo on phones, bigger on md+ -->
+                        <img
+                            src="Assets/Img/ONETAKE LOGO.png"
+                            alt="ONET8K"
+                            class="d-inline d-md-none"
+                            style="height: 40px; width: auto"
+                        />
+                        <img
+                            src="Assets/Img/ONETAKE LOGO.png"
+                            alt="ONET8K"
+                            class="d-none d-md-inline"
+                            style="height: 80px; width: auto"
+                        />
+                        <div
+                            class="small opacity-75 mt-1 d-none d-sm-block"
+                        ></div>
+                    </div>
+
+                    <!-- RIGHT (CTA + icons) -->
+                    <div class="col-4 pe-md-0">
+                        <div
+                            class="d-flex justify-content-end align-items-center gap-3 flex-wrap"
+                        >
+                            <!-- Hide long text CTA on phones to save space -->
+                            <a
+                                href="#"
+                                class="text-light fw-semibold text-decoration-none d-none d-sm-inline"
+                                data-bs-toggle="modal"
+                                data-bs-target="#hafaSamband"
+                                >Hafa samband</a
+                            >
+
+                            <a
+                                href="https://www.instagram.com/onet8k/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-light"
+                                aria-label="instagram"
+                            >
+                                <i class="bi bi-instagram fs-5 fs-md-3"></i>
+                            </a>
+                            <a
+                                href="https://www.tiktok.com/@onet8kmedia"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-light"
+                                aria-label="facebook"
+                            >
+                                <i class="bi bi-tiktok fs-5 fs-md-3"></i>
+                            </a>
+
+                            <!-- Back to top: keep for sm+ to avoid crowding on xs -->
+                            <a
+                                href="#"
+                                class="d-none d-sm-inline"
+                                aria-label="Back to top"
+                            >
+                                <i
+                                    class="bi bi-arrow-up-circle h4 text-light"
+                                ></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        </footer>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="hafaSamband"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="hafaSambandTitle"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content border-0 rounded-5 overflow-hidden">
+                    <div
+                        class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3"
+                    >
+                        <h5 class="modal-title fw-bold" id="hafaSamband">
+                            Fylltu út formið og við heyrum í þér
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
 
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="Assets/Img/Kænar.png" alt="">
-              <div class="card-footer bg-danger text-white text-center">
-                <h5 class="mb-1 fw-bold">Kári Snær Halldórsson</h5>
-                <p>kari@onet8k.is</p>
-                <p>+354 776 0957</p>
-              </div>
+                    <div class="modal-body bg-danger text-white p-4">
+                        <form
+                            name="contact"
+                            method="POST"
+                            action="/thankYou.html"
+                            data-netlify="true"
+                            netlify-honeypot="bot-field"
+                            accept="UTF-8"
+                            hx-boost="false"
+                        >
+                            <input
+                                type="hidden"
+                                name="form-name"
+                                value="contact"
+                            />
+                            <p style="display: none">
+                                <label
+                                    >Don't fill this out if you're human:
+                                    <input name="bot-field"
+                                /></label>
+                            </p>
+                            <div class="mb-3">
+                                <label for="nafn" class="col-form-label">
+                                    *Nafn:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="nafn"
+                                    class="form-control"
+                                    id="nafn"
+                                    required
+                                />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">
+                                    *Email:
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    class="form-control"
+                                    id="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="simanumer" class="col-form-label">
+                                    Símanúmer:
+                                </label>
+                                <input
+                                    type="text"
+                                    name="simanumer"
+                                    class="form-control"
+                                    id="simanumer"
+                                />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="skilabod" class="col-form-label">
+                                    *Hvernig getum við aðstoðað?:
+                                </label>
+                                <textarea
+                                    name="skilabod"
+                                    class="form-control"
+                                    id="skilabod"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                class="btn w-100 fw-bold py-3 senda-btn"
+                            >
+                                Senda
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+        <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+        <script>
+            document.body.addEventListener("htmx:beforeSwap", () => {
+                const main = document.querySelector("main#app");
+                if (main) main.style.opacity = "0";
+            });
 
-        <div class="row align-items-center justify-content-center p-5">
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="Assets/Img/dori.png" alt="">
-              <div class="card-footer bg-danger text-white text-center">
-                <h5 class="mb-1 fw-bold">Halldór Smári Karlsson</h5>
-                <p>Mank@onetake.is</p>
-                <p>+354 776 0957</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="Assets/Img/bernard.png" alt="">
-              <div class="card-footer bg-danger text-white text-center">
-                <h5 class="mb-1 fw-bold">Beres Gay kingberg</h5>
-                <p>bernie@onetake.is</p>
-                <p>+354 776 0957</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+            document.body.addEventListener("htmx:afterSwap", () => {
+                const main = document.querySelector("main#app");
+                if (main) {
+                    // small delay to let HTMX inject new content before fading in
+                    requestAnimationFrame(() => (main.style.opacity = "1"));
+                }
+            });
+        </script>
+        <script>
+            // Update <title> after HTMX navigation
+            document.body.addEventListener("htmx:afterOnLoad", (e) => {
+                const txt = e.detail?.xhr?.responseText;
+                if (!txt) return;
+                const doc = new DOMParser().parseFromString(txt, "text/html");
+                const t = doc.querySelector("title");
+                if (t) document.title = t.textContent;
+            });
 
-<!-- footer -->
-<footer class="footer bg-danger text-white py-4">
-  <div class="container-fluid px-2 px-md-3">
-    <div class="row g-2 align-items-center">
+            // Scroll blur for HOME (video background)
+            function initHomeOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                const video = document.querySelector("video");
+                if (!overlay || !video) return;
 
-      <!-- LEFT (address + phone) -->
-      <div class="col-4 ps-md-5">
-        <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
-        <div class="text-start d-none d-sm-block small">
-          <p class="mb-1 fw-bold">Onetake ehf.</p>
-          <p class="mb-1 fw-bold">Hafnargata,</p>
-          <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
-        </div>
-        <div class="text-center text-md-start">
-          <a href="tel:+3547760957" class="text-white text-decoration-none fw-semibold small">
-            +354 7760957
-          </a>
-        </div>
-      </div>
+                // Make sure video is visible on home
+                video.style.display = "";
 
-      <!-- CENTER (logo) -->
-      <div class="col-4 text-center">
-        <!-- Smaller logo on phones, bigger on md+ -->
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
-             class="d-inline d-md-none" style="height:40px;width:auto;">
-        <img src="Assets/Img/ONETAKE LOGO.png" alt="ONET8K"
-             class="d-none d-md-inline" style="height:80px;width:auto;">
-        <div class="small opacity-75 mt-1 d-none d-sm-block"></div>
-      </div>
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const y = window.scrollY || 0;
+                        const opacity = Math.min(y / 700, 0.7);
+                        const blur = Math.min(y / 100, 10);
+                        overlay.style.background = `rgba(220,53,69,${opacity})`;
+                        overlay.style.backdropFilter = `blur(${blur}px)`;
+                        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+                        ticking = false;
+                    });
+                };
 
-      <!-- RIGHT (CTA + icons) -->
-      <div class="col-4 pe-md-0">
-        <div class="d-flex justify-content-end align-items-center gap-3 flex-wrap">
-          <!-- Hide long text CTA on phones to save space -->
-          <a href="#" class="text-light fw-semibold text-decoration-none d-none d-sm-inline"
-             data-bs-toggle="modal" data-bs-target="#hafaSamband">Hafa samband</a>
+                window.addEventListener("scroll", onScroll, { passive: true });
+                window.__pageCleanup = () =>
+                    window.removeEventListener("scroll", onScroll);
+                onScroll();
+            }
 
-          <a href="https://www.instagram.com/onet8k/" target="_blank" rel="noopener noreferrer"
-             class="text-light" aria-label="instagram">
-            <i class="bi bi-instagram fs-5 fs-md-3"></i>
-          </a>
-          <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" rel="noopener noreferrer"
-             class="text-light" aria-label="facebook">
-            <i class="bi bi-tiktok fs-5 fs-md-3"></i>
-          </a>
+            // Static max blur for UM OKKUR (video background)
+            function initUmOkkurOverlay() {
+                const overlay = document.getElementById("videoOverlay");
+                const video = document.querySelector("video");
+                if (!overlay || !video) return;
 
-          <!-- Back to top: keep for sm+ to avoid crowding on xs -->
-          <a href="#" class="d-none d-sm-inline" aria-label="Back to top">
-            <i class="bi bi-arrow-up-circle h4 text-light"></i>
-          </a>
-        </div>
-      </div>
+                // Make sure video is visible on umOkkur
+                video.style.display = "";
 
-    </div>
-  </div>
-</footer>
-<!-- Modal -->
-<div class="modal fade" id="hafaSamband" tabindex="-1" role="dialog" aria-labelledby="hafaSambandTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content border-0 rounded-5 overflow-hidden">
+                overlay.style.background = `rgba(220,53,69,0.7)`;
+                overlay.style.backdropFilter = `blur(10px)`;
+                overlay.style.webkitBackdropFilter = `blur(10px)`;
 
-      <div class="modal-header bg-danger text-white rounded-top-4 px-4 pt-3">
-        <h5 class="modal-title fw-bold" id="hafaSamband">Fylltu út formið og við heyrum í þér</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">
-        </button>
-      </div>
-      
-      <div class="modal-body bg-danger text-white p-4">
-        <form name="contact" method="POST" action="/thankYou.html" data-netlify="true" netlify-honeypot="bot-field" accept="UTF-8" hx-boost="false">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-          </p>
-          <div class="mb-3">
-            <label for="nafn" class="col-form-label">
-              *Nafn:
-            </label>
-            <input type="text" name="nafn" class="form-control" id="nafn" required>
-          </div>
+                // no scroll listener here
+                window.__pageCleanup = null;
+            }
 
-          <div class="mb-3">
-            <label for="email" class="col-form-label">
-              *Email:
-            </label>
-            <input type="email" name="email" class="form-control" id="email" required>
-          </div>
+            // Photo background for SNJALLTRYGGINGAR
+            function initSnjallOverlay() {
+                const video = document.querySelector("video");
+                const videoOverlay = document.getElementById("videoOverlay");
+                const photoOverlay = document.getElementById("photoOverlay");
 
-          <div class="mb-3">
-            <label for="simanumer" class="col-form-label">
-              Símanúmer:
-            </label>
-            <input type="text" name="simanumer" class="form-control" id="simanumer">
-          </div>
+                // Hide the video when on snjalltryggingar
+                if (video) video.style.display = "none";
 
-          <div class="mb-3">
-            <label for="skilabod" class="col-form-label">
-              *Hvernig getum við aðstoðað?:
-            </label>
-            <textarea name="skilabod" class="form-control" id="skilabod" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn w-100 fw-bold py-3 senda-btn">Senda</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
-<script>
-document.body.addEventListener('htmx:beforeSwap', () => {
-  const main = document.querySelector('main#app');
-  if (main) main.style.opacity = '0';
-});
+                // Clear any styling on the videoOverlay
+                if (videoOverlay) {
+                    videoOverlay.style.background = "";
+                    videoOverlay.style.backdropFilter = "";
+                    videoOverlay.style.webkitBackdropFilter = "";
+                }
 
-document.body.addEventListener('htmx:afterSwap', () => {
-  const main = document.querySelector('main#app');
-  if (main) {
-    // small delay to let HTMX inject new content before fading in
-    requestAnimationFrame(() => main.style.opacity = '1');
-  }
-});
-</script>
-<script>
-  // Update <title> after HTMX navigation
-  document.body.addEventListener('htmx:afterOnLoad', (e) => {
-    const txt = e.detail?.xhr?.responseText;
-    if (!txt) return;
-    const doc = new DOMParser().parseFromString(txt, 'text/html');
-    const t = doc.querySelector('title');
-    if (t) document.title = t.textContent;
-  });
+                if (!photoOverlay) {
+                    window.__pageCleanup = null;
+                    return;
+                }
 
-  // Scroll blur for HOME (video background)
-  function initHomeOverlay() {
-    const overlay = document.getElementById('videoOverlay');
-    const video   = document.querySelector('video');
-    if (!overlay || !video) return;
+                let ticking = false;
+                const onScroll = () => {
+                    if (ticking) return;
+                    ticking = true;
+                    requestAnimationFrame(() => {
+                        const y = window.scrollY || 0;
+                        const opacity = Math.min(y / 700, 0.7);
+                        const blur = Math.min(y / 100, 10);
+                        photoOverlay.style.background = `rgba(220,53,69,${opacity})`;
+                        photoOverlay.style.backdropFilter = `blur(${blur}px)`;
+                        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
+                        ticking = false;
+                    });
+                };
 
-    // Make sure video is visible on home
-    video.style.display = '';
+                window.addEventListener("scroll", onScroll, { passive: true });
 
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY || 0;
-        const opacity = Math.min(y / 700, 0.7);
-        const blur    = Math.min(y / 100, 10);
-        overlay.style.background        = `rgba(220,53,69,${opacity})`;
-        overlay.style.backdropFilter    = `blur(${blur}px)`;
-        overlay.style.webkitBackdropFilter = `blur(${blur}px)`;
-        ticking = false;
-      });
-    };
+                // Cleanup when leaving snjalltryggingar
+                window.__pageCleanup = () => {
+                    window.removeEventListener("scroll", onScroll);
+                    // show the video again when we leave this page
+                    if (video) video.style.display = "";
+                };
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.__pageCleanup = () => window.removeEventListener('scroll', onScroll);
-    onScroll();
-  }
+                onScroll();
+            }
 
-  // Static max blur for UM OKKUR (video background)
-  function initUmOkkurOverlay() {
-    const overlay = document.getElementById('videoOverlay');
-    const video   = document.querySelector('video');
-    if (!overlay || !video) return;
+            function runPageInit() {
+                // Cleanup previous page behavior
+                if (typeof window.__pageCleanup === "function") {
+                    try {
+                        window.__pageCleanup();
+                    } catch {}
+                    window.__pageCleanup = null;
+                }
 
-    // Make sure video is visible on umOkkur
-    video.style.display = '';
+                const main = document.querySelector("main#app");
+                const page = main?.dataset.page || "";
 
-    overlay.style.background        = `rgba(220,53,69,0.7)`;
-    overlay.style.backdropFilter    = `blur(10px)`;
-    overlay.style.webkitBackdropFilter = `blur(10px)`;
+                if (page === "home") {
+                    initHomeOverlay();
+                } else if (page === "umOkkur") {
+                    initUmOkkurOverlay();
+                } else if (page === "snjalltryggingar") {
+                    initSnjallOverlay();
+                } else {
+                    // Default: clear video overlay, ensure video is visible
+                    const overlay = document.getElementById("videoOverlay");
+                    const video = document.querySelector("video");
+                    if (overlay) {
+                        overlay.style.background = "";
+                        overlay.style.backdropFilter = "";
+                        overlay.style.webkitBackdropFilter = "";
+                    }
+                    if (video) video.style.display = "";
+                }
+            }
 
-    // no scroll listener here
-    window.__pageCleanup = null;
-  }
+            // Manual scroll restoration so our own logic is in control
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
 
-  // Photo background for SNJALLTRYGGINGAR
-  function initSnjallOverlay() {
-    const video        = document.querySelector('video');
-    const videoOverlay = document.getElementById('videoOverlay');
-    const photoOverlay = document.getElementById('photoOverlay');
+            // Handle scrolling to #hafaSamband on HOME after HTMX swap
+            document.body.addEventListener("htmx:afterSettle", () => {
+                const main = document.querySelector("main#app");
+                if (!main) return;
 
-    // Hide the video when on snjalltryggingar
-    if (video) video.style.display = 'none';
+                const page = main.dataset.page;
+                const hash = window.location.hash;
 
-    // Clear any styling on the videoOverlay
-    if (videoOverlay) {
-      videoOverlay.style.background        = '';
-      videoOverlay.style.backdropFilter    = '';
-      videoOverlay.style.webkitBackdropFilter = '';
-    }
+                if (page === "home") {
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            if (hash && document.querySelector(hash)) {
+                                const el = document.querySelector(hash);
+                                el.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start",
+                                });
+                            } else {
+                                window.scrollTo(0, 0);
+                            }
+                        });
+                    });
+                }
+            });
 
-    if (!photoOverlay) {
-      window.__pageCleanup = null;
-      return;
-    }
+            document.addEventListener("DOMContentLoaded", runPageInit);
 
-    let ticking = false;
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        const y = window.scrollY || 0;
-        const opacity = Math.min(y / 700, 0.7);
-        const blur    = Math.min(y / 100, 10);
-        photoOverlay.style.background        = `rgba(220,53,69,${opacity})`;
-        photoOverlay.style.backdropFilter    = `blur(${blur}px)`;
-        photoOverlay.style.webkitBackdropFilter = `blur(${blur}px)`;
-        ticking = false;
-      });
-    };
+            document.body.addEventListener("htmx:afterSwap", (e) => {
+                if (e.target.id === "app") {
+                    // Wait one frame so HTMX can inject the new content and dataset
+                    requestAnimationFrame(() => runPageInit());
+                }
+            });
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+            document.body.addEventListener("htmx:historyRestore", runPageInit);
+        </script>
+        <script>
+            (function () {
+                const THRESHOLD = 50;
 
-    // Cleanup when leaving snjalltryggingar
-    window.__pageCleanup = () => {
-      window.removeEventListener('scroll', onScroll);
-      // show the video again when we leave this page
-      if (video) video.style.display = '';
-    };
+                function applyNavState() {
+                    const nav = document.getElementById("mainNav");
+                    const page =
+                        document.querySelector("main#app")?.dataset.page || "";
+                    if (!nav) return;
 
-    onScroll();
-  }
+                    if (page === "home") {
+                        if (
+                            (window.scrollY ||
+                                document.documentElement.scrollTop ||
+                                0) > THRESHOLD
+                        ) {
+                            nav.classList.add("scrolled");
+                        } else {
+                            nav.classList.remove("scrolled");
+                        }
+                    } else {
+                        nav.classList.add("scrolled");
+                    }
+                }
 
-  function runPageInit() {
-    // Cleanup previous page behavior
-    if (typeof window.__pageCleanup === 'function') {
-      try { window.__pageCleanup(); } catch {}
-      window.__pageCleanup = null;
-    }
+                document.addEventListener("DOMContentLoaded", applyNavState);
 
-    const main = document.querySelector('main#app');
-    const page = main?.dataset.page || '';
+                window.addEventListener("scroll", applyNavState, {
+                    passive: true,
+                });
 
-    if (page === 'home') {
-      initHomeOverlay();
-    } else if (page === 'umOkkur') {
-      initUmOkkurOverlay();
-    } else if (page === 'snjalltryggingar') {
-      initSnjallOverlay();
-    } else {
-      // Default: clear video overlay, ensure video is visible
-      const overlay = document.getElementById('videoOverlay');
-      const video   = document.querySelector('video');
-      if (overlay) {
-        overlay.style.background        = '';
-        overlay.style.backdropFilter    = '';
-        overlay.style.webkitBackdropFilter = '';
-      }
-      if (video) video.style.display = '';
-    }
-  }
+                document.body.addEventListener("htmx:afterSwap", (e) => {
+                    if (e.target?.id === "app")
+                        requestAnimationFrame(applyNavState);
+                });
+                document.body.addEventListener("htmx:historyRestore", () =>
+                    requestAnimationFrame(applyNavState),
+                );
+                document.body.addEventListener("htmx:afterSettle", () =>
+                    requestAnimationFrame(applyNavState),
+                );
+            })();
+        </script>
 
-  // Manual scroll restoration so our own logic is in control
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-
-  // Handle scrolling to #hafaSamband on HOME after HTMX swap
-  document.body.addEventListener('htmx:afterSettle', () => {
-    const main = document.querySelector('main#app');
-    if (!main) return;
-
-    const page = main.dataset.page;
-    const hash = window.location.hash;
-
-    if (page === 'home') {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          if (hash && document.querySelector(hash)) {
-            const el = document.querySelector(hash);
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          } else {
-            window.scrollTo(0, 0);
-          }
-        });
-      });
-    }
-  });
-
-  document.addEventListener('DOMContentLoaded', runPageInit);
-
-  document.body.addEventListener('htmx:afterSwap', (e) => {
-    if (e.target.id === 'app') {
-      // Wait one frame so HTMX can inject the new content and dataset
-      requestAnimationFrame(() => runPageInit());
-    }
-  });
-
-  document.body.addEventListener('htmx:historyRestore', runPageInit);
-</script>
-<script>
-  (function () {
-    const THRESHOLD = 50;
-
-    function applyNavState() {
-      const nav  = document.getElementById('mainNav');
-      const page = document.querySelector('main#app')?.dataset.page || '';
-      if (!nav) return;
-
-      if (page === 'home') {
-        if ((window.scrollY || document.documentElement.scrollTop || 0) > THRESHOLD) {
-          nav.classList.add('scrolled');
-        } else {
-          nav.classList.remove('scrolled');
-        }
-      } else {
-        nav.classList.add('scrolled');
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', applyNavState);
-
-    window.addEventListener('scroll', applyNavState, { passive: true });
-
-    document.body.addEventListener('htmx:afterSwap',  e => { if (e.target?.id === 'app') requestAnimationFrame(applyNavState); });
-    document.body.addEventListener('htmx:historyRestore', () => requestAnimationFrame(applyNavState));
-    document.body.addEventListener('htmx:afterSettle', () => requestAnimationFrame(applyNavState));
-  })();
-</script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-</body>    
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
