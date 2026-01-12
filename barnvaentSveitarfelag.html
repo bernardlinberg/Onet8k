@@ -60,10 +60,12 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a
-                                href="snjalltryggingar.html"
+                                href="index.html#verkefni"
                                 class="nav-link text-light fs-5 px-3 fw-bold"
-                                >Verkefni</a
+                                hx-boost="false"
                             >
+                                Verkefni
+                            </a>
                         </li>
 
                         <li class="nav-item">
@@ -481,7 +483,16 @@
                             >
                                 <i class="bi bi-tiktok fs-5 fs-md-3"></i>
                             </a>
-                            <!-- Back to top: keep for sm+ to avoid crowding on xs -->
+                            <a 
+                                href="https://www.facebook.com/profile.php?id=61586025819175"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-light"
+                                aria-label="facebook"
+                            >
+
+                                <i class="bi bi-facebook fs-5 fs-md-3"></i>
+                            </a>
                             <a
                                 href="#"
                                 class="d-none d-sm-inline"
@@ -499,17 +510,15 @@
 
         <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
         <script>
-            document.body.addEventListener("htmx:beforeSwap", () => {
+            document.body.addEventListener("htmx:historyRestore", () => {
                 const main = document.querySelector("main#app");
-                if (main) main.style.opacity = "0";
+                if (main) main.style.opacity = "1";
             });
 
-            document.body.addEventListener("htmx:afterSwap", () => {
+            // Also cover the browser's back-forward cache (bfcache)
+            window.addEventListener("pageshow", () => {
                 const main = document.querySelector("main#app");
-                if (main) {
-                    // small delay to let HTMX inject new content before fading in
-                    requestAnimationFrame(() => (main.style.opacity = "1"));
-                }
+                if (main) main.style.opacity = "1";
             });
         </script>
         <script>

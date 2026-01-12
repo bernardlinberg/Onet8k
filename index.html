@@ -63,10 +63,12 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a
-                                href="snjalltryggingar.html"
+                                href="index.html#verkefni"
                                 class="nav-link text-light fs-5 px-3 fw-bold"
-                                >Verkefni</a
+                                hx-boost="false"
                             >
+                                Verkefni
+                            </a>
                         </li>
 
                         <li class="nav-item">
@@ -134,32 +136,31 @@
             <section
                 class="position-relative text-center text-sm-start"
                 style="min-height: calc(100vh - 80px)"
-            >
-                <!-- Content container -->
-                <div
-                    class="container-fluid d-flex flex-column justify-content-end align-items-start min-vh-100 text-light pt-5"
                 >
-                    <div class="pb-4 ps-3 ps-md-5 ms-md-5 ms-lg-5">
-                        <h3 class="display-3 fw-bold">Fleiri hugmyndir,</h3>
-                        <h3 class="display-3 fw-bold">meiri metnaður,</h3>
-                        <h3 class="display-3 fw-bold pb-4">betri þjónusta.</h3>
+                <div class="container-fluid position-relative min-vh-100 text-light pt-5">
+                    <div
+                    class="position-absolute translate-middle-y pb-4 ps-3 ps-md-5"
+                    style="top:62%; left: 12%;"
+                    >
+                    <h3 class="display-3 fw-bold">Fleiri hugmyndir,</h3>
+                    <h3 class="display-3 fw-bold">meiri metnaður,</h3>
+                    <h3 class="display-3 fw-bold pb-4">betri þjónusta.</h3>
 
-                        <a
-                            href="#hafaSamband"
-                            class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3 mb-10"
-                            hx-boost="false"
-                        >
-                            Hafa Samband
-                        </a>
+                    <a
+                        href="#hafaSamband"
+                        class="btn btn-danger btn-lg rounded-pill fs-1 fw-bold px-5 mt-3"
+                        hx-boost="false"
+                    >
+                        Hafa Samband
+                    </a>
                     </div>
                 </div>
-            </section>
 
             <!-- vimeo carousel section-->
 
             <section class="mt-10"></section>
 
-            <section class="text-light p-5 position-relative">
+            <section id="verkefni" class="text-light p-5 position-relative">
                 <div class="container">
                     <div class="project-panel text-white shadow">
                         <div class="d-flex justify-content-center">
@@ -703,7 +704,17 @@
                             >
                                 <i class="bi bi-tiktok fs-5 fs-md-3"></i>
                             </a>
-                            <!-- Back to top: keep for sm+ to avoid crowding on xs -->
+
+                            <a 
+                                href="https://www.facebook.com/profile.php?id=61586025819175"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-light"
+                                aria-label="facebook"
+                            >
+
+                                <i class="bi bi-facebook fs-5 fs-md-3"></i>
+                            </a>
                             <a
                                 href="#"
                                 class="d-none d-sm-inline"
@@ -721,17 +732,15 @@
 
         <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
         <script>
-            document.body.addEventListener("htmx:beforeSwap", () => {
+            document.body.addEventListener("htmx:historyRestore", () => {
                 const main = document.querySelector("main#app");
-                if (main) main.style.opacity = "0";
+                if (main) main.style.opacity = "1";
             });
 
-            document.body.addEventListener("htmx:afterSwap", () => {
+            // Also cover the browser's back-forward cache (bfcache)
+            window.addEventListener("pageshow", () => {
                 const main = document.querySelector("main#app");
-                if (main) {
-                    // small delay to let HTMX inject new content before fading in
-                    requestAnimationFrame(() => (main.style.opacity = "1"));
-                }
+                if (main) main.style.opacity = "1";
             });
         </script>
         <script>
