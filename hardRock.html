@@ -129,7 +129,7 @@
             style="background: rgba(220, 53, 69, 0); z-index: -1"
         ></div>
 
-        <main id="app" data-page="snjalltryggingar">
+        <main id="app" data-page="project">
             <section
                 class="position-relative text-center text-sm-start"
                 style="min-height: 80vh; overflow: hidden"
@@ -599,7 +599,7 @@
 
                 const page = getCurrentPage();
 
-                if (page === "home") {
+                if (page === "home" || page === "project") {
                     initHomeOverlay();
                 } else if (page === "umOkkur") {
                     initUmOkkurOverlay();
