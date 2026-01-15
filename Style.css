@@ -390,3 +390,16 @@ main#app {
     transition: none;
   }
 }
+
+#mainNav .nav-logo{
+  opacity: .7;
+  transition: opacity 200ms ease;
+}
+
+#mainNav.scrolled .nav-logo{
+  opacity: 1;
+}
+
+#mainNav:hover .nav-logo{
+  opacity: 1;
+}
