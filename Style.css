@@ -22,6 +22,7 @@
   top: 40%;
 }
 
+
 #verkefni {
   scroll-margin: 12rem;
 }
@@ -403,3 +404,8 @@ main#app {
 #mainNav:hover .nav-logo{
   opacity: 1;
 }
+
+#mainNav:has(#navMenu.show) .nav-logo{
+  opacity: 1;
+}
+
