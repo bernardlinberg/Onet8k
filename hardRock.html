@@ -11,6 +11,8 @@
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
             crossorigin="anonymous"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
@@ -23,6 +25,7 @@
         <link rel="prefetch" href="index.html" as="document" />
         <link rel="prefetch" href="umOkkur.html" as="document" />
     </head>
+
     <body
         hx-boost="true"
         hx-push-url="true"
@@ -40,8 +43,9 @@
                     <img
                         src="Assets/Img/ONETAKE LOGO.png"
                         alt="onet8k logo"
+                        class="nav-logo"
                         style="height: 80px; width: auto"
-                    />
+                        />
                 </a>
 
                 <button
@@ -77,6 +81,7 @@
                             >
                         </li>
                     -->   
+
                         <li class="nav-item">
                             <a
                                 href="index.html#hafaSamband"
@@ -88,21 +93,21 @@
                         <a
                             href="https://www.instagram.com/onet8k/"
                             target="_blank"
-                            class="pe-3 ps-3 text-light"
+                            class="pe-2 ps-2 text-light"
                         >
                             <i class="bi bi-instagram fs-4"></i>
                         </a>
                         <a
                             href="https://www.tiktok.com/@onet8kmedia"
                             target="_blank"
-                            class="pe-3 ps-3 text-light"
+                            class="pe-2 ps-2 text-light"
                         >
                             <i class="bi bi-tiktok fs-4"></i>
                         </a>
                         <a
                             href="https://www.facebook.com/profile.php?id=61586025819175"
                             target="_blank"
-                            class="pe-3 ps-3 text-light"
+                            class="pe-3 ps-2 text-light"
                         >
                             <i class="bi bi-facebook fs-4"></i>
                         </a>
@@ -121,8 +126,8 @@
             class="position-fixed start-0 w-100 h-100"
             style="top: 0px; width: 100%; object-fit: cover; z-index: -2"
         >
-            <source src="/Assets/Videos/reel v2 av1.mp4" type="video/mp4" />
-            <source src="/Assets/Videos/reel v2 h.264.mp4" type="video/mp4" />
+            <source src="/Assets/Videos/reel v3 av1.mp4" type="video/mp4" />
+            <source src="/Assets/Videos/reel v3 h.264.mp4" type="video/mp4" />
         </video>
         <div
             id="videoOverlay"
@@ -149,30 +154,31 @@
                     style="min-height: calc(80vh - 30px)"
                 ></section>
             </section>
-            <section class="px-3 px-md-4 my-0">
-                <div class="project-panel bg-danger text-white shadow">
-                    <div class="container-xxl py-5">
-                        <!-- TOP ROW -->
-                        <div class="row g-4 align-items-start mb-5">
-                            <!-- LEFT (Title) -->
-                            <div class="col-12 col-lg-6">
-                                <p class="text-uppercase fw-semibold mb-1">
-                                    Verkefnið
-                                </p>
-                                <h1
-                                    class="fw-bold m-0"
-                                    style="letter-spacing: 0.2px"
-                                >
-                                    Ljósmyndabanki Hard Rock Reykjavíkur
+            <section class="my-0">
+                <div
+                    class="text-white shadow py-5"
+                    style="background: rgba(220,53,69,0.88); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);"
+                >
+                    <div class="container-xxl px-3 px-md-4 py-4">
+                        <div class="row g-4 align-items-stretch">
+                            <!-- LEFT -->
+                            <div class="col-12 col-lg-4">
+                            <div class="mb-4">
+                                <div class="text-uppercase fw-semibold small opacity-75">Verkefnið</div>
+                                <h1 class="fw-bold m-0 lh-1" style="letter-spacing: .2px;">
+                                Ljósmyndabanki Hard Rock Reykjavíkur
                                 </h1>
                             </div>
 
-                            <!-- RIGHT (Description) -->
-                            <div class="col-12 col-lg-6">
-                                <p class="text-uppercase fw-bold mb-2">
-                                    Verkefnið
-                                </p>
-                                <p class="mb-0">
+                            <div>
+                                <div class="text-uppercase fw-semibold small opacity-75">Viðskiptavinur</div>
+                                <h2 class="fw-bold m-0 lh-1">Hard Rock Reykjavík</h2>
+                            </div>
+                            </div>
+
+                            <!-- RIGHT (center vertically) -->
+                            <div class="col-12 col-lg-8 d-flex align-items-center">
+                                <p class="fs-4 mb-0" style="max-width: 60ch;">
                                     Hardrock Reykjavík vantaði góðan banka af
                                     ljósmyndum til að geta birt reglulega á
                                     samfélagsmiðlum. Í samstarfi við PiparTBWA
@@ -183,37 +189,15 @@
                                 </p>
                             </div>
                         </div>
-
-                        <!-- BOTTOM ROW -->
-                        <div class="row g-4 align-items-start">
-                            <!-- LEFT (Client info) -->
-                            <div class="col-12 col-lg-6">
-                                <p class="text-uppercase fw-semibold mb-1">
-                                    Viðskiptavinur
-                                </p>
-                                <h2 class="fw-bold m-0">Hard Rock Reykjavík</h2>
-                            </div>
-
-                            <!-- RIGHT (empty for spacing) -->
-                            <div class="col-12 col-lg-6"></div>
-                        </div>
                     </div>
                 </div>
             </section>
-            <section class="text-light position-relative pt-4">
-                <div class="container-xxl">
-                    <div class="row justify-content-center g-4">
-                        <div class="container-xxl">
-                            <div class="row justify-content-center g-4">
-                                <img
-                                    src="Assets/Img/Verkefnasidur/hardrock myndir.jpg"
-                                    alt=""
-                                    class="w-80"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section class="position-relative">
+                <img
+                    src="Assets/Img/Verkefnasidur/hardrock myndir.jpg"
+                    alt=""
+                    class="img-fluid w-100"
+                />
             </section>
             <section class="text-light position-relative">
                 <div class="container">
@@ -235,22 +219,25 @@
                                         <div class="row g-3">
                                             <div class="col-12 col-md-4">
                                                 <a
-                                                    href="/hardRock.html"
+                                                    href="/songvakeppni.html"
                                                     class="project-card"
                                                 >
                                                     <img
-                                                        src="/Assets/Img/Verkefnasidur/hardrockcover.jpg"
-                                                        alt="Hard Rock verkefni"
+                                                        src="/Assets/Img/thumbnails/söngvakeppnis banner 3.jpg"
+                                                        alt="Söngvakeppnis verkefni"
                                                         loading="lazy"
                                                     />
 
                                                     <div
                                                         class="project-overlay"
                                                     >
-                                                        <i
-                                                            class="bi bi-play-circle-fill"
-                                                        ></i>
-                                                        <h3>Hard Rock</h3>
+                                                        <img
+                                                            src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png"
+                                                            alt="ruv logo"
+                                                            class="project-logo pb-3"
+                                                            style="height: 7rem; width: auto;"
+                                                        />
+                                                        <h3>Söngvakeppnin</h3>
                                                     </div>
                                                 </a>
                                             </div>
@@ -268,9 +255,12 @@
                                                     <div
                                                         class="project-overlay"
                                                     >
-                                                        <i
-                                                            class="bi bi-play-circle-fill"
-                                                        ></i>
+                                                        <img
+                                                            src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/sjova-hvitt.png"
+                                                            alt="Sjóvá Snjalltryggingar logo"
+                                                            class="project-logo pb-4"
+                                                            style="height: 6rem; width: auto;"
+                                                        />
                                                         <h3>
                                                             Sjóvá
                                                             Snjalltryggingar
@@ -278,34 +268,6 @@
                                                     </div>
                                                 </a>
                                             </div>
-                                            <div class="col-12 col-md-4">
-                                                <a
-                                                    href="/barnvaentSveitarfelag.html"
-                                                    class="project-card"
-                                                >
-                                                    <img
-                                                        src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.jpg"
-                                                        alt="Barnvænt Sveitarfélag verkefni"
-                                                        loading="lazy"
-                                                    />
-
-                                                    <div
-                                                        class="project-overlay"
-                                                    >
-                                                        <i
-                                                            class="bi bi-play-circle-fill"
-                                                        ></i>
-                                                        <h3>
-                                                            Barnvænt
-                                                            Sveitarfélag
-                                                        </h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row g-3">
                                             <div class="col-12 col-md-4">
                                                 <a
                                                     href="/vitringarnir.html"
@@ -320,10 +282,44 @@
                                                     <div
                                                         class="project-overlay"
                                                     >
-                                                        <i
-                                                            class="bi bi-play-circle-fill"
-                                                        ></i>
+                                                        <img
+                                                            src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png"
+                                                            alt="Vitringarnir logo"
+                                                            class="project-logo pb-4"
+                                                            style="height: 10rem; width: auto;"
+                                                        />
                                                         <h3>Vitringarnir</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-md-4">
+                                                <a
+                                                    href="/barnvaentSveitarfelag.html"
+                                                    class="project-card"
+                                                >
+                                                    <img
+                                                        src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.jpg"
+                                                        alt="Barnvænt Sveitarfélag verkefni"
+                                                        loading="lazy"
+                                                    />
+
+                                                    <div
+                                                        class="project-overlay"
+                                                    >
+                                                        <img
+                                                            src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/kopavogur 1.png"
+                                                            alt="Barnvænt Sveitarfélag logo"
+                                                            class="project-logo pb-1.5"
+                                                            style="height: 7rem; width: auto;"
+                                                        />
+                                                        <h3>
+                                                            Barnvænt
+                                                            Sveitarfélag
+                                                        </h3>
                                                     </div>
                                                 </a>
                                             </div>
@@ -341,9 +337,12 @@
                                                     <div
                                                         class="project-overlay"
                                                     >
-                                                        <i
-                                                            class="bi bi-play-circle-fill"
-                                                        ></i>
+                                                        <img
+                                                            src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png"
+                                                            alt="hinsegin dagar logo"
+                                                            class="project-logo pb-3"
+                                                            style="height: 7rem; width: auto;"
+                                                        />
                                                         <h3>
                                                             Hinsegin Dagar
                                                         </h3>
@@ -352,22 +351,25 @@
                                             </div>
                                             <div class="col-12 col-md-4">
                                                 <a
-                                                    href="/songvakeppni.html"
+                                                    href="/hardRock.html"
                                                     class="project-card"
                                                 >
                                                     <img
-                                                        src="/Assets/Img/thumbnails/söngvakeppnis banner 3.jpg"
-                                                        alt="Söngvakeppnis verkefni"
+                                                        src="/Assets/Img/Verkefnasidur/hardrockcover.jpg"
+                                                        alt="Hard Rock verkefni"
                                                         loading="lazy"
                                                     />
 
                                                     <div
                                                         class="project-overlay"
                                                     >
-                                                        <i
-                                                            class="bi bi-play-circle-fill"
-                                                        ></i>
-                                                        <h3>Söngvakeppnin</h3>
+                                                        <img
+                                                            src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png"
+                                                            alt="Hard Rock logo"
+                                                            class="project-logo pb-4"
+                                                            style="height: 8rem; width: auto;"
+                                                        />
+                                                        <h3>Hard Rock</h3>
                                                     </div>
                                                 </a>
                                             </div>
@@ -406,16 +408,15 @@
                     <div class="col-4 ps-md-5">
                         <!-- Hide the multi-line address on the tiniest screens to avoid crowding -->
                         <div class="text-start d-none d-sm-block small">
-                            <p class="mb-1 fw-bold">Onetake ehf.</p>
+                            <p class="mb-1 fw-bold">ONET8K ehf.</p>
                             <p class="mb-1 fw-bold">Hafnargata,</p>
-                            <p class="mb-0 fw-bold">230, Reykjanesbæ</p>
                         </div>
                         <div class="text-center text-md-start">
                             <a
                                 href="tel:+3547760957"
                                 class="text-white text-decoration-none fw-semibold small"
                             >
-                                +354 7760957
+                                230, Reykjanesbæ
                             </a>
                         </div>
                     </div>
@@ -471,6 +472,7 @@
                             >
                                 <i class="bi bi-tiktok fs-5 fs-md-3"></i>
                             </a>
+
                             <a 
                                 href="https://www.facebook.com/profile.php?id=61586025819175"
                                 target="_blank"
@@ -729,7 +731,6 @@
                 }
             });
         </script>
-
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
