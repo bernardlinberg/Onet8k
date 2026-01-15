@@ -22,6 +22,10 @@
   top: 40%;
 }
 
+#verkefni {
+  scroll-margin: 12rem;
+}
+
 #vimeoCarousel .carousel-control-prev-icon,
 #vimeoCarousel .carousel-control-next-icon {
   background-color: rgba(0, 0, 0, 0.88);
@@ -298,7 +302,7 @@ main#app {
   margin-bottom: 0.5rem;
 }
 
-.project-card:hover img {
+.project-card:hover > img {
   filter: blur(4px) brightness(0.75);
   transform: scale(1.05);
 }
@@ -386,4 +390,3 @@ main#app {
     transition: none;
   }
 }
-
