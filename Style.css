@@ -329,6 +329,10 @@ main#app {
   display: block;
 }
 
+.ratio.ratio-2x1 {
+  --bs-aspect-ratio: 177.78%;
+}
+
 @media (max-width: 575.98px) {
   /* Hide address block and big text logo + MEDIA line */
   .footer .ps-md-5 .text-start {
