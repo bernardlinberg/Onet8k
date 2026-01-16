@@ -409,3 +409,24 @@ main#app {
   opacity: 1;
 }
 
+.hero-copy{
+  top: 65%;
+  left: 12%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px){
+  .hero-copy{
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 520px);
+    text-align: center;
+    padding-left: 0 !important;
+  }
+
+  .hero-copy .btn{
+    width: auto;
+    max-width: 92vw;
+  }
+}
