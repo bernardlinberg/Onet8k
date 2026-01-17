@@ -282,6 +282,7 @@ main#app {
   overflow: hidden;
   border-radius: 0.75rem;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .project-card img {
@@ -293,13 +294,13 @@ main#app {
     transform 0.35s ease;
 }
 @media (hover: none) and (pointer: coarse) {
-  .project-overlay {
-    opacity: 1;
+  .project-card:hover > img {
+    filter: none !important;
+    transform: none !important;
   }
 
-  .project-card:hover > img {
-    filter: none;
-    transform: none;
+  .project-card:hover .project-overlay {
+    opacity: 0 !important;
   }
 }
 
