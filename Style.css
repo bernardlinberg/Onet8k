@@ -5,7 +5,7 @@
 
 .carousel-wrapper {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .carousel-control-prev {
@@ -22,6 +22,15 @@
   top: 40%;
 }
 
+@media (max-width: 768px) {
+  .carousel-control-prev {
+    left: 0.25rem;
+  }
+
+  .carousel-control-next {
+    right: 0.25rem;
+  }
+}
 
 #verkefni {
   scroll-margin: 12rem;
@@ -296,6 +305,7 @@ main#app {
   transition: opacity 0.35s ease;
   color: white;
   text-align: center;
+  pointer-events: none;
 }
 
 .project-overlay i {
@@ -392,31 +402,31 @@ main#app {
   }
 }
 
-#mainNav .nav-logo{
-  opacity: .7;
+#mainNav .nav-logo {
+  opacity: 0.7;
   transition: opacity 200ms ease;
 }
 
-#mainNav.scrolled .nav-logo{
+#mainNav.scrolled .nav-logo {
   opacity: 1;
 }
 
-#mainNav:hover .nav-logo{
+#mainNav:hover .nav-logo {
   opacity: 1;
 }
 
-#mainNav:has(#navMenu.show) .nav-logo{
+#mainNav:has(#navMenu.show) .nav-logo {
   opacity: 1;
 }
 
-.hero-copy{
+.hero-copy {
   top: 65%;
   left: 12%;
   transform: translateY(-50%);
 }
 
-@media (max-width: 768px){
-  .hero-copy{
+@media (max-width: 768px) {
+  .hero-copy {
     left: 50%;
     top: 58%;
     transform: translate(-50%, -50%);
@@ -425,7 +435,7 @@ main#app {
     padding-left: 0 !important;
   }
 
-  .hero-copy .btn{
+  .hero-copy .btn {
     width: auto;
     max-width: 92vw;
   }
