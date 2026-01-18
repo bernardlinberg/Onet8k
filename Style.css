@@ -121,6 +121,8 @@ body {
 .logos-slide {
   display: inline-block;
   animation: 30s slide infinite linear;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .logos-slide img {
