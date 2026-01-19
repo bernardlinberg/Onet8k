@@ -310,6 +310,20 @@ main#app {
   #vimeoCarousel {
     padding-inline: 4rem;
   }
+  footer.footer .row > div:nth-child(1),
+  footer.footer .row > div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* Make the remaining column span full width */
+  footer.footer .row > div:nth-child(3) {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  footer.footer .row > div:nth-child(3) > div {
+    justify-content: center !important;
+  }
 }
 
 .project-overlay {
