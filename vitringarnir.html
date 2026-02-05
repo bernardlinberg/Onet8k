@@ -595,7 +595,7 @@
 
         <!-- footer -->
         <footer class="footer bg-danger text-white py-4">
-            <div class="container-fluid px-2 px-md-3">
+            <div class="container-fluid px-2 px-md-5">
                 <div class="row g-2 align-items-center">
                     <!-- LEFT (address + phone) -->
                     <div class="col-4">
@@ -606,32 +606,36 @@
                         </div>
                         <div class="text-start">
                             <a
-                                href="tel:+3547760957"
+                                
                                 class="text-white text-decoration-none fw-semibold small"
                             >
-                                230, Reykjanesbæ
+                                230, Reykjanesbær
                             </a>
                         </div>
                     </div>
 
                     <!-- CENTER (logo) -->
                     <div class="col-4 text-center">
-                        <!-- Smaller logo on phones, bigger on md+ -->
-                        <img
-                            src="Assets/Img/ONETAKE LOGO.png"
-                            alt="ONET8K"
-                            class="d-inline d-md-none"
-                            style="height: 40px; width: auto"
-                        />
-                        <img
-                            src="Assets/Img/ONETAKE LOGO.png"
-                            alt="ONET8K"
-                            class="d-none d-md-inline"
-                            style="height: 80px; width: auto"
-                        />
-                        <div
-                            class="small opacity-75 mt-1 d-none d-sm-block"
-                        ></div>
+                        <a
+                            href="index.html#top"
+                            class="d-inline-block"
+                            hx-boost="false"
+                            aria-label="Back to top"
+                        >
+                            <img
+                                src="Assets/Img/ONETAKE LOGO.png"
+                                alt="ONET8K"
+                                class="d-inline d-md-none"
+                                style="height: 40px; width: auto"
+                            />
+                            <img
+                                src="Assets/Img/ONETAKE LOGO.png"
+                                alt="ONET8K"
+                                class="d-none d-md-inline"
+                                style="height: 80px; width: auto"
+                            />
+                        </a>
+                        <div class="small opacity-75 mt-1 d-none d-sm-block"></div>
                     </div>
 
                     <!-- RIGHT (CTA + icons) -->
@@ -640,12 +644,7 @@
                             class="d-flex justify-content-end align-items-center gap-3 flex-wrap"
                         >
                             <!-- changed: footer CTA scrolls to form -->
-                            <a
-                                href="index.html#hafaSamband"
-                                class="text-light fw-semibold text-decoration-none d-none d-sm-inline"
-                            >
-                                Hafa samband
-                            </a>
+                            
 
                             <a
                                 href="https://www.instagram.com/onet8k_media/"
@@ -666,13 +665,14 @@
                                 <i class="bi bi-tiktok fs-5 fs-md-3"></i>
                             </a>
 
-                            <a
+                            <a 
                                 href="https://www.facebook.com/profile.php?id=61586025819175"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 class="text-light"
                                 aria-label="facebook"
                             >
+
                                 <i class="bi bi-facebook fs-5 fs-md-3"></i>
                             </a>
                         </div>
@@ -786,7 +786,7 @@
 
                 if (page === "home" || page === "project") {
                     initHomeOverlay();
-                } else if (page === "umOkkur") {
+                } else if (page === "umOkkur" || page === "takkSite") {
                     initUmOkkurOverlay();
                 }
             }
