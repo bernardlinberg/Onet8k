@@ -1,35 +1,89 @@
+.carousel-wrapper{
+    overflow: visible;
+}
+
+#vimeoCarousel{
+    position: relative;
+    padding-inline: 8rem;
+    overflow: visible;
+}
+
+#vimeoCarousel .custom-carousel-control{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+    outline: none;
+    box-shadow: none;
+}
+
+#vimeoCarousel .custom-carousel-control:focus,
+#vimeoCarousel .custom-carousel-control:focus-visible{
+    outline: none;
+    box-shadow: none;
+}
+
 #vimeoCarousel .carousel-control-prev,
-#vimeoCarousel .carousel-control-next {
-  width: 5%;
+#vimeoCarousel .carousel-control-next{
+    opacity: 1;
 }
 
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
+#vimeoCarousel .carousel-control-prev{
+    left: .5rem;
 }
 
-.carousel-control-prev {
-  left: clamp(-12rem, -5vw, -0.5rem);
-  font-size: 3rem;
-  color: white;
-  top: 40%;
+#vimeoCarousel .carousel-control-next{
+    right: .5rem;
 }
 
-.carousel-control-next {
-  right: clamp(-12rem, -5vw, -0.5rem);
-  font-size: 3rem;
-  color: white;
-  top: 40%;
+#vimeoCarousel .custom-carousel-control i{
+    font-size: 3.4rem;
+    color: #fff;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 .15rem .75rem rgba(0,0,0,.7);
 }
 
-@media (max-width: 768px) {
-  .carousel-control-prev {
-    left: 0.25rem;
-  }
+@media (min-width: 992px){
+    #vimeoCarousel .carousel-control-prev{
+        left: 3rem;
+    }
 
-  .carousel-control-next {
-    right: 0.25rem;
-  }
+    #vimeoCarousel .carousel-control-next{
+        right: 3rem;
+    }
+
+    #vimeoCarousel .custom-carousel-control i{
+        font-size: 3.75rem;
+    }
+}
+
+@media (max-width: 575.98px){
+    #vimeoCarousel{
+        padding-inline: 0;
+    }
+
+    #vimeoCarousel .carousel-control-prev{
+        left: .25rem;
+    }
+
+    #vimeoCarousel .carousel-control-next{
+        right: .25rem;
+    }
+
+    #vimeoCarousel .custom-carousel-control i{
+        font-size: 3.1rem;
+    }
 }
 
 #verkefni {
@@ -203,10 +257,6 @@ main#app {
 
 @media (min-width: 992px) {
   #mainNav .navbar-collapse {
-    display: none !important;
-  }
-  #mainNav:hover .navbar-collapse,
-  #mainNav.scrolled .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
     justify-content: end;
@@ -218,28 +268,17 @@ main#app {
     align-items: center;
     gap: 1.25rem;
     white-space: nowrap;
-    transform: translateX(32px);
-    opacity: 0;
-    transition:
-      transform 0.35s ease,
-      opacity 0.3s ease;
+
+    opacity: .7;           
+    transform: none;        
+    transition: opacity 200ms ease;
   }
+
   #mainNav:hover .navbar-collapse .navbar-nav,
   #mainNav.scrolled .navbar-collapse .navbar-nav,
-  #mainNav:focus-within .navbar-collapse .navbar-nav {
-    transform: none;
+  #mainNav:has(:focus-visible) .navbar-collapse .navbar-nav,
+  #mainNav:has(#navMenu.show) .navbar-collapse .navbar-nav {
     opacity: 1;
-  }
-
-  #mainNav .navbar-toggler {
-    border-width: 50px;
-    padding: 0.5rem 0.8rem;
-    border: 4px solid white;
-    margin-right: 1.5rem;
-  }
-
-  #mainNav .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
 
   #mainNav:hover .navbar-toggler,
@@ -472,4 +511,65 @@ main#app {
     width: auto;
     max-width: 92vw;
   }
+}
+
+#mainNav .nav-fade{
+  opacity: .7;
+  transition: opacity 200ms ease;
+}
+
+#mainNav.scrolled .nav-fade,
+#mainNav:hover .nav-fade,
+#mainNav:focus-within .nav-fade,
+#mainNav:has(#navMenu.show) .nav-fade{
+  opacity: 1;
+}
+
+@media (max-width: 991px){
+  #mainNav .nav-fade{
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991.98px){
+    /* 1) Smaller header + smaller logo */
+    #mainNav.navbar{
+        padding-top: .25rem !important;
+        padding-bottom: .25rem !important;
+    }
+
+    #mainNav .nav-logo{
+        height: 52px !important;
+        width: auto !important;
+        opacity: 1 !important;      /* 2) Always 100% opacity on mobile */
+    }
+
+    /* 2) Navbar background is always visible on mobile already, keep logo/items fully visible */
+    #mainNav:hover .nav-logo,
+    #mainNav.scrolled .nav-logo,
+    #mainNav:has(#navMenu.show) .nav-logo{
+        opacity: 1 !important;
+    }
+
+    /* 3) Center nav menu text/icons in mobile view */
+    #mainNav .navbar-collapse .navbar-nav{
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    #mainNav .navbar-collapse .nav-link{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #mainNav .navbar-collapse .nav-item .d-flex{
+        justify-content: center;
+        padding-left: 0 !important;
+    }
+
+    /* 3) Center the "verkefni" intro text block on mobile */
+    #verkefni .text-start{
+        text-align: center !important;
+    }
 }
