@@ -532,7 +532,7 @@ main#app {
 }
 
 @media (max-width: 991.98px){
-    /* 1) Smaller header + smaller logo */
+
     #mainNav.navbar{
         padding-top: .25rem !important;
         padding-bottom: .25rem !important;
@@ -541,17 +541,15 @@ main#app {
     #mainNav .nav-logo{
         height: 52px !important;
         width: auto !important;
-        opacity: 1 !important;      /* 2) Always 100% opacity on mobile */
+        opacity: 1 !important;      
     }
 
-    /* 2) Navbar background is always visible on mobile already, keep logo/items fully visible */
     #mainNav:hover .nav-logo,
     #mainNav.scrolled .nav-logo,
     #mainNav:has(#navMenu.show) .nav-logo{
         opacity: 1 !important;
     }
 
-    /* 3) Center nav menu text/icons in mobile view */
     #mainNav .navbar-collapse .navbar-nav{
         align-items: center;
         text-align: center;
@@ -568,8 +566,140 @@ main#app {
         padding-left: 0 !important;
     }
 
-    /* 3) Center the "verkefni" intro text block on mobile */
     #verkefni .text-start{
         text-align: center !important;
     }
 }
+
+@media (max-width: 575.98px){
+    #verkefni .text-start h1,
+    #verkefni .text-start h3{
+        margin: 0;
+        padding: 0;
+        line-height: 1.25;
+    }
+
+    #verkefni .text-start h1{
+        margin-bottom: .6rem;
+    }
+
+    #verkefni .text-start h3{
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    #hafaSamband .modal-title{
+        text-align: center;
+        width: 100%;
+    }
+
+    #hafaSamband label[for="skilabod"]{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+
+    #hafaSamband label:not([for="skilabod"]){
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    #hafaSamband .form-control{
+        text-align: left;
+    }
+}
+
+@media (max-width: 575.98px){
+    #verkefni .text-start{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 991.98px){
+    #mainNav::before{
+        display: none !important;
+    }
+}
+
+.project-carousel{
+    position: relative;
+    overflow: visible;
+}
+
+.project-carousel .custom-carousel-control{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    width: auto;
+    height: auto;
+    background: none;
+    border: 0;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+    outline: none;
+    box-shadow: none;
+}
+
+.project-carousel .custom-carousel-control:focus,
+.project-carousel .custom-carousel-control:focus-visible{
+    outline: none;
+    box-shadow: none;
+}
+
+.project-carousel .carousel-control-prev,
+.project-carousel .carousel-control-next{
+    opacity: 1;
+}
+
+.project-carousel .custom-carousel-control i{
+    font-size: 3.4rem;
+    color: #fff;
+    background: transparent;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 .15rem .75rem rgba(0,0,0,.7);
+}
+
+@media (min-width: 992px){
+    .project-carousel{
+        padding-inline: 8rem;
+    }
+
+    .project-carousel .carousel-control-prev{
+        left: 4rem;
+    }
+
+    .project-carousel .carousel-control-next{
+        right: 4rem;
+    }
+}
+
+@media (max-width: 575.98px){
+    .project-carousel{
+        padding-inline: 0;
+    }
+
+    .project-carousel .carousel-control-prev{
+        left: .25rem;
+    }
+
+    .project-carousel .carousel-control-next{
+        right: .25rem;
+    }
+}
+
+@media (max-width: 575.98px){
+    .project-carousel .carousel-inner{
+        width: min(70vw, 420px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
