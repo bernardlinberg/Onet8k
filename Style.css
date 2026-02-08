@@ -596,7 +596,7 @@ main#app {
     #hafaSamband label[for="skilabod"]{
         display: block;
         width: 100%;
-        text-align: center;
+        text-align: left;
         margin-bottom: .5rem;
     }
 
@@ -703,3 +703,107 @@ main#app {
     }
 }
 
+#verkefni .verkefni-copy{
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.45;
+}
+
+@media (max-width: 575.98px){
+    #verkefni .text-start{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left !important;
+    }
+
+    #verkefni .verkefni-copy{
+        max-width: 26rem;
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 575.98px){
+    #verkefni .verkefni-copy{
+        max-width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+
+    #verkefni .verkefni-copy .verkefni-last{
+        display: block;
+        margin-top: .35rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px){
+    #verkefni .text-start{
+        max-width: 44rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #verkefni .verkefni-copy{
+        font-size: 1.35rem;
+        line-height: 1.55;
+        text-align: left;
+    }
+}
+
+#verkefni .text-start > h1{
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 575.98px){
+    #verkefni .text-start > h1{
+        max-width: 22rem;
+    }
+}
+
+.hero-title{
+    margin: 0;
+    line-height: 1.08;
+}
+
+.hero-title .hero-line{
+    display: inline;
+}
+
+@media (max-width: 575.98px){
+    .hero-title{
+        line-height: 1.05;
+    }
+
+    .hero-title .hero-line{
+        display: block;
+    }
+}
+
+@media (min-width: 992px){
+    .hero-copy{
+        max-width: 60rem;
+    }
+}
+
+@media (min-width: 992px){
+    #verkefni .text-start{
+        max-width: 60rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #verkefni .verkefni-copy,
+    #verkefni .verkefni-cta{
+        max-width: none;
+    }
+
+    #vimeoCarousel{
+        padding-top: 1.5rem !important;
+    }
+}
