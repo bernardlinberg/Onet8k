@@ -1,89 +1,89 @@
-.carousel-wrapper{
-    overflow: visible;
+.carousel-wrapper {
+  overflow: visible;
 }
 
-#vimeoCarousel{
-    position: relative;
-    padding-inline: 8rem;
-    overflow: visible;
+#vimeoCarousel {
+  position: relative;
+  padding-inline: 8rem;
+  overflow: visible;
 }
 
-#vimeoCarousel .custom-carousel-control{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9999;
-    width: auto;
-    height: auto;
-    background: transparent;
-    border: 0;
-    padding: 0;
-    opacity: 1;
-    pointer-events: auto;
-    outline: none;
-    box-shadow: none;
+#vimeoCarousel .custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  pointer-events: auto;
+  outline: none;
+  box-shadow: none;
 }
 
 #vimeoCarousel .custom-carousel-control:focus,
-#vimeoCarousel .custom-carousel-control:focus-visible{
-    outline: none;
-    box-shadow: none;
+#vimeoCarousel .custom-carousel-control:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 #vimeoCarousel .carousel-control-prev,
-#vimeoCarousel .carousel-control-next{
-    opacity: 1;
+#vimeoCarousel .carousel-control-next {
+  opacity: 1;
 }
 
-#vimeoCarousel .carousel-control-prev{
-    left: .5rem;
+#vimeoCarousel .carousel-control-prev {
+  left: 0.5rem;
 }
 
-#vimeoCarousel .carousel-control-next{
-    right: .5rem;
+#vimeoCarousel .carousel-control-next {
+  right: 0.5rem;
 }
 
-#vimeoCarousel .custom-carousel-control i{
-    font-size: 3.4rem;
-    color: #fff;
-    background: transparent;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0 .15rem .75rem rgba(0,0,0,.7);
+#vimeoCarousel .custom-carousel-control i {
+  font-size: 3.4rem;
+  color: #fff;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0.15rem 0.75rem rgba(0, 0, 0, 0.7);
 }
 
-@media (min-width: 992px){
-    #vimeoCarousel .carousel-control-prev{
-        left: 3rem;
-    }
+@media (min-width: 992px) {
+  #vimeoCarousel .carousel-control-prev {
+    left: 3rem;
+  }
 
-    #vimeoCarousel .carousel-control-next{
-        right: 3rem;
-    }
+  #vimeoCarousel .carousel-control-next {
+    right: 3rem;
+  }
 
-    #vimeoCarousel .custom-carousel-control i{
-        font-size: 3.75rem;
-    }
+  #vimeoCarousel .custom-carousel-control i {
+    font-size: 3.75rem;
+  }
 }
 
-@media (max-width: 575.98px){
-    #vimeoCarousel{
-        padding-inline: 0;
-    }
+@media (max-width: 575.98px) {
+  #vimeoCarousel {
+    padding-inline: 0;
+  }
 
-    #vimeoCarousel .carousel-control-prev{
-        left: .25rem;
-    }
+  #vimeoCarousel .carousel-control-prev {
+    left: 0.25rem;
+  }
 
-    #vimeoCarousel .carousel-control-next{
-        right: .25rem;
-    }
+  #vimeoCarousel .carousel-control-next {
+    right: 0.25rem;
+  }
 
-    #vimeoCarousel .custom-carousel-control i{
-        font-size: 3.1rem;
-    }
+  #vimeoCarousel .custom-carousel-control i {
+    font-size: 3.1rem;
+  }
 }
 
 #verkefni {
@@ -269,8 +269,8 @@ main#app {
     gap: 1.25rem;
     white-space: nowrap;
 
-    opacity: .7;           
-    transform: none;        
+    opacity: 0.7;
+    transform: none;
     transition: opacity 200ms ease;
   }
 
@@ -513,297 +513,290 @@ main#app {
   }
 }
 
-#mainNav .nav-fade{
-  opacity: .7;
+#mainNav .nav-fade {
+  opacity: 0.7;
   transition: opacity 200ms ease;
 }
 
 #mainNav.scrolled .nav-fade,
 #mainNav:hover .nav-fade,
 #mainNav:focus-within .nav-fade,
-#mainNav:has(#navMenu.show) .nav-fade{
+#mainNav:has(#navMenu.show) .nav-fade {
   opacity: 1;
 }
 
-@media (max-width: 991px){
-  #mainNav .nav-fade{
+@media (max-width: 991px) {
+  #mainNav .nav-fade {
     opacity: 1;
   }
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 991.98px) {
+  #mainNav.navbar {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
 
-    #mainNav.navbar{
-        padding-top: .25rem !important;
-        padding-bottom: .25rem !important;
-    }
+  #mainNav .nav-logo {
+    height: 52px !important;
+    width: auto !important;
+    opacity: 1 !important;
+  }
 
-    #mainNav .nav-logo{
-        height: 52px !important;
-        width: auto !important;
-        opacity: 1 !important;      
-    }
+  #mainNav:hover .nav-logo,
+  #mainNav.scrolled .nav-logo,
+  #mainNav:has(#navMenu.show) .nav-logo {
+    opacity: 1 !important;
+  }
 
-    #mainNav:hover .nav-logo,
-    #mainNav.scrolled .nav-logo,
-    #mainNav:has(#navMenu.show) .nav-logo{
-        opacity: 1 !important;
-    }
+  #mainNav .navbar-collapse .navbar-nav {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
 
-    #mainNav .navbar-collapse .navbar-nav{
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
+  #mainNav .navbar-collapse .nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 
-    #mainNav .navbar-collapse .nav-link{
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
+  #mainNav .navbar-collapse .nav-item .d-flex {
+    justify-content: center;
+    padding-left: 0 !important;
+  }
 
-    #mainNav .navbar-collapse .nav-item .d-flex{
-        justify-content: center;
-        padding-left: 0 !important;
-    }
-
-    #verkefni .text-start{
-        text-align: center !important;
-    }
+  #verkefni .text-start {
+    text-align: center !important;
+  }
 }
 
-@media (max-width: 575.98px){
-    #verkefni .text-start h1,
-    #verkefni .text-start h3{
-        margin: 0;
-        padding: 0;
-        line-height: 1.25;
-    }
-
-    #verkefni .text-start h1{
-        margin-bottom: .6rem;
-    }
-
-    #verkefni .text-start h3{
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
-
-    #hafaSamband .modal-title{
-        text-align: center;
-        width: 100%;
-    }
-
-    #hafaSamband label[for="skilabod"]{
-        display: block;
-        width: 100%;
-        text-align: left;
-        margin-bottom: .5rem;
-    }
-
-    #hafaSamband label:not([for="skilabod"]){
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
-    #hafaSamband .form-control{
-        text-align: left;
-    }
-}
-
-@media (max-width: 575.98px){
-    #verkefni .text-start{
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-
-@media (max-width: 991.98px){
-    #mainNav::before{
-        display: none !important;
-    }
-}
-
-.project-carousel{
-    position: relative;
-    overflow: visible;
-}
-
-.project-carousel .custom-carousel-control{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 9999;
-    width: auto;
-    height: auto;
-    background: none;
-    border: 0;
+@media (max-width: 575.98px) {
+  #verkefni .text-start h1,
+  #verkefni .text-start h3 {
+    margin: 0;
     padding: 0;
-    opacity: 1;
-    pointer-events: auto;
-    outline: none;
-    box-shadow: none;
+    line-height: 1.25;
+  }
+
+  #verkefni .text-start h1 {
+    margin-bottom: 0.6rem;
+  }
+
+  #verkefni .text-start h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  #hafaSamband .modal-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  #hafaSamband label[for="skilabod"] {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  #hafaSamband label:not([for="skilabod"]) {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  #hafaSamband .form-control {
+    text-align: left;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #verkefni .text-start {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #mainNav::before {
+    display: none !important;
+  }
+}
+
+.project-carousel {
+  position: relative;
+  overflow: visible;
+}
+
+.project-carousel .custom-carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
+  width: auto;
+  height: auto;
+  background: none;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  pointer-events: auto;
+  outline: none;
+  box-shadow: none;
 }
 
 .project-carousel .custom-carousel-control:focus,
-.project-carousel .custom-carousel-control:focus-visible{
-    outline: none;
-    box-shadow: none;
+.project-carousel .custom-carousel-control:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
 
 .project-carousel .carousel-control-prev,
-.project-carousel .carousel-control-next{
-    opacity: 1;
+.project-carousel .carousel-control-next {
+  opacity: 1;
 }
 
-.project-carousel .custom-carousel-control i{
-    font-size: 3.4rem;
-    color: #fff;
-    background: transparent;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 0 .15rem .75rem rgba(0,0,0,.7);
+.project-carousel .custom-carousel-control i {
+  font-size: 3.4rem;
+  color: #fff;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0.15rem 0.75rem rgba(0, 0, 0, 0.7);
 }
 
-@media (min-width: 992px){
-    .project-carousel{
-        padding-inline: 8rem;
-    }
+@media (min-width: 992px) {
+  .project-carousel {
+    padding-inline: 8rem;
+  }
 
-    .project-carousel .carousel-control-prev{
-        left: 4rem;
-    }
+  .project-carousel .carousel-control-prev {
+    left: 4rem;
+  }
 
-    .project-carousel .carousel-control-next{
-        right: 4rem;
-    }
+  .project-carousel .carousel-control-next {
+    right: 4rem;
+  }
 }
 
-@media (max-width: 575.98px){
-    .project-carousel{
-        padding-inline: 0;
-    }
+@media (max-width: 575.98px) {
+  .project-carousel {
+    padding-inline: 0;
+  }
 
-    .project-carousel .carousel-control-prev{
-        left: .25rem;
-    }
+  .project-carousel .carousel-control-prev {
+    left: 0.25rem;
+  }
 
-    .project-carousel .carousel-control-next{
-        right: .25rem;
-    }
+  .project-carousel .carousel-control-next {
+    right: 0.25rem;
+  }
 }
 
-@media (max-width: 575.98px){
-    .project-carousel .carousel-inner{
-        width: min(70vw, 420px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-#verkefni .verkefni-copy{
-    max-width: 44rem;
+@media (max-width: 575.98px) {
+  .project-carousel .carousel-inner {
+    width: min(70vw, 420px);
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.45;
+  }
 }
 
-@media (max-width: 575.98px){
-    #verkefni .text-start{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        text-align: left !important;
-    }
-
-    #verkefni .verkefni-copy{
-        max-width: 26rem;
-        font-size: 1.15rem;
-    }
+.text-wrap {
+  max-width: 540px;
+}
+.text-wrap-right {
+  margin-right: auto;
+}
+.text-wrap-left {
+  margin-left: auto;
 }
 
-@media (max-width: 575.98px){
-    #verkefni .verkefni-copy{
-        max-width: 22rem;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: justify;
-        text-justify: inter-word;
-        hyphens: auto;
-    }
-
-    #verkefni .verkefni-copy .verkefni-last{
-        display: block;
-        margin-top: .35rem;
-        text-align: left;
-    }
+.object-fit-cover {
+  object-fit: cover;
+  min-height: 420px;
+}
+.justify {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
-@media (min-width: 992px){
-    #verkefni .text-start{
-        max-width: 44rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #verkefni .verkefni-copy{
-        font-size: 1.35rem;
-        line-height: 1.55;
-        text-align: left;
-    }
+/* TEST SECTION */
+.about-hero {
+  background: #dc3545;
+  padding: 100px 0;
 }
 
-#verkefni .text-start > h1{
-    max-width: 44rem;
-    margin-left: auto;
-    margin-right: auto;
+.values-section {
+  background: #b8202e;
 }
 
-@media (max-width: 575.98px){
-    #verkefni .text-start > h1{
-        max-width: 22rem;
-    }
+.value-card {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 12px;
+  height: 100%;
 }
 
-.hero-title{
-    margin: 0;
-    line-height: 1.08;
+.team-card-pro {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background: #000;
 }
 
-.hero-title .hero-line{
-    display: inline;
+.team-card-pro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-@media (max-width: 575.98px){
-    .hero-title{
-        line-height: 1.05;
-    }
-
-    .hero-title .hero-line{
-        display: block;
-    }
+/* Bottom gradient */
+.team-card-pro::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(220, 53, 69, 0.85) 0%,
+    rgba(220, 53, 69, 0.4) 40%,
+    rgba(220, 53, 69, 0) 70%
+  );
 }
 
-@media (min-width: 992px){
-    .hero-copy{
-        max-width: 60rem;
-    }
+/* Text block */
+.team-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px;
+  color: white;
+  z-index: 2;
 }
 
-@media (min-width: 992px){
-    #verkefni .text-start{
-        max-width: 60rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.team-overlay h5 {
+  margin: 0;
+  font-weight: 700;
+}
 
-    #verkefni .verkefni-copy,
-    #verkefni .verkefni-cta{
-        max-width: none;
-    }
+.team-overlay p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
 
-    #vimeoCarousel{
-        padding-top: 1.5rem !important;
-    }
+.team-overlay small {
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+/* Optional hover effect */
+.team-card-pro:hover img {
+  transform: scale(1.05);
+  transition: 0.4s;
 }
