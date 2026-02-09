@@ -86,8 +86,57 @@
   }
 }
 
-#verkefni {
-  scroll-margin: 3.5rem;
+#verkefni{
+    scroll-margin: 3.5rem;
+}
+
+#verkefni .verkefni-copy{
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.45;
+}
+
+#verkefni .text-start > h1{
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#verkefni .verkefni-last{
+    display: block;
+    margin-top: .35rem;
+    text-align: left;
+}
+
+@media (max-width: 575.98px){
+    #verkefni .text-start{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left !important;
+    }
+
+    #verkefni .verkefni-copy{
+        max-width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.15rem;
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+
+    #verkefni .text-start > h1{
+        max-width: 22rem;
+    }
+}
+
+@media (min-width: 992px){
+    #verkefni .verkefni-copy{
+        font-size: 1.35rem;
+        line-height: 1.55;
+        text-align: left;
+    }
 }
 
 #vimeoCarousel .carousel-control-prev-icon,
@@ -565,9 +614,7 @@ main#app {
     padding-left: 0 !important;
   }
 
-  #verkefni .text-start {
-    text-align: center !important;
-  }
+  
 }
 
 @media (max-width: 575.98px) {
