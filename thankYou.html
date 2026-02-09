@@ -22,6 +22,7 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
         />
+        <link rel="prefetch" href="index.html" as="document" />
         <link rel="prefetch" href="umOkkur.html" as="document" />
     </head>
 
@@ -32,6 +33,7 @@
         hx-swap="outerHTML"
         hx-target="main#app"
     >
+        <div id="top"></div>
         <!-- NAVBAR -->
         <nav
             id="mainNav"
@@ -42,10 +44,10 @@
                     <img
                         src="Assets/Img/ONETAKE LOGO.png"
                         alt="onet8k logo"
-                        style="height: 80px; width: auto"
-                    />
+                        class="nav-logo"
+                        style="height: 70px; width: auto"
+                        />
                 </a>
-
                 <button
                     class="navbar-toggler d-md-none"
                     type="button"
@@ -62,12 +64,15 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a
-                                href="snjalltryggingar.html"
-                                class="nav-link text-light fs-5 px-3 fw-bold"
-                                >Verkefni</a
+                                href="index.html#verkefni"
+                                class="nav-link text-light fs-5 px-3 fw-bold nav-fade"
+                                hx-boost="false"
                             >
+                                Verkefni
+                            </a>
                         </li>
 
+                        <!--                   
                         <li class="nav-item">
                             <a
                                 href="umOkkur.html"
@@ -75,36 +80,29 @@
                                 >Um okkur</a
                             >
                         </li>
+                    -->   
 
                         <li class="nav-item">
                             <a
                                 href="index.html#hafaSamband"
-                                class="nav-link text-light fs-5 px-3 fw-bold"
+                                class="nav-link text-light fs-5 px-3 fw-bold nav-fade"
                             >
                                 Hafa samband
                             </a>
                         </li>
-                        <a
-                            href="https://www.instagram.com/onet8k_media/"
-                            target="_blank"
-                            class="pe-3 ps-3 text-light"
-                        >
-                            <i class="bi bi-instagram fs-4"></i>
-                        </a>
-                        <a
-                            href="https://www.tiktok.com/@onet8kmedia"
-                            target="_blank"
-                            class="pe-3 ps-3 text-light"
-                        >
-                            <i class="bi bi-tiktok fs-4"></i>
-                        </a>
-                        <a
-                            href="https://www.facebook.com/profile.php?id=61586025819175"
-                            target="_blank"
-                            class="pe-3 ps-3 text-light"
-                        >
-                            <i class="bi bi-facebook fs-4"></i>
-                        </a>
+                        <li class="nav-item">
+                            <div class="d-flex align-items-center gap-4 ps-3">
+                            <a href="https://www.instagram.com/onet8k_media/" target="_blank" class="text-light nav-fade">
+                                <i class="bi bi-instagram fs-4"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@onet8kmedia" target="_blank" class="text-light nav-fade">
+                                <i class="bi bi-tiktok fs-4"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61586025819175" target="_blank" class="text-light nav-fade">
+                                <i class="bi bi-facebook fs-4"></i>
+                            </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
