@@ -106,8 +106,17 @@
                 </div>
             </div>
         </nav>
-                <!-- Background video -->
-        <div class="color-black"></div>
+
+        <!-- Background video -->
+        <video
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="auto"
+            class="position-fixed start-0 w-100 h-100"
+            style="top: 0px; width: 100%; object-fit: cover; z-index: -2"
+        >
             <source src="/Assets/Videos/reel v3 av1.mp4" type="video/mp4" />
             <source src="/Assets/Videos/reel v3 h.264.mp4" type="video/mp4" />
         </video>
@@ -117,111 +126,115 @@
             style="background: rgba(220, 53, 69, 0); z-index: -1"
         ></div>
 
+        <main id="app" data-page="project">
+            <section
+                class="position-relative text-center text-sm-start"
+                style="min-height: 65vh; overflow: hidden"
+            >
+                <!-- Background image that replaces video -->
+                <img
+                    src="Assets/Img/pro myndir/compressed/Group_Pic.jpg"
+                    alt="Snjalltryggingar background"
+                    class="position-fixed top-0 start-0 w-100 h-100 object-fit-cover"
+                    style="z-index: -2"
+                />
 
-        <section class="about-hero text-danger text-center">
-  <div class="container pt-5">
-    <h1 class="display-4 fw-bold">Kíktu í heimsókn</h1>
-    <p class="lead mt-1">
-      og sköpum eitthvað skemmtilegt saman.
-    </p>
-  </div>
-</section>
+                <!-- Spacer to give some top height like the hero on other pages -->
+                <section
+                    class="position-relative text-center text-sm-start"
+                    style="min-height: calc(50vh - 0px)"
+                ></section>
+            </section>
+            <section class="my-0">
+                <div
+                    class="text-white shadow py-5"
+                    style="background: rgba(220,53,69,0.88); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);"
+                >
+                        <div class="container-xxl px-3 px-md-4 py-4 mb-5 text-center">
+                            <div>
 
-<!-- STORY -->
-<section class="container-fluid p-0 ">
-  <div class="row g-0 align-items-stretch position-relative">
-    <div class="col-md-5 bg-white d-flex align-items-center text-white">
-        <div class="text-wrap text-wrap-left px-4 px-xl-5 py-5">
-            <h2 class="fw-bold text-danger">Hvað gerum við?</h2>
+                                <div class="mb-3">
+                                    <h1 class="fw-bold m-0 lh-1 display-3" style="letter-spacing: .2px;">
+                                        Kíktu í heimsókn
+                                    </h1>
+                                </div>
 
-            <p class="text-danger justify story-text">
-            Við sérhæfum okkur í að bjóða upp á fjölbreyttar og samþættar lausnir á sviði stafrænnar markaðssetningar sem hámarka árangur. Við leggjum áherslu á að skapa einstaka þjónustuupplifun fyrir hvern viðskiptavin og mótum markaðsstarfið í takt við þarfir þíns fyrirtækis.
-            </p>
-        </div>
-    </div>
+                                <div>
+                                    <p class="fs-4 mb-0 mx-auto" style="max-width: 60ch;">
+                                        og sköpum eitthvað skemmtilegt saman.
+                                    </p>
+                                </div>
 
-    <div class="col-md-7">
-      <img
-        src="/Assets/Img/Kári og einar lookin fly.png"
-        class="img-fluid w-100 h-100 object-fit-cover"
-      >
-    </div>
-  </div>
-</section>
+                            </div>
+                        </div>
 
-<!-- 
-<section class="values-section text-white text-center py-5">
-  <div class="container">
-    <h2 class="fw-bold mb-5">Gildi okkar</h2>
+                        <div class="container-xxl px-3 px-md-4 py-4">
+                        <div class="row g-4 align-items-center">
 
-    <div class="row g-4">
-      <div class="col-md-3">
-        <div class="value-card">
-          <h5>Markmið</h5>
-          <p>Við vinnum markvisst að árangri.</p>
-        </div>
-      </div>
+                            <div class="row align-items-center">
 
-      <div class="col-md-3">
-        <div class="value-card">
-          <h5>Samvinna</h5>
-          <p>Sterkt teymi skilar bestu lausnunum.</p>
-        </div>
-      </div>
+                            <div class="col-12 col-lg-7">
+                                <div class="image-16x9 rounded-4 shadow">
+                                <img src="Assets/Img/pro myndir/compressed/einarKari.jpg" alt="">
+                                </div>
+                            </div>
 
-      <div class="col-md-3">
-        <div class="value-card">
-          <h5>Nýsköpun</h5>
-          <p>Við hugsum út fyrir boxið.</p>
-        </div>
-      </div>
+                            <div class="col-12 col-lg-5 d-flex flex-column justify-content-center">
+                                <h1 class="fw-bold mb-3" style="">Hvað gerum við?</h1>
+                                <p class="fs-4 mb-0" style="max-width: 60ch; text-align: justify; ">
+                                    Við sérhæfum okkur í að bjóða upp á fjölbreyttar og samþættar lausnir á sviði stafrænnar markaðssetningar sem hámarka árangur. Við leggjum áherslu á að skapa einstaka þjónustuupplifun fyrir hvern viðskiptavin og mótum markaðsstarfið í takt við þarfir þíns fyrirtækis.
+                                </p>
+                            </div>
 
-      <div class="col-md-3">
-        <div class="value-card">
-          <h5>Viðskiptavinir</h5>
-          <p>Þeir eru í forgrunni hjá okkur.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-VALUES -->
+                        </div>
+                        </div>
 
-<!-- STORY -->
-<section class="container-fluid p-0">
-  <div class="row g-0 align-items-stretch position-relative">
-      
-      <div class="col-md-7">
-          <img
-          src="/Assets/Img/Cover test.png"
-          class="img-fluid w-100 h-100 object-fit-cover"
-          >
-        </div>
-        <div class="col-md-5 bg-danger d-flex align-items-center text-white">
-            <div class="text-wrap text-wrap-right px-4 px-xl-5 py-5">
-                <h2 class="fw-bold">Hvað er ONET8K?</h2>
-                <p class="justify">
-                Við erum lítð en kröftugt framleiðslufyrirtæki sem starfar úr Reykjanesbæ. Með árareynslu í sjónvarps- og auglýsinga framleiðslu, sérhæfum við okkur allra hellst í áhrifaríkri og ógleymanlegri stafrænni markaðssetningu.
+                        <div class="md-4 py-4">
+                        <div class="row g-4 align-items-center">
 
-Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við flóknum vandamálum séu lykil atriði til að tryggja góðar niðurstöður.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+                            <div class="row align-items-center">
 
+                            <!-- TEXT -->
+                            <div class="col-12 col-lg-5 d-flex flex-column justify-content-center">
+                                <h1 class="fw-bold mt-5" style="">Hvað er ONET8K?</h1>
+                                <p class="fs-4 mb-0" style="max-width: 60ch; text-align: justify;">
+                                    Við erum lítð en kröftugt framleiðslufyrirtæki sem starfar úr Reykjanesbæ. Með árareynslu í sjónvarps- og auglýsinga framleiðslu, sérhæfum við okkur allra hellst í áhrifaríkri og ógleymanlegri stafrænni markaðssetningu. Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við flóknum vandamálum séu lykil atriði til að tryggja góðar niðurstöður.
+                                </p>
+                            </div>
+
+                            <!-- IMAGE -->
+                            <div class="col-12 col-lg-7">
+                                <div class="image-16x9 rounded-4 shadow">
+                                <img src="Assets/Img/Kári og einar lookin fly.png" alt="">
+                                </div>
+                            </div>
+
+                            </div>
+
+                        </div>
+                        </div>
+
+                        <div class="container-xxl px-3 px-md-4 py-2 mt-5 text-center">
+                            <div>
+
+                                <div class="mb-3">
+                                    <h3 class="fw-bold m-0 lh-1 display-3" style="letter-spacing: .2px;">
+                                        Teymið
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>                        
+            </section>
 <!-- TEAM -->
-<section class=" py-5 text-center bg-danger">
+<section class=" py-5 text-center">
     <div class="container">
-        <div class=" row g-4 justify-content-center bg-danger">
-            <h2 class="fw-bold mb-5 text-white">Teymið</h2>
+        <div class=" row g-4 justify-content-center">
             <div class="col-md-3 col-sm-6 px-2">
                 <div class="team-card-pro">
                     <img src="/Assets/Img/Teymid/kari.png" alt="Kári">
                     <div class="team-overlay">
                         <h5>Kári Snær Halldórsson</h5>
                         <p>Framleiðsla og tækni</p>
-                        <small>kari@onet8k.is</small>
                     </div>
                 </div>    
             </div>
@@ -231,7 +244,6 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                     <div class="team-overlay">
                         <h5>Einar Örn Michaelsson</h5>
                         <p>Hugmyndasmiður og leikstjóri</p>
-                        <small>einar@onet8k.is</small>
                     </div>
                 </div>    
             </div>    
@@ -241,7 +253,6 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                     <div class="team-overlay">
                         <h5>Halldór Smári Karlsson</h5>
                         <p>Vefhönnun og forritun</p>
-                        <small>halldor@onet8k.is</small>
                     </div>
                 </div>    
             </div>
@@ -251,7 +262,6 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                     <div class="team-overlay">
                         <h5>Bernard Geir Linberg Ásgeirsson</h5>
                         <p>Vefhönnun og forritun</p>
-                        <small>bernard@onet8k.is</small>
                     </div>
                 </div>    
             </div>
@@ -261,22 +271,18 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                     <div class="team-overlay">
                         <h5>Kolmundur Vargur Jónsson</h5>
                         <p>Fjármál og verkefnastjórn</p>
-                        <small>kolli@onet8k.is</small>
                     </div>
                 </div>    
             </div>
         </div>
     </div>
 </section>
-
-
-</body>
-                        <section class="text-light position-relative">
+            <section class="text-light position-relative">
                 <div class="container">
                     <div class="project-panel text-white shadow">
                         <div class="d-flex justify-content-center">
                             <div class="text-start">
-                                <h1 class="fw-bold pb-1">Fleiri verkefni</h1>
+                                <h1 class="fw-bold pb-1">Verkefnin</h1>
                             </div>
                         </div>
 
@@ -313,11 +319,11 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                                             </div>
 
                                             <div class="col-12 col-md-4">
-                                                <a href="/hinsegindagar.html" class="project-card">
-                                                    <img src="/Assets/Img/thumbnails/HinseginDagarThumbnail.jpg" alt="hinsegin dagar verkefni" loading="lazy" />
+                                                <a href="/vitringarnir.html" class="project-card">
+                                                    <img src="/Assets/Img/thumbnails//Vitringarnir3thumbnail.jpg" alt="Vitringarnir verkefni" loading="lazy" />
                                                     <div class="project-overlay">
-                                                        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="hinsegin dagar logo" class="project-logo pb-3" style="height: 7rem; width: auto;" />
-                                                        <h3>Hinsegin Dagar</h3>
+                                                        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="Vitringarnir logo" class="project-logo pb-4" style="height: 10rem; width: auto;" />
+                                                        <h3>Hópefli Vitringanna</h3>
                                                     </div>
                                                 </a>
                                             </div>
@@ -336,13 +342,13 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                                                     </div>
                                                 </a>
                                             </div>
-                                            
+
                                             <div class="col-12 col-md-4">
-                                                <a href="/vitringarnir.html" class="project-card">
-                                                    <img src="/Assets/Img/thumbnails//Vitringarnir3thumbnail.jpg" alt="Vitringarnir verkefni" loading="lazy" />
+                                                <a href="/hinsegindagar.html" class="project-card">
+                                                    <img src="/Assets/Img/thumbnails/HinseginDagarThumbnail.jpg" alt="hinsegin dagar verkefni" loading="lazy" />
                                                     <div class="project-overlay">
-                                                        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="Vitringarnir logo" class="project-logo pb-4" style="height: 10rem; width: auto;" />
-                                                        <h3>Hópefli Vitringanna</h3>
+                                                        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/RUV-ohf_White 2.png" alt="hinsegin dagar logo" class="project-logo pb-3" style="height: 7rem; width: auto;" />
+                                                        <h3>Hinsegin Dagar</h3>
                                                     </div>
                                                 </a>
                                             </div>
@@ -423,6 +429,20 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                                     <div class="carousel-item">
                                         <div class="row g-3">
                                             <div class="col-12">
+                                                <a href="/vitringarnir.html" class="project-card">
+                                                    <img src="/Assets/Img/thumbnails//Vitringarnir3thumbnail.jpg" alt="Vitringarnir verkefni" loading="lazy" />
+                                                    <div class="project-overlay">
+                                                        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="Vitringarnir logo" class="project-logo pb-4" style="height: 10rem; width: auto;" />
+                                                        <h3>Hópefli Vitringanna</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <div class="row g-3">
+                                            <div class="col-12">
                                                 <a href="/barnvaentSveitarfelag.html" class="project-card">
                                                     <img src="/Assets/Img/thumbnails/barnvæntSveitarfelagThumbnail.jpg" alt="Barnvænt Sveitarfélag verkefni" loading="lazy" />
                                                     <div class="project-overlay">
@@ -456,20 +476,6 @@ Við erum þess hugar að góð samskipti og áhersla á frumlegar lausnir við 
                                                     <div class="project-overlay">
                                                         <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/hard rock.png" alt="Hard Rock logo" class="project-logo pb-4" style="height: 8rem; width: auto;" />
                                                         <h3>Hard Rock</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="carousel-item">
-                                        <div class="row g-3">
-                                            <div class="col-12">
-                                                <a href="/vitringarnir.html" class="project-card">
-                                                    <img src="/Assets/Img/thumbnails//Vitringarnir3thumbnail.jpg" alt="Vitringarnir verkefni" loading="lazy" />
-                                                    <div class="project-overlay">
-                                                        <img src="/Assets/Img/logos/einarorn8_logos_2025-09-23_2020/logos/vitringarnir.png" alt="Vitringarnir logo" class="project-logo pb-4" style="height: 10rem; width: auto;" />
-                                                        <h3>Hópefli Vitringanna</h3>
                                                     </div>
                                                 </a>
                                             </div>
