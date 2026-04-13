@@ -86,57 +86,57 @@
   }
 }
 
-#verkefni{
-    scroll-margin: 3.5rem;
+#verkefni {
+  scroll-margin: 3.5rem;
 }
 
-#verkefni .verkefni-copy{
-    max-width: 72rem;
+#verkefni .verkefni-copy {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.45;
+}
+
+#verkefni .text-start > h1 {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#verkefni .verkefni-last {
+  display: block;
+  margin-top: 0.35rem;
+  text-align: left;
+}
+
+@media (max-width: 575.98px) {
+  #verkefni .text-start {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left !important;
+  }
+
+  #verkefni .verkefni-copy {
+    max-width: 22rem;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.45;
+    font-size: 1.15rem;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  #verkefni .text-start > h1 {
+    max-width: 22rem;
+  }
 }
 
-#verkefni .text-start > h1{
-    max-width: 44rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#verkefni .verkefni-last{
-    display: block;
-    margin-top: .35rem;
+@media (min-width: 992px) {
+  #verkefni .verkefni-copy {
+    font-size: 1.35rem;
+    line-height: 1.55;
     text-align: left;
-}
-
-@media (max-width: 575.98px){
-    #verkefni .text-start{
-        padding-left: 1rem;
-        padding-right: 1rem;
-        text-align: left !important;
-    }
-
-    #verkefni .verkefni-copy{
-        max-width: 22rem;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.15rem;
-        text-align: justify;
-        text-justify: inter-word;
-        hyphens: auto;
-    }
-
-    #verkefni .text-start > h1{
-        max-width: 22rem;
-    }
-}
-
-@media (min-width: 992px){
-    #verkefni .verkefni-copy{
-        font-size: 1.35rem;
-        line-height: 1.55;
-        text-align: left;
-    }
+  }
 }
 
 #vimeoCarousel .carousel-control-prev-icon,
@@ -540,22 +540,22 @@ main#app {
   opacity: 1;
 }
 
-.hero-title{
+.hero-title {
   margin: 0;
   line-height: 1.08;
 }
 
-.hero-title .hero-line{
+.hero-title .hero-line {
   display: inline;
 }
 
-.hero-title{
-    user-select: none;
-    -webkit-user-select: none;
+.hero-title {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-@media (min-width: 992px){
-  .hero-title .hero-line:first-child{
+@media (min-width: 992px) {
+  .hero-title .hero-line:first-child {
     display: block;
   }
 }
@@ -633,8 +633,6 @@ main#app {
     justify-content: center;
     padding-left: 0 !important;
   }
-
-  
 }
 
 @media (max-width: 575.98px) {
@@ -811,7 +809,7 @@ main#app {
   position: relative;
   border-radius: 14px;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   background: #000;
 }
 
@@ -862,15 +860,14 @@ main#app {
   font-size: 0.8rem;
 }
 
-/* Optional hover effect */
+/* Optional hover effect 
 .team-card-pro:hover img {
   transform: scale(1.05);
   transition: 0.4s;
 }
-
-.story-text 
-{
-  font-size: 2.0rem;
+*/
+.story-text {
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -884,4 +881,3 @@ main#app {
   height: 100%;
   object-fit: cover;
 }
-
